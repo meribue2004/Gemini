@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  - slant
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Ground
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: bg
+    uniqueID: 3831506257
+    locked: 0
+  - name: checkpoint
+    uniqueID: 1210171705
+    locked: 0
+  - name: aditionaryassets
+    uniqueID: 4013027241
+    locked: 0
+  - name: mc
+    uniqueID: 1145404385
+    locked: 0
+  - name: bg2d
+    uniqueID: 3069388387
+    locked: 0
+  - name: securitycam
+    uniqueID: 1335276079
+    locked: 0
+  - name: platform
+    uniqueID: 4122228187
+    locked: 0
+  - name: collectibale
+    uniqueID: 746874699
+    locked: 0
