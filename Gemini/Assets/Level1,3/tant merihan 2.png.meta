@@ -1,0 +1,3709 @@
+fileFormatVersion: 2
+guid: 917a5e717cd21b94b8b1fd1fbef8f123
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tant merihan 2_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 2741
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97799f8d92624884293490cda4f752d0
+      internalID: 610767228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_1
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 2768
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a25114bcd3f7f141b7b76f26a100f55
+      internalID: 641999193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_2
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 2740
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32413951627d1b54a9e8fc966ee336b8
+      internalID: 1934975725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_3
+      rect:
+        serializedVersion: 2
+        x: 2367
+        y: 2765
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e0904b74be3ece409f35c4b028c9b54
+      internalID: -1891577520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_4
+      rect:
+        serializedVersion: 2
+        x: 2422
+        y: 2749
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a4025223fc5ff64fbd1926db4359485
+      internalID: 888330053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_5
+      rect:
+        serializedVersion: 2
+        x: 3570
+        y: 2767
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6f11a329a3c0944cb920b44bab66e45
+      internalID: -272939288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_6
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 2740
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff2cacde7ade5943a2742deb51a0881
+      internalID: 627520114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_7
+      rect:
+        serializedVersion: 2
+        x: 2344
+        y: 2741
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 049e49fdf022efc47bd2ff9698658a87
+      internalID: 1668541229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_8
+      rect:
+        serializedVersion: 2
+        x: 2447
+        y: 2741
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4463e3e60a601b9419a9479782e63d00
+      internalID: 1680689401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_9
+      rect:
+        serializedVersion: 2
+        x: 3550
+        y: 2747
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af4b55b869565749b81cfb44de87449
+      internalID: 532981128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_10
+      rect:
+        serializedVersion: 2
+        x: 3543
+        y: 2740
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 444a72417a57adf43b1446b9196cf258
+      internalID: 1916134437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_11
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 2671
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ca26a767701c1d469e409ae637d8429
+      internalID: 1158303265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_12
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 2013
+        width: 411
+        height: 559
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe00a7fd1ab5ea04f962bd07bf3d7e3b
+      internalID: -1035360326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_13
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 2445
+        width: 1148
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49ecbfc86ce08ca45a7ffc338e1bd979
+      internalID: -1523123557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_14
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 2456
+        width: 24
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59526c0f65502784085539f340cc2d26
+      internalID: 548292187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_15
+      rect:
+        serializedVersion: 2
+        x: 1875
+        y: 2456
+        width: 58
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7234d5daacf37964581be614de0f13b0
+      internalID: -1010338955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_16
+      rect:
+        serializedVersion: 2
+        x: 1933
+        y: 2456
+        width: 38
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0320929e3c6dc744a447fd70a4be18c
+      internalID: -1485993562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_17
+      rect:
+        serializedVersion: 2
+        x: 1973
+        y: 2456
+        width: 47
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a899f17c5f41b1346a083976d1b23d7b
+      internalID: 694111572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_18
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 2323
+        width: 483
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73ced3efae398864ba9c68a04885df7b
+      internalID: -858061878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_19
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 2330
+        width: 522
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e4c9edd772334f408d9688b17f2ec54
+      internalID: 1317009153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_20
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 2119
+        width: 153
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d6960e56a9bb114e9e6aa9bd124cb16
+      internalID: 1036609125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_21
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 2119
+        width: 152
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e80b554b1fe07c4484a80d916657d74
+      internalID: 597215098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_22
+      rect:
+        serializedVersion: 2
+        x: 2381
+        y: 2119
+        width: 149
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 422173d60a979e0439af9a5bdb4bf281
+      internalID: -1773313738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_23
+      rect:
+        serializedVersion: 2
+        x: 2653
+        y: 2119
+        width: 148
+        height: 283
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b93811dd5df48f4096b80f617ee5e40
+      internalID: -177632935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_24
+      rect:
+        serializedVersion: 2
+        x: 2924
+        y: 2119
+        width: 155
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa5c8e7640f07814d9d07d979b9fe92c
+      internalID: 1319244887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_25
+      rect:
+        serializedVersion: 2
+        x: 3197
+        y: 2119
+        width: 153
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28e9d1f4d2b264542b58a47b33ed8ad6
+      internalID: -1463221354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_26
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 2213
+        width: 12
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb54dc98f519074db19ea2fe1d95045
+      internalID: 127591826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_27
+      rect:
+        serializedVersion: 2
+        x: 3100
+        y: 2213
+        width: 12
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc7940b6c160384dad3a2a87e99f383
+      internalID: 1537059982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_28
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 2022
+        width: 330
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40acc83a38d3e8e43ba696ab41020f81
+      internalID: -545175540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_29
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 2026
+        width: 330
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11b06e7f542617e44b8fd074ae29b180
+      internalID: 504326134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_30
+      rect:
+        serializedVersion: 2
+        x: 1945
+        y: 2040
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46a10e27286695b47ad50a25e43f5548
+      internalID: -397965013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_31
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 1974
+        width: 37
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67cb21e2f174665439a1bd5a296ce6df
+      internalID: 1969445108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_32
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 1974
+        width: 117
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40538c5c159a7474f9663c24378658c7
+      internalID: 488389717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_33
+      rect:
+        serializedVersion: 2
+        x: 1947
+        y: 1973
+        width: 47
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1647fa5832519d6439603d6ce7d8bca4
+      internalID: 1970968799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_34
+      rect:
+        serializedVersion: 2
+        x: 1996
+        y: 1973
+        width: 46
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3aa1d63d69d1cc4190245e08605a56c
+      internalID: 1149378201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_35
+      rect:
+        serializedVersion: 2
+        x: 2037
+        y: 1974
+        width: 49
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ed36f7f7f91c7e44a009dd6f4472284
+      internalID: 36515942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_36
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 1887
+        width: 54
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 869089559270321429fc8260a95e3778
+      internalID: -969608471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_37
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 1885
+        width: 63
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff69fc09f686a894c88dfe6a2068d577
+      internalID: -314606238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_38
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1885
+        width: 67
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b31b4513769d53b46bcf12d9c5f22b47
+      internalID: -2093154966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_39
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 1730
+        width: 268
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 021f6c5791ac7ce48a7972c596283703
+      internalID: -1134585344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_40
+      rect:
+        serializedVersion: 2
+        x: 2120
+        y: 1736
+        width: 238
+        height: 211
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e41baaf9f3e6f1439176e14012e1f1a
+      internalID: -935243314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_41
+      rect:
+        serializedVersion: 2
+        x: 2386
+        y: 1737
+        width: 292
+        height: 210
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c11bd88a45e9c44eb7ce41b23592fab
+      internalID: -1270020538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_42
+      rect:
+        serializedVersion: 2
+        x: 2724
+        y: 1738
+        width: 274
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aea3e2d7116f3e459e93cc503dee704
+      internalID: -1610573069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_43
+      rect:
+        serializedVersion: 2
+        x: 3044
+        y: 1734
+        width: 276
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c2ceb9b15715554782c00578e48562d
+      internalID: -345523863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_44
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 1876
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d82e48d175c379d45bc0895ef2a76503
+      internalID: 1385907096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_45
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 1648
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5a3539943c8a8146b0215b96c97b504
+      internalID: -1432655504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_46
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 1592
+        width: 133
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 392f7e851a045704dad1d8e69fe2bbda
+      internalID: 1332494638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_47
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 1592
+        width: 132
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e9e0cead0a718449686ce5301d905c
+      internalID: -665688324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_48
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 1592
+        width: 142
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5191e565ecc9424bbdbc50ecd00ac53
+      internalID: -2096402672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_49
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 1599
+        width: 149
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39226502c74e22d419714bbc7c2ce6a2
+      internalID: 18997057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_50
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 1600
+        width: 153
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6cc616897684304696054aa8b31bc57
+      internalID: 831143309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_51
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 1599
+        width: 155
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3edcae7f3357454383978c2a09e201f
+      internalID: -168572540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_52
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 1634
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 178e76ab5fc8154478ab9ea6efda2c92
+      internalID: 48611229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_53
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 1620
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5190e09ed8f07c94b867fe47aa52ff93
+      internalID: -582135663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_54
+      rect:
+        serializedVersion: 2
+        x: 1873
+        y: 1572
+        width: 42
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b4cf2f01147084f81430e71482b808
+      internalID: -48487378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_55
+      rect:
+        serializedVersion: 2
+        x: 1913
+        y: 1372
+        width: 178
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6efefe3573b0e34984d3229b8122146
+      internalID: -2142250297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_56
+      rect:
+        serializedVersion: 2
+        x: 3562
+        y: 1622
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf9198c38c40c3d4fbcfe48abcf952f1
+      internalID: 229562180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_57
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 1541
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb44d86ce829e98488bab7c4f08b5922
+      internalID: 849542590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_58
+      rect:
+        serializedVersion: 2
+        x: 2167
+        y: 1365
+        width: 168
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a78ec4e96750d1499debcc99e1681d2
+      internalID: -655480563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_59
+      rect:
+        serializedVersion: 2
+        x: 2402
+        y: 1375
+        width: 160
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbacb0fea8d929b408e0264a3be78a9c
+      internalID: -1673405243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_60
+      rect:
+        serializedVersion: 2
+        x: 2515
+        y: 1377
+        width: 75
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a9d9662ce689c8469cd449553076eab
+      internalID: -94121822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_61
+      rect:
+        serializedVersion: 2
+        x: 2659
+        y: 1365
+        width: 174
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e23cc68581b27a34b93b86bae07d7c15
+      internalID: 929364999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_62
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 1367
+        width: 176
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ed55306f45e15c4facbd50f26a41ff1
+      internalID: -249864348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_63
+      rect:
+        serializedVersion: 2
+        x: 3163
+        y: 1365
+        width: 171
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3050f0e60bbfd9e479ec23f67ade6b63
+      internalID: 926963115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_64
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 1488
+        width: 43
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: befa237ae4e557343bf0d80f097928fe
+      internalID: 547659670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_65
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 1486
+        width: 48
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 585e51ca9ef40bd429bb3e28005c5f98
+      internalID: 1020886610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_66
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 1488
+        width: 52
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dfff973bebd1874ebb4b08a5ffa1651
+      internalID: -108283700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_67
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 1486
+        width: 49
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 984fef32a8f734d42bc35c9fc5db0535
+      internalID: 951795729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_68
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 1527
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1919595bcf763d642837b4fc9a58bd6f
+      internalID: -148682550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_69
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 1488
+        width: 41
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f62324130cf0a74fb8452c9962bd2ff
+      internalID: -746550888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_70
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1486
+        width: 48
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8dd6b281678eee44924d48c02e85916
+      internalID: 2059522550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_71
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 1486
+        width: 49
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 071a9705b2dfd40479d6c8350442f9a6
+      internalID: 1516314728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_72
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1488
+        width: 52
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ced7ba512cc61244fa5c2927058f5487
+      internalID: -1508567259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_73
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 1488
+        width: 54
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8583093109b57d54dab47acb909aa72b
+      internalID: -46052184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_74
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1480
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0fc7b6677ebb794ea5191213dd838cc
+      internalID: -268975379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_75
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 1194
+        width: 186
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85ff6aefb9b3f7d4f965d23d4f96452d
+      internalID: -1859157940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_76
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 1191
+        width: 179
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d4fa4a8e749b6046b3c33c2dffa38a9
+      internalID: 1720846124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_77
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 1193
+        width: 181
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 253effa44f1349c4d886308e8f2f8702
+      internalID: -393446601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_78
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 1193
+        width: 181
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f269cc4ebb607414597d53970b148d15
+      internalID: 1769366329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_79
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 1187
+        width: 181
+        height: 273
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db805d003d2b6c418b3f1fb2f02152c
+      internalID: -510253607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_80
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 1203
+        width: 194
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58688017d2b70684295836d6e7c0f9c8
+      internalID: 388309096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_81
+      rect:
+        serializedVersion: 2
+        x: 2133
+        y: 1258
+        width: 41
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fd025b075979bc49aa3098da9a5e89d
+      internalID: -118178213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_82
+      rect:
+        serializedVersion: 2
+        x: 2172
+        y: 1258
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 146faf30d1bc6e844aae797415e373eb
+      internalID: -1972381707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_83
+      rect:
+        serializedVersion: 2
+        x: 2209
+        y: 1258
+        width: 21
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b448e0c1e6a44c40a6fd78f712ad401
+      internalID: 1782565773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_84
+      rect:
+        serializedVersion: 2
+        x: 2228
+        y: 1258
+        width: 53
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe8e1024c53edde408a319fd5e2989c4
+      internalID: -804648910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_85
+      rect:
+        serializedVersion: 2
+        x: 2281
+        y: 1258
+        width: 42
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 063f0c9442458974db05ea389bce2117
+      internalID: 164861836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_86
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 1141
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca1682a81ae06b941a0b0a44cd4f375f
+      internalID: 1152713124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_87
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 1050
+        width: 170
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6db98a3b220a3b842812c36191922493
+      internalID: 572597487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_88
+      rect:
+        serializedVersion: 2
+        x: 2416
+        y: 1049
+        width: 165
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09137fd3a49552349819d58a36dc7fcb
+      internalID: -134928644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_89
+      rect:
+        serializedVersion: 2
+        x: 2659
+        y: 1048
+        width: 161
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86d415c776d8dd4459b60df2e289f6ee
+      internalID: -911980848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_90
+      rect:
+        serializedVersion: 2
+        x: 2845
+        y: 1056
+        width: 169
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b220d79fe839e4a9320e02b709c991
+      internalID: 629523216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_91
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 1022
+        width: 52
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cadf95b28421f254bb262c9385ef86f7
+      internalID: -994683765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_92
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 1022
+        width: 96
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69ed98a71a0fd7a40a5f24ce3c076ccd
+      internalID: -552716364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_93
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 1022
+        width: 52
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1d656eb61236d84fa83dd2ae04ca255
+      internalID: 701877879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_94
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 1022
+        width: 53
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dea2a426ed2626428c0c728d2f69c80
+      internalID: -1753709031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_95
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1022
+        width: 56
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa1be3799ee3cd74dacee308d0bd02e9
+      internalID: 906129518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_96
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 727
+        width: 255
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d3d1d92c1c9e0442bf5eebb0f5084c9
+      internalID: -1229425669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_97
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 725
+        width: 184
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f6e353d6467cf44cbd56ba714c9945b
+      internalID: 60179244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_98
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 1014
+        width: 10
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f549571fc80dbc14da36ed1b720fd9f2
+      internalID: -943710655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_99
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 723
+        width: 167
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a4e86d93eb2d544c839b5727d865934
+      internalID: 1164433590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_100
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 723
+        width: 170
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8c34d4fa81575d4582d554e517e84e8
+      internalID: -1258211487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_101
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 723
+        width: 182
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b26c4d03c9530e43834ea47e148cb60
+      internalID: 1647600282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_102
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 723
+        width: 201
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f784ae8a91071b4d9eb7ce72a7a65ca
+      internalID: 452635334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_103
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 927
+        width: 83
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63ecf010c6de77145ad934ed4b5a7174
+      internalID: 1589014263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_104
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 1013
+        width: 49
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 617fb2e10a0ef7f49a4539b706d99311
+      internalID: 2116660003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_105
+      rect:
+        serializedVersion: 2
+        x: 1942
+        y: 927
+        width: 42
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de8e46e258619354e991ce72eb9b2604
+      internalID: -1410643804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_106
+      rect:
+        serializedVersion: 2
+        x: 1982
+        y: 927
+        width: 51
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4821b581534f1b24582a66c87e7a4fa8
+      internalID: -1140919025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_107
+      rect:
+        serializedVersion: 2
+        x: 2035
+        y: 927
+        width: 61
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c38b1f8fbe877de4fbec7a7c462a5334
+      internalID: -385975344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_108
+      rect:
+        serializedVersion: 2
+        x: 2089
+        y: 927
+        width: 21
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7dc28c5493ff1d45a6d106292ca73e3
+      internalID: -1411402837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_109
+      rect:
+        serializedVersion: 2
+        x: 2107
+        y: 927
+        width: 49
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da8a5f3c0cecac469a0f2a8f3a8c811
+      internalID: -1136353779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_110
+      rect:
+        serializedVersion: 2
+        x: 2154
+        y: 927
+        width: 46
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc8dd55aac1b444ca26c58928d1a850
+      internalID: 25125663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_111
+      rect:
+        serializedVersion: 2
+        x: 3075
+        y: 970
+        width: 37
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe9f7679e2bf2054980eb8f1c1f90f38
+      internalID: -935464772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_112
+      rect:
+        serializedVersion: 2
+        x: 2931
+        y: 927
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 379cf7fdf75f93c4e9c0e82796b94169
+      internalID: -330455049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_113
+      rect:
+        serializedVersion: 2
+        x: 1871
+        y: 919
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a52322a235277294ab49de195e684c0c
+      internalID: -1316171794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_114
+      rect:
+        serializedVersion: 2
+        x: 3073
+        y: 901
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcc03ec9bcd0aff44836c22d23db3634
+      internalID: 1470407618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_115
+      rect:
+        serializedVersion: 2
+        x: 1882
+        y: 900
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cae5bbf4a7ce29429e08f84524703de
+      internalID: -1574542914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_116
+      rect:
+        serializedVersion: 2
+        x: 2906
+        y: 902
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d44c79988dff3845b15c5faf196ac5a
+      internalID: 727812683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_117
+      rect:
+        serializedVersion: 2
+        x: 1944
+        y: 835
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49d06938036ca5642ab80e981a522f1e
+      internalID: 660723311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_118
+      rect:
+        serializedVersion: 2
+        x: 1968
+        y: 604
+        width: 135
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88b061c1cf8618745a9e924a42a52412
+      internalID: -1481930615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_119
+      rect:
+        serializedVersion: 2
+        x: 2147
+        y: 607
+        width: 167
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ba042dad9481c499bf175ba331225e
+      internalID: -1644150559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_120
+      rect:
+        serializedVersion: 2
+        x: 2406
+        y: 607
+        width: 152
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac8d6e1bb7cb54e4484551fe1d6f35b1
+      internalID: 635165500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_121
+      rect:
+        serializedVersion: 2
+        x: 2657
+        y: 606
+        width: 131
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 668c698117596c545ba0e05f16147617
+      internalID: 1868752335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_122
+      rect:
+        serializedVersion: 2
+        x: 2918
+        y: 604
+        width: 140
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fa6e48aeb0776e4e94243fb67bf03c0
+      internalID: 976555027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_123
+      rect:
+        serializedVersion: 2
+        x: 3145
+        y: 838
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a77eed0b42efb8448b922ce36d0d7e4c
+      internalID: 1224660664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_124
+      rect:
+        serializedVersion: 2
+        x: 3179
+        y: 602
+        width: 132
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ea85d385501df54bbb8fe3ff92e562e
+      internalID: -513763242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_125
+      rect:
+        serializedVersion: 2
+        x: 2104
+        y: 675
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a931b8887ed484f9d11b555c48d993
+      internalID: -1511012611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_126
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 580
+        width: 49
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb0c1f55c7c80b545a7234eeb967492e
+      internalID: 891593098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_127
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 579
+        width: 22
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9f27d0f018214d44955c1d70403102f
+      internalID: -501743913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_128
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 579
+        width: 126
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe3ba14329bc89b41923e8e575ae4f16
+      internalID: -1932740565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_129
+      rect:
+        serializedVersion: 2
+        x: 1861
+        y: 521
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57bb85b500302fd4b89d307c0e5246ba
+      internalID: 2145174750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_130
+      rect:
+        serializedVersion: 2
+        x: 1913
+        y: 521
+        width: 23
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671be5cbf5ee3434c9d00fbfc947ce8a
+      internalID: 1396771425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_131
+      rect:
+        serializedVersion: 2
+        x: 1935
+        y: 521
+        width: 42
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e20efa641c47ee4f85c45be997d3538
+      internalID: 1252265178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_132
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 524
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e9b1f9e21f2701448b4265ca202f66a
+      internalID: -1978549642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_133
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 279
+        width: 237
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56bf9e78dd9a88645bdd07ce13ea85f0
+      internalID: -990919916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_134
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 279
+        width: 223
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b2e1c87d2da2fe44afd1219c1278ff0
+      internalID: -1396903381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_135
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 279
+        width: 235
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aaf3d9589dabd24daddf23dfa0ec60b
+      internalID: -733856674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_136
+      rect:
+        serializedVersion: 2
+        x: 1225
+        y: 279
+        width: 238
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e45d5ac5136f1cb4baa91ba158d39990
+      internalID: 707403509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_137
+      rect:
+        serializedVersion: 2
+        x: 1529
+        y: 279
+        width: 224
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4780f57bd9fc3147be043cf00a3c530
+      internalID: 1221835011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_138
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 501
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 863fcf90527d7f444b7f91ac1acaa77c
+      internalID: 827836600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_139
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 440
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49f19e9d41ff3cc4191bfe8716efa009
+      internalID: 1830470700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_140
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 396
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3acb8d7cc5211e468263f91a7b07519
+      internalID: 687906158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_141
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 432
+        width: 53
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11261493bef389e4abec21caecfa4618
+      internalID: -1390081926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_142
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 396
+        width: 59
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b3d95debebbd1547b4b9814ec5dcec9
+      internalID: -1241993743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_143
+      rect:
+        serializedVersion: 2
+        x: 1929
+        y: 259
+        width: 132
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f63bb2b32778d145a7a3ce2d814f57d
+      internalID: 58722591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_144
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 261
+        width: 186
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58c2a0980ee6454429365eb3f2734334
+      internalID: 161267868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_145
+      rect:
+        serializedVersion: 2
+        x: 2371
+        y: 262
+        width: 234
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 662c1519c8a28d44494ccc3f34176de4
+      internalID: 1612549013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_146
+      rect:
+        serializedVersion: 2
+        x: 2882
+        y: 291
+        width: 227
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28e9ecfc961c28549a4a799cca087302
+      internalID: -870169142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_147
+      rect:
+        serializedVersion: 2
+        x: 3543
+        y: 419
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d898afc09e7796f4a835c7947e6d48ca
+      internalID: 2138789797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_148
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 420
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a2849b5ffb584840a5dfe5a9adb0535
+      internalID: -1682862224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_149
+      rect:
+        serializedVersion: 2
+        x: 2631
+        y: 282
+        width: 233
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0d9144f88a13b2449f073c66a5862d9
+      internalID: -533585479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_150
+      rect:
+        serializedVersion: 2
+        x: 3103
+        y: 290
+        width: 238
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a38367357b5bc4409b8ca2856bc8a31
+      internalID: 505854421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_151
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 340
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2204ee284f23074b981d8727091dc3d
+      internalID: -339729922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_152
+      rect:
+        serializedVersion: 2
+        x: 3543
+        y: 339
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e1185b7afc9a7a4bad1409a0bfabcbc
+      internalID: 388255507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_153
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 259
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50be48589a276874d9f295959266181e
+      internalID: -1764976008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_154
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 195
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7f0f25b2ef57d342a47212c33e9a736
+      internalID: 1321114925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_155
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 179
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4eb6746d61d68d344ae64c5e0c5fc0d6
+      internalID: -2037446170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_156
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 100
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed0d24d9ecb9104a8e2cb7319fa3096
+      internalID: 254641381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_157
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 20
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 759152667ee2c594a8995c363c2960b6
+      internalID: -1490757923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_158
+      rect:
+        serializedVersion: 2
+        x: 1543
+        y: 38
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d290bd37e508034da37a1596ecfebc9
+      internalID: -1444471800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_159
+      rect:
+        serializedVersion: 2
+        x: 2745
+        y: 43
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf40b5c411b12b84c91eb2ea727458ae
+      internalID: 1982329926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_160
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 21
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d31019144ac58f4dbe6fcd48f9a95a0
+      internalID: -383332003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_161
+      rect:
+        serializedVersion: 2
+        x: 2760
+        y: 27
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29d116e5fe6336944bcde158d6e9cf98
+      internalID: 1016370332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tant merihan 2_162
+      rect:
+        serializedVersion: 2
+        x: 2770
+        y: 22
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e2dedf7a02398e4384a36739a9ca9fa
+      internalID: -1151375861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      tant merihan 2_19: 1317009153
+      tant merihan 2_57: 849542590
+      tant merihan 2_42: -1610573069
+      tant merihan 2_110: 25125663
+      tant merihan 2_20: 1036609125
+      tant merihan 2_156: 254641381
+      tant merihan 2_158: -1444471800
+      tant merihan 2_112: -330455049
+      tant merihan 2_18: -858061878
+      tant merihan 2_67: 951795729
+      tant merihan 2_10: 1916134437
+      tant merihan 2_100: -1258211487
+      tant merihan 2_38: -2093154966
+      tant merihan 2_51: -168572540
+      tant merihan 2_105: -1410643804
+      tant merihan 2_48: -2096402672
+      tant merihan 2_54: -48487378
+      tant merihan 2_94: -1753709031
+      tant merihan 2_120: 635165500
+      tant merihan 2_74: -268975379
+      tant merihan 2_107: -385975344
+      tant merihan 2_29: 504326134
+      tant merihan 2_32: 488389717
+      tant merihan 2_44: 1385907096
+      tant merihan 2_102: 452635334
+      tant merihan 2_130: 1396771425
+      tant merihan 2_115: -1574542914
+      tant merihan 2_52: 48611229
+      tant merihan 2_60: -94121822
+      tant merihan 2_138: 827836600
+      tant merihan 2_159: 1982329926
+      tant merihan 2_55: -2142250297
+      tant merihan 2_3: -1891577520
+      tant merihan 2_12: -1035360326
+      tant merihan 2_95: 906129518
+      tant merihan 2_150: 505854421
+      tant merihan 2_75: -1859157940
+      tant merihan 2_37: -314606238
+      tant merihan 2_64: 547659670
+      tant merihan 2_98: -943710655
+      tant merihan 2_111: -935464772
+      tant merihan 2_35: 36515942
+      tant merihan 2_49: 18997057
+      tant merihan 2_140: 687906158
+      tant merihan 2_76: 1720846124
+      tant merihan 2_78: 1769366329
+      tant merihan 2_2: 1934975725
+      tant merihan 2_8: 1680689401
+      tant merihan 2_65: 1020886610
+      tant merihan 2_23: -177632935
+      tant merihan 2_139: 1830470700
+      tant merihan 2_117: 660723311
+      tant merihan 2_143: 58722591
+      tant merihan 2_134: -1396903381
+      tant merihan 2_31: 1969445108
+      tant merihan 2_26: 127591826
+      tant merihan 2_88: -134928644
+      tant merihan 2_25: -1463221354
+      tant merihan 2_155: -2037446170
+      tant merihan 2_89: -911980848
+      tant merihan 2_71: 1516314728
+      tant merihan 2_121: 1868752335
+      tant merihan 2_77: -393446601
+      tant merihan 2_147: 2138789797
+      tant merihan 2_160: -383332003
+      tant merihan 2_21: 597215098
+      tant merihan 2_101: 1647600282
+      tant merihan 2_16: -1485993562
+      tant merihan 2_97: 60179244
+      tant merihan 2_144: 161267868
+      tant merihan 2_27: 1537059982
+      tant merihan 2_58: -655480563
+      tant merihan 2_4: 888330053
+      tant merihan 2_83: 1782565773
+      tant merihan 2_109: -1136353779
+      tant merihan 2_142: -1241993743
+      tant merihan 2_129: 2145174750
+      tant merihan 2_13: -1523123557
+      tant merihan 2_36: -969608471
+      tant merihan 2_39: -1134585344
+      tant merihan 2_154: 1321114925
+      tant merihan 2_1: 641999193
+      tant merihan 2_72: -1508567259
+      tant merihan 2_141: -1390081926
+      tant merihan 2_132: -1978549642
+      tant merihan 2_43: -345523863
+      tant merihan 2_56: 229562180
+      tant merihan 2_33: 1970968799
+      tant merihan 2_145: 1612549013
+      tant merihan 2_87: 572597487
+      tant merihan 2_22: -1773313738
+      tant merihan 2_28: -545175540
+      tant merihan 2_45: -1432655504
+      tant merihan 2_136: 707403509
+      tant merihan 2_0: 610767228
+      tant merihan 2_14: 548292187
+      tant merihan 2_119: -1644150559
+      tant merihan 2_15: -1010338955
+      tant merihan 2_47: -665688324
+      tant merihan 2_59: -1673405243
+      tant merihan 2_126: 891593098
+      tant merihan 2_61: 929364999
+      tant merihan 2_46: 1332494638
+      tant merihan 2_69: -746550888
+      tant merihan 2_85: 164861836
+      tant merihan 2_137: 1221835011
+      tant merihan 2_125: -1511012611
+      tant merihan 2_113: -1316171794
+      tant merihan 2_24: 1319244887
+      tant merihan 2_50: 831143309
+      tant merihan 2_81: -118178213
+      tant merihan 2_68: -148682550
+      tant merihan 2_116: 727812683
+      tant merihan 2_62: -249864348
+      tant merihan 2_86: 1152713124
+      tant merihan 2_63: 926963115
+      tant merihan 2_114: 1470407618
+      tant merihan 2_7: 1668541229
+      tant merihan 2_148: -1682862224
+      tant merihan 2_104: 2116660003
+      tant merihan 2_93: 701877879
+      tant merihan 2_122: 976555027
+      tant merihan 2_131: 1252265178
+      tant merihan 2_124: -513763242
+      tant merihan 2_73: -46052184
+      tant merihan 2_96: -1229425669
+      tant merihan 2_66: -108283700
+      tant merihan 2_152: 388255507
+      tant merihan 2_9: 532981128
+      tant merihan 2_34: 1149378201
+      tant merihan 2_99: 1164433590
+      tant merihan 2_80: 388309096
+      tant merihan 2_91: -994683765
+      tant merihan 2_92: -552716364
+      tant merihan 2_133: -990919916
+      tant merihan 2_30: -397965013
+      tant merihan 2_70: 2059522550
+      tant merihan 2_84: -804648910
+      tant merihan 2_149: -533585479
+      tant merihan 2_106: -1140919025
+      tant merihan 2_82: -1972381707
+      tant merihan 2_108: -1411402837
+      tant merihan 2_161: 1016370332
+      tant merihan 2_79: -510253607
+      tant merihan 2_41: -1270020538
+      tant merihan 2_17: 694111572
+      tant merihan 2_118: -1481930615
+      tant merihan 2_103: 1589014263
+      tant merihan 2_127: -501743913
+      tant merihan 2_5: -272939288
+      tant merihan 2_11: 1158303265
+      tant merihan 2_157: -1490757923
+      tant merihan 2_162: -1151375861
+      tant merihan 2_53: -582135663
+      tant merihan 2_90: 629523216
+      tant merihan 2_146: -870169142
+      tant merihan 2_123: 1224660664
+      tant merihan 2_135: -733856674
+      tant merihan 2_40: -935243314
+      tant merihan 2_6: 627520114
+      tant merihan 2_128: -1932740565
+      tant merihan 2_151: -339729922
+      tant merihan 2_153: -1764976008
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
