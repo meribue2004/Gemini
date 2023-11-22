@@ -12,10 +12,10 @@ public class PlayerMovement : MonoBehaviour
     public KeyCode L;
     public KeyCode R;
 
-    public Transform groundCheck;
-    public float groundCheckRadius;
-    private Rigidbody2D rb;
-    private bool isGrounded;
+   public Transform groundCheck;
+   public float groundCheckRadius;
+   private Rigidbody2D rb;
+   private bool isGrounded;
 
     // Start is called before the first frame update
     void Start()
@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
 
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+       // isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
     }
 
     public void Jump()
