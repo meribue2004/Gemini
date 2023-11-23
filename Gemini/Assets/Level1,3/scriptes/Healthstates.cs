@@ -13,6 +13,7 @@ public class Healthstates : MonoBehaviour
     public int coinsCollected = 0;
     private Animator anim;
     private bool hurt;
+    private bool died=false;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,7 @@ public class Healthstates : MonoBehaviour
             if (immunityTime >= immunityDuration)
             {
                 hurt = false;
+                died = false;
                 anim.SetBool("hurt", hurt);
                 this.isImmune = false;
                
@@ -42,6 +44,9 @@ public class Healthstates : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
+
+
+        died = false;
         if (this.isImmune == false)
         {
             hurt = true;
@@ -49,12 +54,17 @@ public class Healthstates : MonoBehaviour
             this.health = this.health - damage;
             if (this.health < 0)
                 this.health = 0;
-
+            
             if (this.lives > 0 && this.health == 0)
             {
+                died = true;
+                anim.SetBool("died", died);
                 FindObjectOfType<LevelManager>().RespawnPlayer();
                 this.health = 6;
                 this.lives--;
+              
+             
+
             }
             else if (this.health == 0 && this.lives == 0)
             {
