@@ -44,9 +44,6 @@ public class Healthstates : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
-
-
-        died = false;
         if (this.isImmune == false)
         {
             hurt = true;
@@ -84,6 +81,34 @@ public class Healthstates : MonoBehaviour
         this.isImmune = true;
         this.immunityTime = 0f;
     }
+   public void Decreaselives()
+    {
+
+        this.lives--;
+        
+        anim.SetBool("died", died);
+        WaitAndContinue();
+        if (this.health > 0 || this.lives > 0) {
+            FindObjectOfType<LevelManager>().RespawnPlayer(); 
+        }
+
+        else if (this.health == 0 && this.lives == 0)
+        {
+            Debug.Log("Gameover");
+            Destroy(this.gameObject); // Destroy the object when no lives left and health is zero
+        }
+
+        Debug.Log("Player health:" + this.health.ToString());
+        Debug.Log("Player Lives:" + this.lives.ToString());
+
+        PlayHitReaction();
+
+    }
+    IEnumerator WaitAndContinue()
+    {
+        // Wait for 2 seconds
+        yield return new WaitForSeconds(3f);
+    }
 
 
-}
+    }
