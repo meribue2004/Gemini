@@ -4,54 +4,34 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-    // Start is called before the first frame update
-
-    public Transform platform;
-    public Transform start;
-    public Transform end;
-    int direction = 1;
-    public float speed;
-
-
-
-    void Start()
+    public GameObject[] points;
+    private int CurrentPoint = 0;
+    public float speed = 2f;
+    // Update is called once per frame
+    void Update()
     {
-        
-    }
-    
-    private void Update()
-    {
-        Vector2 target = currentMovementTarget();
-        platform.position = Vector2.Lerp(platform.position, target, speed * Time.deltaTime);
-        float distance = (target - (Vector2)platform.position).magnitude;
-
-        if (distance <= 0.1f)
+        if (Vector2.Distance(points[CurrentPoint].transform.position, transform.position) < 0.1f)
         {
-            direction *= -1;
+            CurrentPoint++;
+            if (CurrentPoint >= points.Length)
+            {
+                CurrentPoint = 0;
+            }
+        }
+        transform.position = Vector2.MoveTowards(transform.position, points[CurrentPoint].transform.position, Time.deltaTime*speed);
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+         if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.gameObject.transform.SetParent(transform);
         }
     }
-
-    private void OnDrawGizmos()
+    private void OnCollisionExit2D(Collider2D collision)
     {
-        if(platform!=null && start!=null && end != null)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            Gizmos.DrawLine(platform.transform.position, start.position);
-            Gizmos.DrawLine(platform.transform.position, end.position);
+            collision.gameObject.transform.SetParent(null);
         }
     }
-
-    Vector2 currentMovementTarget()
-    {
-        if (direction == 1)
-        {
-            return start.position;
-        }
-        else
-        {
-            return end.position;
-        }
-
-    }
-
-
 }
