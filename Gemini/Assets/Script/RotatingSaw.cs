@@ -8,6 +8,6 @@ public class RotatingSaw : MonoBehaviour
 
     private void Update()
     {
-        transform.Rotate(0, 0, 360 * speed * Time.deltaTime);
+        transform.Rotate(3, 8, 360 * speed * Time.deltaTime);
     }
 }
