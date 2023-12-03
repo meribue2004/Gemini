@@ -7,10 +7,12 @@ public class lasershot : MonoBehaviour
     public float moveSpeed = 10f; // Adjust the speed of the bullet
    
     private Vector3 startPosition;
-
+    public float targetZ = -36f;
+    public Vector3 targetRotation = new Vector3(0f, 0f, -37f);
     // Start is called before the first frame update
     void Start()
     {
+        transform.rotation = Quaternion.Euler(targetRotation);
         lasergun gun;
         gun = FindObjectOfType<lasergun>();
         // Save the initial position for shake effects
@@ -23,15 +25,7 @@ public class lasershot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //float horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
-        //float verticalMovement = Input.GetAxis("Vertical") * moveSpeed * Time.deltaTime;
-
-        //// Update the object's position directly
-        //transform.position = new Vector3(
-        //    transform.position.x + horizontalMovement,
-        //    transform.position.y + verticalMovement,
-        //    transform.position.z);
-        //GetComponent<Rigidbody2D>().velocity=new Vector2(moveSpeed,GetComponent<Rigidbody2D>().velocity.y);
+       
         GetComponent<Rigidbody2D>().velocity = new Vector2(moveSpeed, -moveSpeed);
 
 
