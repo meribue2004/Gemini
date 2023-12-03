@@ -10,7 +10,7 @@ public class Healthstates : MonoBehaviour
     public bool isImmune = false;
     private float immunityTime = 0f;
     public float immunityDuration = 1.5f;
-    public int coinsCollected = 0;
+ 
     private Animator anim;
     private bool hurt;
     private bool died=false;
