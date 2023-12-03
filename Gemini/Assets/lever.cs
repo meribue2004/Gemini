@@ -2,12 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Trap : MonoBehaviour
+public class lever : MonoBehaviour
 {
-   
-    public int damage = 1;
-   
-
+    public Transform laser;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,17 +16,12 @@ public class Trap : MonoBehaviour
     {
         
     }
-    void OnTriggerEnter2D(Collider2D collider)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-     
-
-        if (collider.tag == "Player")
+       
+        if (collision.gameObject.tag == "Player")
         {
-            FindObjectOfType<Healthstates>().TakeDamage(damage);
-
-        
-           
-
+            laser.GetComponent<leverturned>().leverturnedd();
         }
     }
 }
