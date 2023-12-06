@@ -19,17 +19,13 @@ public class Trap : MonoBehaviour
     {
         
     }
-    void OnTriggerEnter2D(Collider2D collider)
-    {
+    //void OnTriggerEnter2D(Collider2D collider)
+    //{
      
 
-        if (collider.tag == "Player")
-        {
-            FindObjectOfType<Healthstates>().TakeDamage(damage);
-
-        
-           
-
-        }
-    }
+    //    if (collider.tag == "Player")
+    //    {
+    //        FindObjectOfType<Healthstates>().TakeDamage(damage);
+    //    }
+    //}
 }

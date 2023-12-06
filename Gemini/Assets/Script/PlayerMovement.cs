@@ -4,61 +4,101 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed; // Player movement speed
-    public float jumpForce; // Force applied when jumping
-    public LayerMask groundLayer; // Layer mask to check if the player is grounded
-
+    public float moveSpeed;
+    public float jumpHeight;
+    public bool isFacingRight;
     public KeyCode Spacebar;
     public KeyCode L;
+    public KeyCode arrowdown;
     public KeyCode R;
+    public Transform groundCheck;
+    public float groundCheckRadius;
+    public LayerMask whatIsGround;
+    private bool grounded;
+    private bool rolling;
+    public bool playerTouchedObject = false;
+    private Animator anim;
 
-   public Transform groundCheck;
-   public float groundCheckRadius;
-   private Rigidbody2D rb;
-   private bool isGrounded;
-
-    // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        isFacingRight = true;
+        anim = GetComponent<Animator>();
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Check if the colliding object has a specific tag 
+        if (collision.gameObject.CompareTag("slant"))
+        {
+            // Set the boolean variable to true when the player touches the object
+            playerTouchedObject = true;
+            Debug.Log("Player touched the object!");
+            anim.SetBool("sliding", playerTouchedObject);
+        }
     }
 
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        // Reset the boolean variable when the player leaves the object
+        if (collision.gameObject.CompareTag("slant"))
+        {
+            playerTouchedObject = false;
+            Debug.Log("Player left the object!");
+            anim.SetBool("sliding", playerTouchedObject);
+        }
+    }
     // Update is called once per frame
     void Update()
     {
-
-        if(Input.GetKeyDown(Spacebar) /*&& isGrounded*/)
+        if (Input.GetKeyDown(Spacebar) && grounded)
         {
             Jump();
         }
-
+        anim.SetBool("grounded", grounded);
         if (Input.GetKey(L))
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(-speed, GetComponent<Rigidbody2D>().velocity.y);
-            if (GetComponent<SpriteRenderer>() != null)
+            GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+            if (isFacingRight)
             {
-                GetComponent<SpriteRenderer>().flipX=true;
+                flip();
+                isFacingRight = false;
             }
         }
         if (Input.GetKey(R))
+
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(speed, GetComponent<Rigidbody2D>().velocity.y);
-            if (GetComponent<SpriteRenderer>() != null)
+            GetComponent<Rigidbody2D>().velocity = new Vector2(moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+
+            if (!isFacingRight)
             {
-                GetComponent<SpriteRenderer>().flipX = false;
+                flip();
+                isFacingRight = true;
             }
         }
+        if (Input.GetKeyDown(arrowdown))
+        {
+            rolling= true;  
+        }
+        if (Input.GetKeyUp(arrowdown)){
+            rolling = false;
+        }
+      
+        anim.SetBool("rolling", rolling);
+
+        anim.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
+
     }
-
-    private void FixedUpdate()
+   
+    void flip()
     {
-
-       // isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        transform.localScale = new Vector3(-(transform.localScale.x), transform.localScale.y, transform.localScale.z);
     }
-
-    public void Jump()
+    void Jump()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpForce);
+        GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpHeight);
+    }
+    void FixedUpdate()
+    {
+        grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
+
     }
 }
-

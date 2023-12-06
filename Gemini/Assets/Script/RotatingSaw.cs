@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class RotatingSaw : MonoBehaviour
 {
-    [SerializeField] private float speed = 2f;
+    public float speed = 2f;
 
     private void Update()
     {
-        transform.Rotate(3, 8, 360 * speed * Time.deltaTime);
+        transform.Rotate(0, 0, 360 * speed * Time.deltaTime);
     }
 }
