@@ -8,6 +8,7 @@ TagManager:
   - slant
   - treadmill
   - Enemy
+  - Score
   layers:
   - Default
   - TransparentFX

@@ -89,6 +89,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; //for health bar ui
+using TMPro;
 
 public class Healthstates : MonoBehaviour
 {
@@ -108,6 +109,10 @@ public class Healthstates : MonoBehaviour
 
     public Image healthBar; 
     public Image[] heartImages;
+
+    public int coinsCollected = 0;
+    //public int heartscollected = 0;
+    public TextMeshProUGUI scoreText;
     void Start()
     {
         //spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
@@ -237,5 +242,25 @@ public class Healthstates : MonoBehaviour
         yield return new WaitForSeconds(3f);
     }
 
+    public void CollectCoin(int coinValue)
+    {
+        this.coinsCollected = this.coinsCollected + coinValue;
+    }
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Score")
+        {
+            coinsCollected++;
+            Debug.Log(coinsCollected);
 
+            scoreText.text = coinsCollected.ToString();
+        }
+        //if (col.gameObject.tag == "Heart")
+        //{
+        //    heartscollected++;
+        //    Debug.Log(heartscollected);
+
+        //    hearttext.text = heartscollected.ToString();
+        //}
+    }
 }
