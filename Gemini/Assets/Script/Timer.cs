@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public float totalTime = 60f;  // Total time in seconds
+    public float totalTime = 10f;  // Total time in seconds
     private float currentTime;     // Current time left
     public Image timeBarImage;     // Reference to the UI Image representing the time bar
 
@@ -27,6 +27,8 @@ public class Timer : MonoBehaviour
         // Check if time is up
         if (currentTime <= 0f)
         {
+             FindObjectOfType<Healthstates>().DecreaselivesTimer();
+             currentTime = totalTime;
             // Handle time-up logic here
             Debug.Log("Time's up!");
         }
