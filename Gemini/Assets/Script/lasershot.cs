@@ -36,7 +36,7 @@ public class lasershot : MonoBehaviour
         if (other.tag == "Player")
         {
             // Handle player damage
-            FindObjectOfType<Healthstates>().TakeDamage(1);
+            FindObjectOfType<Healthsytemlevel3>().TakeDamage(1);
             Destroy(gameObject);
         }
         if(other.tag == "Ground")
