@@ -140,10 +140,7 @@ public class Healthstates : MonoBehaviour
             this.health = this.health - damage;
             healthBar.fillAmount -= 0.1285f;
 
-            //debugging
-            Debug.Log("Current Health: " + this.health);
-
-            Debug.Log("Health Ratio: " + this.health/6f);
+           
             if (this.health < 0)
             {
                 this.health = 0;
@@ -193,7 +190,37 @@ public class Healthstates : MonoBehaviour
             FindObjectOfType<LevelManager>().RespawnPlayer();
         }
 
-        else if (this.health == 0 && this.lives == 0)
+        else if (this.health == 0 && this.lives == 1)
+        {
+            Debug.Log("Gameover");
+            Destroy(this.gameObject); // Destroy the object when no lives left and health is zero
+        }
+
+        Debug.Log("Player health:" + this.health.ToString());
+        Debug.Log("Player Lives:" + this.lives.ToString());
+
+        PlayHitReaction();
+    }
+    //koki timer 
+     public void DecreaselivesTimer()
+    {
+        
+       
+        if ( this.lives > 1)
+        {
+            died = true;
+                anim.SetBool("died", died);
+                 WaitAndContinue();
+                FindObjectOfType<LevelManager>().RespawnPlayer();
+                ResetHealth();
+                this.health = 6;
+                this.lives--;
+                Color imageColor = heartImages[lives].color;
+                        imageColor.a = 0f; // Set alpha to 0 (fully transparent)
+                        heartImages[lives].color = imageColor;
+        }
+
+        else if (this.lives == 1)
         {
             Debug.Log("Gameover");
             Destroy(this.gameObject); // Destroy the object when no lives left and health is zero
