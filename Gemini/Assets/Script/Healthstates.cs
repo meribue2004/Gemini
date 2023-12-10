@@ -120,6 +120,7 @@ public class Healthstates : MonoBehaviour
                 hurt = false;
                 died = false;
                 anim.SetBool("hurt", hurt);
+                anim.SetBool("died", died);
                 this.isImmune = false;
             }
         }
