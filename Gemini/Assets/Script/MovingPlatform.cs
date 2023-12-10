@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-    public GameObject[] points;
-    private int CurrentPoint = 0;
+    public GameObject[] points; //array to store the points where the platform will move to or from
+    private int CurrentPoint = 0; //a counter for these points, to track at which point is the platform at
     public float speed = 2f;
-    // Update is called once per frame
+    
     void Update()
     {
-        if (Vector2.Distance(points[CurrentPoint].transform.position, transform.position) < 0.1f)
+        //used to check that the platform had reached the current point, by comparing the distance between the platform and the point
+        if (Vector2.Distance(points[CurrentPoint].transform.position, transform.position) < 0.1f) 
         {
-            CurrentPoint++;
+            CurrentPoint++;//when it reaches we increment CurrentPoint to say at which point we are at
             if (CurrentPoint >= points.Length)
             {
-                CurrentPoint = 0;
+                CurrentPoint = 0;// when it reachs the last point aka "points.Lenght" it will start agian from point 0
             }
         }
         transform.position = Vector2.MoveTowards(transform.position, points[CurrentPoint].transform.position, Time.deltaTime*speed);

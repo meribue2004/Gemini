@@ -6,11 +6,13 @@ public class lever : MonoBehaviour
 {
     public Transform laser;
     public Sprite leverpulled;
+    private bool hasPlayed;
     // Start is called before the first frame update
-    private Animator animator;
+
     void Start()
     {
-        animator = GetComponent<Animator>();
+        hasPlayed = false;
+
     }
 
     // Update is called once per frame
@@ -21,10 +23,16 @@ public class lever : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
        
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && !hasPlayed)
         {
+           
             laser.GetComponent<leverturned>().leverturnedd();
-            animator.SetTrigger("leverpulled");
+                hasPlayed = true;
+
+            Transform objectTransform = transform;
+
+         
+            objectTransform.position = new Vector3(objectTransform.position.x,7 , objectTransform.position.z);
             SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
                 spriteRenderer.sprite = leverpulled;
             

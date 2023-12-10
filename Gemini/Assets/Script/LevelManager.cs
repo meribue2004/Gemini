@@ -19,6 +19,5 @@ public class LevelManager : MonoBehaviour
     public void RespawnPlayer()
     {
         FindObjectOfType<PlayerMovement>().transform.position = CurrentCheckpoint.transform.position;
-        
     }
 }
