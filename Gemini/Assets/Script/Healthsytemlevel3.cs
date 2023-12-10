@@ -7,42 +7,65 @@ public class Healthsytemlevel3 : MonoBehaviour
   
     public int health = 6;
     public int lives = 3;
-
+    float zValue=15;
+    private float startTime;
     private SpriteRenderer spriteRenderer;
+    public float shakeDuration = 1.5f;
+    public float shakeIntensity = 9.7f;
+
+    private Vector3 startPosition;
 
     public bool isImmune = false;
     private float immunityTime = 0f;
     public float immunityDuration = 1.5f;
 
+    private bool canMove = true;
+    private Vector3 originalPosition;
     private Animator anim;
     private bool hurt;
-    private bool died = false;
-
+  
+    public float backwardThrowForce = 3f;
     public Image healthBar; 
     public Image[] heartImages;
+   
     void Start()
     {
         //spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        originalPosition = transform.position;
         healthBar.fillAmount = 0.771f;
+      
     }
 
     void Update()
     {
+        originalPosition = transform.position;
         if (this.isImmune == true)
         {
             immunityTime = immunityTime + Time.deltaTime;
             if (immunityTime >= immunityDuration)
             {
-              
+                canMove = true;
+                FindObjectOfType<jetpackmovment>().setcanmove(canMove);
+
                 this.isImmune = false;
             }
         }
     }
     public void TakeDamage(int damage)
     {
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
         if (!this.isImmune)
         {
+
+            canMove = false;
+            FindObjectOfType<jetpackmovment>().setcanmove(canMove);
+            // betermmy leh wara 3shan may3odesh yetkhebet fy el obs
+        
+            rb.velocity = new Vector2(-backwardThrowForce, rb.velocity.y);
+            StartCoroutine(ShakePlayer());
+            transform.rotation = Quaternion.Euler(0f, 0f, zValue);
+
             hurt = true;
            
             this.health = this.health - damage;
@@ -53,10 +76,15 @@ public class Healthsytemlevel3 : MonoBehaviour
             }
             if (this.lives > 1 && this.health == 0)
             {
-                died = true;
-           
-                FindObjectOfType<LevelManager>().RespawnPlayer();
-                 ResetHealth();
+                
+                WaitAndContinue();
+                IncreaseGravityScale();
+                WaitAndContinue();
+                //FindObjectOfType<LevelManager>().RespawnPlayer();
+                Invoke("ResetGravity", 3);
+
+
+                ResetHealth();
                 this.health = 6;
                 this.lives--;
                 Color imageColor = heartImages[lives].color;
@@ -74,7 +102,13 @@ public class Healthsytemlevel3 : MonoBehaviour
             PlayHitReaction();
         }
     }
-     void ResetHealth()
+    void ResetGravity()
+    {
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.gravityScale = 0f;
+        
+    }
+    void ResetHealth()
     {
         health = 6;
        healthBar.fillAmount = 0.771f ;
@@ -87,13 +121,19 @@ public class Healthsytemlevel3 : MonoBehaviour
     }
     public void Decreaselives()
     {
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
         this.lives--;
 
       
         WaitAndContinue();
         if (this.health > 0 || this.lives > 0)
         {
+            WaitAndContinue();
+            IncreaseGravityScale();
+           
             FindObjectOfType<LevelManager>().RespawnPlayer();
+          Invoke("ResetGravity",3);
+            
         }
 
         else if (this.health == 0 && this.lives == 0)
@@ -109,10 +149,36 @@ public class Healthsytemlevel3 : MonoBehaviour
     }
     IEnumerator WaitAndContinue()
     {
+      
         // Wait for 2 seconds
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(5f);
+        
     }
 
+    private IEnumerator ShakePlayer()
+    {
+        float elapsedTime = 0f;
+
+        while (elapsedTime < shakeDuration)
+        {
+
+            float offsetX = Mathf.Sin(Time.time * 45f) * shakeIntensity;
+            transform.position = originalPosition + new Vector3(offsetX, 0f, 0f);
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.position = originalPosition;
+        canMove = true;  // Re-enable movement after shaking
+    }
+
+    void IncreaseGravityScale()
+    {
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        // Increase the gravity scale by 2
+        rb.gravityScale += 1.0f; 
+    }
 
 }
 

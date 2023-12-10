@@ -16,7 +16,7 @@ public class jetpackmovment : MonoBehaviour
     public KeyCode moveRight;
     public float rotationSpeed = 90f;
     float zValue;
-
+    bool canmove = true;
     void Start()
     {
         isFacingRight = true;
@@ -28,6 +28,17 @@ public class jetpackmovment : MonoBehaviour
     }
 
     void Update()
+    {
+        if (canmove)
+        {
+            movmentcode();
+        }
+    }
+    public void setcanmove(bool I) { 
+        canmove = I;
+    
+    }
+    void movmentcode()
     {
         if (Input.GetKey(arrowUp))
         {
@@ -46,7 +57,7 @@ public class jetpackmovment : MonoBehaviour
         if (Input.GetKey(arrowDown))
         {
             ApplyDownwardForce();
-             zValue = -9 * Mathf.Sin(rotationSpeed * Time.time);
+            zValue = -9 * Mathf.Sin(rotationSpeed * Time.time);
             transform.rotation = Quaternion.Euler(0f, 0f, zValue);
         }
         else
