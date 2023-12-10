@@ -88,10 +88,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; //for health bar ui
 
 public class Healthstates : MonoBehaviour
 {
     public int health = 6;
+
     public int lives = 3;
 
     private SpriteRenderer spriteRenderer;
@@ -104,10 +106,13 @@ public class Healthstates : MonoBehaviour
     private bool hurt;
     private bool died = false;
 
+    public Image healthBar; 
+    public Image[] heartImages;
     void Start()
     {
         //spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+         healthBar.fillAmount = 0.771f;
     }
 
     void Update()
@@ -127,24 +132,35 @@ public class Healthstates : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
+        
         if (!this.isImmune)
         {
             hurt = true;
             anim.SetBool("hurt", hurt);
             this.health = this.health - damage;
+            healthBar.fillAmount -= 0.1285f;
+
+            //debugging
+            Debug.Log("Current Health: " + this.health);
+
+            Debug.Log("Health Ratio: " + this.health/6f);
             if (this.health < 0)
             {
                 this.health = 0;
             }
-            if (this.lives > 0 && this.health == 0)
+            if (this.lives > 1 && this.health == 0)
             {
                 died = true;
                 anim.SetBool("died", died);
                 FindObjectOfType<LevelManager>().RespawnPlayer();
+                ResetHealth();
                 this.health = 6;
                 this.lives--;
+                Color imageColor = heartImages[lives].color;
+                        imageColor.a = 0f; // Set alpha to 0 (fully transparent)
+                        heartImages[lives].color = imageColor;
             }
-            else if (this.health == 0 && this.lives == 0)
+            else if (this.health == 0 && this.lives == 1)
             {
                 Debug.Log("Gameover");
                 Destroy(this.gameObject); // Destroy the object when no lives left and health is zero
@@ -155,7 +171,12 @@ public class Healthstates : MonoBehaviour
             PlayHitReaction();
         }
     }
-
+    //koki reset health 
+   void ResetHealth()
+    {
+        health = 6;
+       healthBar.fillAmount = 0.771f ;
+    }
     void PlayHitReaction()
     {
         this.isImmune = true;
