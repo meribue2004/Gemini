@@ -153,11 +153,10 @@ public class Healthstates : MonoBehaviour
             }
             if (this.lives > 1 && this.health == 0)
             {
-                died = true;
-                anim.SetBool("died", died);
-                FindObjectOfType<LevelManager>().RespawnPlayer();
+                //died = true;
+                StartCoroutine(DieAndRespawn());
                 ResetHealth();
-                this.health = 6;
+              
                 this.lives--;
                 Color imageColor = heartImages[lives].color;
                         imageColor.a = 0f; // Set alpha to 0 (fully transparent)
@@ -177,7 +176,7 @@ public class Healthstates : MonoBehaviour
     //koki reset health 
    void ResetHealth()
     {
-        health = 6;
+      
        healthBar.fillAmount = 0.771f ;
     }
     void PlayHitReaction()
@@ -195,7 +194,8 @@ public class Healthstates : MonoBehaviour
         WaitAndContinue();
         if (this.lives > 1)
         {
-            DieAndRespawn();
+            StartCoroutine(DieAndRespawn());
+            lives--;
             
         }
 
@@ -276,12 +276,12 @@ heartImages[lives ].color = imageColor;
     IEnumerator DieAndRespawn()
     {
         health = 6;
-        lives--;
+      
  
-        died = true;
+        //died = true;
        
         anim.SetTrigger("playanimation");
-
+        Debug.Log("in respawn:");
         yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length); // Wait for the duration of the die animation
 
         FindObjectOfType<LevelManager>().RespawnPlayer();
