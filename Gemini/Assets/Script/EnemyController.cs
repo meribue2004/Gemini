@@ -5,7 +5,16 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public bool isFacingRight = false;
-    public int damage=1;
+    public int damageToPlayer=1;
+    public EnemyHealthBar healthBar;
+    public float HitPoints=3; // if hit 3 times they die
+    public Animator anim;
+
+
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     public void Flip()
     {
@@ -17,8 +26,29 @@ public class EnemyController : MonoBehaviour
     {
         if (collider.tag == "Player")
         {
-            FindObjectOfType<Healthstates>().TakeDamage(damage);
+            FindObjectOfType<Healthstates>().TakeDamage(damageToPlayer);
         }
+    }
+
+    public void TakeHit(float damageTaken)
+    {
+        HitPoints -= damageTaken;
+
+        if (HitPoints <= 0)
+        {
+            StartCoroutine(DestroyAfterAnimation());
+        }
+    }
+
+    IEnumerator DestroyAfterAnimation()
+    {
+        anim.SetBool("die", true);
+
+        Debug.Log("Playing death animation");
+
+        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
+
+        Destroy(gameObject);
     }
 }
 

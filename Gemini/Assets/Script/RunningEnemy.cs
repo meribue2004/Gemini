@@ -7,14 +7,12 @@ public class RunningEnemy : EnemyController
     //variables for moving
     public GameObject[] points;
     private int CurrentPoint = 0;
-    public float speed = 2f;
+    public float speed;
 
-    //shooting related variables
-    public float stoppingDistance = 10.0f;
-    private Animator anim;
+
+    public float stoppingDistance;
     public GameObject player;
     private bool isShooting;
-    private bool isPlayerInFront;
     public GameObject bullet;
     public Transform shootingPoint;
     public float shootingInterval = 2f;
@@ -24,7 +22,6 @@ public class RunningEnemy : EnemyController
     {
         anim = GetComponent<Animator>();
         isShooting = false;
-        isPlayerInFront = false;
         isFacingRight = false;
     }
 
@@ -38,8 +35,11 @@ public class RunningEnemy : EnemyController
 
     void Move()
     {
-        anim.SetBool("Shoot", isShooting);
+        //Runing state
         anim.SetBool("wait", false);
+        anim.SetBool("Shoot", false);
+        anim.SetBool("Run", true);
+
         if (Vector2.Distance(points[CurrentPoint].transform.position, transform.position) < 0.1f)
         {
             Flip();
@@ -55,20 +55,25 @@ public class RunningEnemy : EnemyController
 
     void PlayerClose()
     {
-
-        checkIfFront();
         // Calculate the distance between the enemy and the player
         float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
 
-        if (isPlayerInFront && distanceToPlayer <= stoppingDistance)
+        if (checkIfFront() && distanceToPlayer <= stoppingDistance)
         {
+            //Idel state
             anim.SetBool("wait", true);
+            //anim.SetBool("Shoot", false);
+            anim.SetBool("Run", false);
+
             isShooting = true;
             timeSinceLastShot += Time.deltaTime;
             if (timeSinceLastShot >= shootingInterval)
             {
-                anim.SetBool("Shoot", isShooting);
+                //Shooting state
+                anim.SetBool("Shoot", true);
                 anim.SetBool("wait", false);
+                anim.SetBool("Run", false);
+
                 Invoke("Shoot", 0.5f);
                 Invoke("StopShootingAnimation", 0.7f);
                 timeSinceLastShot = 0f;
@@ -76,26 +81,26 @@ public class RunningEnemy : EnemyController
         }
         else
         {
+            //Running state
             isShooting = false;
-            anim.SetBool("Shoot", isShooting);
+            anim.SetBool("wait", false);
+            anim.SetBool("Shoot", false); 
+            anim.SetBool("Run", true);
         }
     }
-
-    void checkIfFront()
+    
+    //checking if the player is in front of the robot
+    bool checkIfFront()
     {
-        //checking if the player is in front of the robot
         float playerX = player.transform.position.x;
         float enemyX = transform.position.x;
 
         if ((isFacingRight && playerX > enemyX) || (!isFacingRight && playerX < enemyX))
-        {
-            isPlayerInFront = true;
-        }
+            return true;
         else
-        {
-            isPlayerInFront = false;
-        }
+            return false;
     }
+
     private void Shoot()
     {
         Instantiate(bullet, shootingPoint.position, shootingPoint.rotation);
@@ -103,7 +108,9 @@ public class RunningEnemy : EnemyController
 
     private void StopShootingAnimation()
     {
+        //Idel state
         anim.SetBool("wait", true);
         anim.SetBool("Shoot", false);
+        anim.SetBool("Run", false);
     }
 }
