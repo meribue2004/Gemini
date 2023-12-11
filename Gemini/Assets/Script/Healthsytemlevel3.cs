@@ -27,6 +27,7 @@ public class Healthsytemlevel3 : MonoBehaviour
     public float backwardThrowForce = 3f;
     public Image healthBar; 
     public Image[] heartImages;
+    public float heartscollected = 0;
    
     void Start()
     {
@@ -179,7 +180,17 @@ public class Healthsytemlevel3 : MonoBehaviour
         // Increase the gravity scale by 2
         rb.gravityScale += 1.0f; 
     }
-
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Heart")
+        {
+            ResetHealth();
+            Debug.Log(heartscollected);
+            Color imageColor = heartImages[lives].color;
+            imageColor.a = 1f; 
+            heartImages[lives].color = imageColor;
+        }
+    }
 }
 
 

@@ -44,9 +44,13 @@ public class lasershot : MonoBehaviour
             Destroy(gameObject);
 
         }
+        //if (other.tag == "Player")
+        //{
+        //    FindObjectOfType<LevelManager>().RespawnPlayer();
+        //}
 
         // Destroy the bullet when it collides with something
-     
+
     }
 }
 

@@ -5,7 +5,6 @@ using UnityEngine;
 public class Keys : MonoBehaviour
 {
     public int coin_value;
-    public int heart;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +21,6 @@ public class Keys : MonoBehaviour
         if (other.name == "Player")
         {
             FindObjectOfType<Healthstates>().coinsCollected += coin_value;
-            FindObjectOfType<Healthstates>().heartscollected += heart;
         }
         Destroy(this.gameObject);
     }
