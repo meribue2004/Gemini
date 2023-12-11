@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour
     public int damageToPlayer=1;
     public EnemyHealthBar healthBar;
     public float HitPoints=3; // if hit 3 times they die
+    public float MaxHitPoint = 3; // if hit 3 times they die
     public Animator anim;
 
 
@@ -33,6 +34,7 @@ public class EnemyController : MonoBehaviour
     public void TakeHit(float damageTaken)
     {
         HitPoints -= damageTaken;
+        healthBar.setHealth(HitPoints, MaxHitPoint);
 
         if (HitPoints <= 0)
         {
@@ -42,7 +44,7 @@ public class EnemyController : MonoBehaviour
 
     IEnumerator DestroyAfterAnimation()
     {
-        anim.SetBool("die", true);
+        anim.SetTrigger("die");
 
         Debug.Log("Playing death animation");
 

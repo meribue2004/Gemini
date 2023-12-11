@@ -5,26 +5,18 @@ using UnityEngine.UI;
 
 public class EnemyHealthBar : MonoBehaviour
 {
-    public Slider bar;
-    public Color low;
-    public Color High;
-    public Vector3 offset;//the height of the enemy
+    public GameObject bar;
+    public Vector3 offset;
+    public Image HealthBar;
 
     // Update is called once per frame
     void Update()
     {
-        bar.transform.position = Camera.main.WorldToScreenPoint(transform.parent.position+offset); //placing the bar above the enemy at all time
+        bar.transform.position = Camera.main.WorldToScreenPoint(transform.parent.position + offset); //placing the bar above the enemy at all time
     }
 
-    public void SetHealth(float currentHealth, float maxHealth)
+    public void setHealth(float currenthealth, float maxHealth)
     {
-
-        //value
-        bar.value = currentHealth;
-        bar.maxValue = maxHealth;
-
-
-        //colors
-        bar.fillRect.GetComponentInChildren<Image>().color = Color.Lerp(low, High, bar.normalizedValue);
+        HealthBar.fillAmount = currenthealth / maxHealth;
     }
 }
