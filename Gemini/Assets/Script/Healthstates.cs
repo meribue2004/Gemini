@@ -187,18 +187,21 @@ public class Healthstates : MonoBehaviour
     public void Decreaselives()
     {
         this.lives--;
-
+        Color imageColor = heartImages[lives].color;
+                        imageColor.a = 0f; // Set alpha to 0 (fully transparent)
+                        heartImages[lives].color = imageColor;
         
         WaitAndContinue();
-        if (this.health > 0 || this.lives > 0)
+        if (this.lives > 1)
         {
             DieAndRespawn();
             
         }
 
-        else if (this.health == 0 && this.lives == 1)
+        else if ( this.lives < 1)
         {
             GameOver();// Destroy the object when no lives left and health is zero
+            Destroy(this.gameObject);
         }
 
         Debug.Log("Player health:" + this.health.ToString());
