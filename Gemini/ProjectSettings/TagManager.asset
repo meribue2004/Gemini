@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - Score
   - Heart
+  - Time
   layers:
   - Default
   - TransparentFX

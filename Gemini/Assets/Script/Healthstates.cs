@@ -111,6 +111,7 @@ public class Healthstates : MonoBehaviour
     public Image[] heartImages;
 
     public int coinsCollected = 0;
+    public float timecollected = 0;
     public float heartscollected = 0;
     public TextMeshProUGUI scoreText;
     void Start()
@@ -259,6 +260,11 @@ public class Healthstates : MonoBehaviour
         {
             heartscollected += 0.771f;
             Debug.Log(heartscollected);
+        }
+        if(col.gameObject.tag=="Time")
+        {
+            timecollected += 30;
+            Debug.Log(timecollected);
         }
     }
 }
