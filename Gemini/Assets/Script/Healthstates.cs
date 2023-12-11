@@ -130,7 +130,7 @@ public class Healthstates : MonoBehaviour
                 hurt = false;
                 died = false;
                 anim.SetBool("hurt", hurt);
-                anim.SetBool("died", died);
+             
                 this.isImmune = false;
             }
         }
@@ -153,8 +153,7 @@ public class Healthstates : MonoBehaviour
             if (this.lives > 1 && this.health == 0)
             {
                 died = true;
-                anim.SetBool("died", died);
-                FindObjectOfType<LevelManager>().RespawnPlayer();
+                DieAndRespawn();
                 ResetHealth();
                 this.health = 6;
                 this.lives--;
@@ -188,17 +187,17 @@ public class Healthstates : MonoBehaviour
     {
         this.lives--;
 
-        anim.SetBool("died", died);
+        
         WaitAndContinue();
         if (this.health > 0 || this.lives > 0)
         {
-            FindObjectOfType<LevelManager>().RespawnPlayer();
+            DieAndRespawn();
+            
         }
 
         else if (this.health == 0 && this.lives == 1)
         {
-            Debug.Log("Gameover");
-            Destroy(this.gameObject); // Destroy the object when no lives left and health is zero
+            GameOver();// Destroy the object when no lives left and health is zero
         }
 
         Debug.Log("Player health:" + this.health.ToString());
@@ -225,10 +224,9 @@ public class Healthstates : MonoBehaviour
                         heartImages[lives].color = imageColor;
         }
 
-        else if (this.lives == 1)
+        else if (this.lives <1)
         {
-            Debug.Log("Gameover");
-            Destroy(this.gameObject); // Destroy the object when no lives left and health is zero
+            GameOver(); // Destroy the object when no lives left and health is zero
         }
 
         Debug.Log("Player health:" + this.health.ToString());
@@ -260,5 +258,25 @@ public class Healthstates : MonoBehaviour
             heartscollected += 0.771f;
             Debug.Log(heartscollected);
         }
+    }
+    IEnumerator DieAndRespawn()
+    {
+        health = 6;
+        lives--;
+ 
+        died = true;
+       
+        anim.SetTrigger("playanimation");
+
+        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length); // Wait for the duration of the die animation
+
+        FindObjectOfType<LevelManager>().RespawnPlayer();
+        anim.SetTrigger("stopdinganimation");
+    }
+
+    void GameOver()
+    {
+        Debug.Log("Gameover");
+        Destroy(gameObject); // Destroy the object when no lives left and health is zero
     }
 }

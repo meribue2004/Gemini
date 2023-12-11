@@ -25,6 +25,7 @@ public class Securitycamera : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             player.GetComponent<Healthstates>().Decreaselives();
+            FindObjectOfType<LevelManager>().RespawnPlayer();
         }
     }
     void RotateCamera() {

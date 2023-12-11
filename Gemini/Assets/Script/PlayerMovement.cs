@@ -116,6 +116,10 @@ public class PlayerMovement : MonoBehaviour
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
     }
 
+    public bool getgrounded()
+    {
+        return grounded;
+    }
     public void Shoot()
     {
         Instantiate(bullet, firepoint.position, firepoint.rotation);
