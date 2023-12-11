@@ -42,4 +42,13 @@ public class Timer : MonoBehaviour
         // Update the fill amount of the time bar UI
         timeBarImage.fillAmount = fillAmount;
     }
+
+    // Function to increase the player's total time
+    //public void IncreaseTotalTime(float timeToAdd)
+    //{
+    //    totalTime += timeToAdd;
+    //    Debug.Log("Player's Total Time: " + totalTime); // Optional: Display total time in the console
+    //    // You can update a UI element to display the updated total time here if needed
+    //    //timeBarImage.fillAmount = totalTime;
+    //}
 }
