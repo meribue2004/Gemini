@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public float totalTime = 10f;  // Total time in seconds
-    private float currentTime;     // Current time left
+    public float currentTime;     // Current time left
     public Image timeBarImage;     // Reference to the UI Image representing the time bar
 
     void Start()

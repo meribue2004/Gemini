@@ -256,12 +256,12 @@ public class Healthstates : MonoBehaviour
         }
         if (col.gameObject.tag == "Heart")
         {
-            heartscollected += 0.771f;
+            ResetHealth();
             Debug.Log(heartscollected);
         }
         if(col.gameObject.tag=="Time")
         {
-            timecollected += 30;
+           FindObjectOfType<Timer>().currentTime+=30;
             Debug.Log(timecollected);
         }
     }
