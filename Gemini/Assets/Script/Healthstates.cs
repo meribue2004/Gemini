@@ -136,7 +136,7 @@ public class Healthstates : MonoBehaviour
             }
         }
     }
-    public void TakeDamage(int damage)
+   public void TakeDamage(int damage)
     {
         
         if (!this.isImmune)
@@ -154,7 +154,8 @@ public class Healthstates : MonoBehaviour
             if (this.lives > 1 && this.health == 0)
             {
                 died = true;
-                StartCoroutine(DieAndRespawn());
+                anim.SetBool("died", died);
+                FindObjectOfType<LevelManager>().RespawnPlayer();
                 ResetHealth();
                 this.health = 6;
                 this.lives--;
