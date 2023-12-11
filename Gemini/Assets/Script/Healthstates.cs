@@ -211,10 +211,14 @@ public class Healthstates : MonoBehaviour
     }
     //koki timer 
      public void DecreaselivesTimer()
-    {
-        
+    { 
+         this.lives--;
+        // Ensure that lives - 1 is a valid index for the heartImages array
+Color imageColor = heartImages[lives ].color;
+imageColor.a = 0f; // Set alpha to 0 (fully transparent)
+heartImages[lives ].color = imageColor;
        
-        if ( this.lives > 1)
+        if ( this.lives >=1)
         {
             died = true;
                 anim.SetBool("died", died);
@@ -222,15 +226,15 @@ public class Healthstates : MonoBehaviour
                 FindObjectOfType<LevelManager>().RespawnPlayer();
                 ResetHealth();
                 this.health = 6;
-                this.lives--;
-                Color imageColor = heartImages[lives].color;
-                        imageColor.a = 0f; // Set alpha to 0 (fully transparent)
-                        heartImages[lives].color = imageColor;
+             
+                
+
         }
 
         else if (this.lives <1)
         {
             GameOver(); // Destroy the object when no lives left and health is zero
+             Destroy(this.gameObject);
         }
 
         Debug.Log("Player health:" + this.health.ToString());
