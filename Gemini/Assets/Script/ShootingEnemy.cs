@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ShootingEnemy : EnemyController
 {
-    private Animator anim;
     private PlayerMovement player;
     public GameObject bullet;
     public Transform shootingPoint;
@@ -13,8 +12,8 @@ public class ShootingEnemy : EnemyController
 
     void Start()
     {
-        player = FindObjectOfType<PlayerMovement>();
         anim = GetComponent<Animator>();
+        player = FindObjectOfType<PlayerMovement>();
     }
 
     private void Update()
@@ -48,5 +47,7 @@ public class ShootingEnemy : EnemyController
     {
         anim.SetBool("shooting", false);
     }
+
+
 }
 

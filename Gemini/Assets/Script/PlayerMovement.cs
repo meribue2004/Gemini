@@ -17,6 +17,9 @@ public class PlayerMovement : MonoBehaviour
     private bool grounded;
     private bool rolling;
     public bool playerTouchedObject = false;
+    public KeyCode ShootKey;
+    public Transform firepoint;
+    public GameObject bullet;
     private Animator anim;
 
     void Start()
@@ -53,7 +56,9 @@ public class PlayerMovement : MonoBehaviour
         {
             Jump();
         }
+
         anim.SetBool("grounded", grounded);
+
         if (Input.GetKey(L))
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
@@ -63,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
                 isFacingRight = false;
             }
         }
+
         if (Input.GetKey(R))
 
         {
@@ -74,31 +80,44 @@ public class PlayerMovement : MonoBehaviour
                 isFacingRight = true;
             }
         }
+
         if (Input.GetKeyDown(arrowdown))
         {
             rolling= true;  
         }
-        if (Input.GetKeyUp(arrowdown)){
+
+        if (Input.GetKeyUp(arrowdown))
+        {
             rolling = false;
+        }
+
+        if (Input.GetKeyDown(ShootKey))
+        {
+            Shoot();
         }
       
         anim.SetBool("rolling", rolling);
 
         anim.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
-
     }
    
     void flip()
     {
         transform.localScale = new Vector3(-(transform.localScale.x), transform.localScale.y, transform.localScale.z);
     }
+
     void Jump()
     {
         GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpHeight);
     }
+
     void FixedUpdate()
     {
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
+    }
 
+    public void Shoot()
+    {
+        Instantiate(bullet, firepoint.position, firepoint.rotation);
     }
 }

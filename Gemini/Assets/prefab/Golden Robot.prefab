@@ -178,7 +178,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFacingRight: 0
-  damage: 1
+  damageToPlayer: 1
+  healthBar: {fileID: 0}
+  HitPoints: 3
+  anim: {fileID: 1994181474}
   bullet: {fileID: 6589944037769076729, guid: bcc5621b4a2f5b14ea1e14db9d329741, type: 3}
   shootingPoint: {fileID: 1991760284}
   shootingInterval: 5
