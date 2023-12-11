@@ -111,7 +111,7 @@ public class Healthstates : MonoBehaviour
     public Image[] heartImages;
 
     public int coinsCollected = 0;
-    //public int heartscollected = 0;
+    public float heartscollected = 0;
     public TextMeshProUGUI scoreText;
     void Start()
     {
@@ -255,12 +255,10 @@ public class Healthstates : MonoBehaviour
 
             scoreText.text = coinsCollected.ToString();
         }
-        //if (col.gameObject.tag == "Heart")
-        //{
-        //    heartscollected++;
-        //    Debug.Log(heartscollected);
-
-        //    hearttext.text = heartscollected.ToString();
-        //}
+        if (col.gameObject.tag == "Heart")
+        {
+            heartscollected += 0.771f;
+            Debug.Log(heartscollected);
+        }
     }
 }

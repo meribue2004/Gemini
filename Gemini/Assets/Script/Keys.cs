@@ -22,7 +22,7 @@ public class Keys : MonoBehaviour
         if (other.name == "Player")
         {
             FindObjectOfType<Healthstates>().coinsCollected += coin_value;
-            //FindObjectOfType<Healthstates>().heartscollected += heart;
+            FindObjectOfType<Healthstates>().heartscollected += heart;
         }
         Destroy(this.gameObject);
     }

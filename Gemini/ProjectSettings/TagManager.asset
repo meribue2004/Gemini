@@ -9,6 +9,7 @@ TagManager:
   - treadmill
   - Enemy
   - Score
+  - Heart
   layers:
   - Default
   - TransparentFX
