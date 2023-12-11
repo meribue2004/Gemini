@@ -6030,6 +6030,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 478261732649731843, guid: 59330e224d6bcc447ab214749e9c3505, type: 3}
+      propertyPath: lev4and5
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 478261732649731843, guid: 59330e224d6bcc447ab214749e9c3505, type: 3}
       propertyPath: moveSpeed
       value: 5
       objectReference: {fileID: 0}
