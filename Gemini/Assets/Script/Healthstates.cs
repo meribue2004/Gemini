@@ -154,7 +154,7 @@ public class Healthstates : MonoBehaviour
             if (this.lives > 1 && this.health == 0)
             {
                 died = true;
-                DieAndRespawn();
+                StartCoroutine(DieAndRespawn());
                 ResetHealth();
                 this.health = 6;
                 this.lives--;
