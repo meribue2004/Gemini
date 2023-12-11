@@ -21,11 +21,13 @@ public class PlayerMovement : MonoBehaviour
     public Transform firepoint;
     public GameObject bullet;
     private Animator anim;
+    public bool lev4and5;
 
     void Start()
     {
         isFacingRight = true;
         anim = GetComponent<Animator>();
+        anim.SetBool("levelgun", lev4and5);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
