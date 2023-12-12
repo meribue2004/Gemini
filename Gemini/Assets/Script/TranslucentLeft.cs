@@ -9,8 +9,8 @@ public class TranslucentLeft : MonoBehaviour
     public float translucentAlpha = 0.2f; // Set the translucent alpha value
     private Color translucentColor; // Color in translucent state
     private float timer = 0f;
-    public float translucentDuration = 5f; // Duration of the translucent state 
-    public float opaqueDuration = 5f; // Duration of the opaque state
+    public float translucentDuration = 3f; // Duration of the translucent state 
+    public float opaqueDuration = 3f; // Duration of the opaque state
     private bool isFirstTime = true;
 
     private void Start()
@@ -19,7 +19,7 @@ public class TranslucentLeft : MonoBehaviour
         originalColor = renderer.color;
         boxCollider = GetComponent<BoxCollider2D>();
         translucentColor = new Color(originalColor.r, originalColor.g, originalColor.b, translucentAlpha);
-        Invoke("TurnTranslucent", 5f);
+        Invoke("TurnTranslucent", 3f);
     }
 
     private void FixedUpdate()

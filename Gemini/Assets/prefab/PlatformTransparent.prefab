@@ -125,5 +125,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   translucentAlpha: 0.2
-  translucentDuration: 5
-  opaqueDuration: 10
+  translucentDuration: 3
+  opaqueDuration: 3

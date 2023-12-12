@@ -27,7 +27,7 @@ public class Stomper : MonoBehaviour
     IEnumerator MoveUpDown() { 
    
 
-while (true)
+    while (true)
         {
             
             float newY = startPos.y + amplitude * Mathf.Sin(frequency * Time.time);
