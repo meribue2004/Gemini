@@ -15,7 +15,7 @@ public class electricshock : MonoBehaviour
     public float flickerDuration = 1.0f;  
     public float flickerInterval = 0.7f;   
 
-    private void Start()
+    void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         collider2D = GetComponent<Collider2D>();

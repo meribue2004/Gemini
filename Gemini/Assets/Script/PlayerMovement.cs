@@ -29,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
         anim.SetBool("levelgun", lev4and5);
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         // Check if the colliding object has a specific tag 
         if (collision.gameObject.CompareTag("slant"))
@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    public void OnCollisionExit2D(Collision2D collision)
     {
         // Reset the boolean variable when the player leaves the object
         if (collision.gameObject.CompareTag("slant"))

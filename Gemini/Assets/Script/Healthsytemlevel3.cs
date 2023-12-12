@@ -81,7 +81,7 @@ public class Healthsytemlevel3 : MonoBehaviour
                 WaitAndContinue();
                 IncreaseGravityScale();
                 WaitAndContinue();
-                //FindObjectOfType<LevelManager>().RespawnPlayer();
+                FindObjectOfType<LevelManagerlevel3>().RespawnPlayer();
                 Invoke("ResetGravity", 3);
 
 
@@ -132,7 +132,7 @@ public class Healthsytemlevel3 : MonoBehaviour
             WaitAndContinue();
             IncreaseGravityScale();
            
-            FindObjectOfType<LevelManager>().RespawnPlayer();
+            FindObjectOfType<LevelManagerlevel3>().RespawnPlayer();
           Invoke("ResetGravity",3);
             
         }
@@ -187,6 +187,7 @@ public class Healthsytemlevel3 : MonoBehaviour
             ResetHealth();
             Debug.Log(heartscollected);
             Color imageColor = heartImages[lives].color;
+            Debug.Log(imageColor);
             imageColor.a = 1f; 
             heartImages[lives].color = imageColor;
         }
