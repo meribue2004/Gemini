@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 7558135332297758923}
   - component: {fileID: 7558135332297758922}
   - component: {fileID: 7558135332297758927}
+  - component: {fileID: 1154429190893411934}
   m_Layer: 0
   m_Name: Drone
   m_TagString: Enemy
@@ -186,3 +187,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1154429190893411934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7558135332297758919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be206dcf420ee0c4bb628099472e8634, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isFacingRight: 0
+  damageToPlayer: 1
+  healthBar: {fileID: 0}
+  HitPoints: 3
+  MaxHitPoint: 3
+  anim: {fileID: 7558135332297758927}
+  bullet: {fileID: 0}
+  shootingPoint: {fileID: 7558135331521498576}
+  points: []
+  speed: 0
+  maxSpeed: 0
+  bulletpos: {fileID: 0}
+  timer: 0

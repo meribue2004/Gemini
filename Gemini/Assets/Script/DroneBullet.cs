@@ -38,7 +38,7 @@ public class DroneBullet : MonoBehaviour
             Destroy(gameObject);
 
         }
-        else if (collider.CompareTag("ground"))
+        else if (collider.CompareTag("Ground"))
         {
             Destroy(gameObject);
         }

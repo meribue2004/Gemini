@@ -5,11 +5,14 @@ using UnityEngine;
 public class MainComputer : EnemyController
 {
 
+    public Sprite HalfHealth;
+    public Sprite Death;
+    private SpriteRenderer sr;
     public float shootingInterval = 5f;
     private float timeSinceLastShot = 0f;
     void Start()
     {
-       
+        sr = GetComponent<SpriteRenderer>();
     }
 
     void Update()
@@ -22,13 +25,16 @@ public class MainComputer : EnemyController
             timeSinceLastShot = 0f;
         }
 
-        HalfHealth();
+        Health();
     }
 
-    void HalfHealth()
+    void Health()
     {
         if ((MaxHitPoint / 2) == HitPoints)
-            anim.SetBool("halfHealth", true);
-     
-}
+            sr.sprite = HalfHealth;
+        if (HitPoints==0)
+            sr.sprite = Death;
+
+
+    }
 }

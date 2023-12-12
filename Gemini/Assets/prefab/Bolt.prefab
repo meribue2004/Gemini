@@ -137,8 +137,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFacingRight: 0
-  bulletSpeed: 5
-  damage: 1
+  bulletSpeed: 10
+  damage: 2
 --- !u!50 &3340317700929826981
 Rigidbody2D:
   serializedVersion: 4
