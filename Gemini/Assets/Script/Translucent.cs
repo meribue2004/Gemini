@@ -9,8 +9,8 @@ public class Translucent : MonoBehaviour
     public float translucentAlpha = 0.2f; // Set the translucent alpha value
     private Color translucentColor; // Color in translucent state
     private float timer = 0f;
-    public float translucentDuration = 5f; // Duration of the translucent state 
-    public float opaqueDuration = 5f; // Duration of the opaque state
+    public float translucentDuration = 3f; // Duration of the translucent state 
+    public float opaqueDuration = 3f; // Duration of the opaque state
 
     private void Start()
     {
