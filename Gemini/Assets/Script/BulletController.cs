@@ -9,6 +9,7 @@ public class BulletController : MonoBehaviour
     private Animator anim;
     public int damage;
     private Transform player;
+    private bool GotHit = false;
 
     private void Start()
     {
@@ -19,21 +20,34 @@ public class BulletController : MonoBehaviour
 
     void Update()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed, GetComponent<Rigidbody2D>().velocity.y);
+        if (!GotHit)
+        {
+            GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed, GetComponent<Rigidbody2D>().velocity.y);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (GotHit) return; // Ignore collisions if the bullet has already hit something
+
         if (collision.tag == "Player")
         {
+            StopBullet();
             FindObjectOfType<Healthstates>().TakeDamage(damage);
-            StartCoroutine(DestroyAfterAnimation());
         }
         else if (collision.tag == "Ground")
         {
-            StartCoroutine(DestroyAfterAnimation());
+            StopBullet();
         }
     }
+
+    private void StopBullet()
+    {
+        GotHit = true;
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero; // Stop the bullet
+        StartCoroutine(DestroyAfterAnimation());
+    }
+
     IEnumerator DestroyAfterAnimation()
     {
         anim.SetBool("hit", true);

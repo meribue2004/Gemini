@@ -13,8 +13,6 @@ public class RunningEnemy : EnemyController
     public float stoppingDistance;
     public GameObject player;
     private bool isShooting;
-    public GameObject bullet;
-    public Transform shootingPoint;
     public float shootingInterval = 2f;
     private float timeSinceLastShot = 0f;
 
@@ -38,7 +36,6 @@ public class RunningEnemy : EnemyController
         //Runing state
         anim.SetBool("wait", false);
         anim.SetBool("Shoot", false);
-        anim.SetBool("Run", true);
 
         if (Vector2.Distance(points[CurrentPoint].transform.position, transform.position) < 0.1f)
         {
@@ -62,8 +59,6 @@ public class RunningEnemy : EnemyController
         {
             //Idel state
             anim.SetBool("wait", true);
-            //anim.SetBool("Shoot", false);
-            anim.SetBool("Run", false);
 
             isShooting = true;
             timeSinceLastShot += Time.deltaTime;
@@ -72,7 +67,6 @@ public class RunningEnemy : EnemyController
                 //Shooting state
                 anim.SetBool("Shoot", true);
                 anim.SetBool("wait", false);
-                anim.SetBool("Run", false);
 
                 Invoke("Shoot", 0.5f);
                 Invoke("StopShootingAnimation", 0.7f);
@@ -85,7 +79,6 @@ public class RunningEnemy : EnemyController
             isShooting = false;
             anim.SetBool("wait", false);
             anim.SetBool("Shoot", false); 
-            anim.SetBool("Run", true);
         }
     }
     
@@ -101,16 +94,11 @@ public class RunningEnemy : EnemyController
             return false;
     }
 
-    private void Shoot()
-    {
-        Instantiate(bullet, shootingPoint.position, shootingPoint.rotation);
-    }
 
     private void StopShootingAnimation()
     {
         //Idel state
         anim.SetBool("wait", true);
         anim.SetBool("Shoot", false);
-        anim.SetBool("Run", false);
     }
 }

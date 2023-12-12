@@ -5,8 +5,6 @@ using UnityEngine;
 public class ShootingEnemy : EnemyController
 {
     private PlayerMovement player;
-    public GameObject bullet;
-    public Transform shootingPoint;
     public float shootingInterval = 5f;
     private float timeSinceLastShot = 0f;
 
@@ -36,11 +34,6 @@ public class ShootingEnemy : EnemyController
         {
             Flip();
         }
-    }
-
-    private void Shoot()
-    {
-        Instantiate(bullet, shootingPoint.position, shootingPoint.rotation);
     }
 
     private void StopShootingAnimation()
