@@ -19,7 +19,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource keyCollectEfx;
     public AudioSource healthkitEfx;
     public AudioSource timekitEfx;
-    public AudioSource dieEfx;
+    //public AudioSource dieEfx;
     public AudioSource ambient;
     public AudioSource dialoguemememew;
     public AudioSource dialogueSara;
