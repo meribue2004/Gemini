@@ -54,7 +54,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(Spacebar) && grounded)
+        if(!PauseMenu.isPaused){
+            if (Input.GetKeyDown(Spacebar) && grounded)
         {
             Jump();
         }
@@ -101,6 +102,7 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("rolling", rolling);
 
         anim.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
+        }
     }
    
     void flip()
