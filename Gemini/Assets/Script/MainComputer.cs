@@ -31,10 +31,13 @@ public class MainComputer : EnemyController
     void Health()
     {
         if ((MaxHitPoint / 2) == HitPoints)
+        {
+            Debug.Log("half health");
             sr.sprite = HalfHealth;
-        if (HitPoints==0)
+        }
+        if (HitPoints == 0)
+        {
             sr.sprite = Death;
-
-
+        }
     }
 }
