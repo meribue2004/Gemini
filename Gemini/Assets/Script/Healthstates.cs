@@ -195,7 +195,7 @@ public class Healthstates : MonoBehaviour
         if (this.lives > 1)
         {
             StartCoroutine(DieAndRespawn());
-            lives--;
+            
             
         }
 
