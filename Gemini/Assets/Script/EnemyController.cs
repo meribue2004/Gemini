@@ -10,6 +10,8 @@ public class EnemyController : MonoBehaviour
     public float HitPoints=3; // if hit 3 times they die
     public float MaxHitPoint = 3; // if hit 3 times they die
     public Animator anim;
+    public GameObject bullet;
+    public Transform shootingPoint;
 
 
     void Start()
@@ -51,6 +53,11 @@ public class EnemyController : MonoBehaviour
         yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
 
         Destroy(gameObject);
+    }
+
+    public void Shoot()
+    {
+        Instantiate(bullet, shootingPoint.position, shootingPoint.rotation);
     }
 }
 
