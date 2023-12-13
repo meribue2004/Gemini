@@ -13,6 +13,6 @@ public class Bulletswitchsides : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        FindObjectOfType<EnemyController>().setside(true);
     }
 }

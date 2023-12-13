@@ -10,7 +10,7 @@ public class BulletController : MonoBehaviour
     public int damage;
     private Transform player;
     private bool GotHit = false;
-
+    private bool onplayerside=false;
     private void Start()
     {
         anim = GetComponent<Animator>();
@@ -20,6 +20,8 @@ public class BulletController : MonoBehaviour
 
     void Update()
     {
+       onplayerside= FindObjectOfType<EnemyController>().returnside();
+
         if (!GotHit)
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed, GetComponent<Rigidbody2D>().velocity.y);
@@ -30,12 +32,12 @@ public class BulletController : MonoBehaviour
     {
         if (GotHit) return; // Ignore collisions if the bullet has already hit something
 
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && !(onplayerside))
         {
             StopBullet();
             FindObjectOfType<Healthstates>().TakeDamage(damage);
         }
-        else if (collision.tag == "Enemy")
+        else if (collision.tag == "Enemy" && onplayerside)
         {
             StopBullet();
             FindObjectOfType<EnemyController>().TakeHit(damage);

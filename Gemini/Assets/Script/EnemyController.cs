@@ -39,6 +39,7 @@ public class EnemyController : MonoBehaviour
         }
     }
     public bool returnside() { return onplayersside; }
+    public void setside(bool side) {  onplayersside = side; }
     public void TakeHit(float damageTaken)
     {
         HitPoints -= damageTaken;

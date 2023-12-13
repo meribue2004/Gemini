@@ -18,12 +18,15 @@ public class PlayerMovement : MonoBehaviour
     private bool rolling;
     public bool playerTouchedObject = false;
     public KeyCode ShootKey;
+    public KeyCode Shottswitch;
     public Transform firepoint;
     public GameObject bullet;
+    public GameObject bulletsw;
     private Animator anim;
     public bool lev4and5;
     public float shootingInterval = 2f;
     private float timeSinceLastShot = 2f;
+    bool canShoot=true;
 
     void Start()
     {
@@ -63,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
 
         timeSinceLastShot += Time.deltaTime;
       
-     
+
         if (!PauseMenu.isPaused){
             if (Input.GetKeyDown(Spacebar) && grounded)
         {
@@ -104,20 +107,27 @@ public class PlayerMovement : MonoBehaviour
             rolling = false;
         }
 
-        if (Input.GetKeyDown(ShootKey))
-        {
-                if (timeSinceLastShot >= shootingInterval)
-                {
+            //if (Input.GetKeyDown(ShootKey))
+            //{
+            //        if (timeSinceLastShot >= shootingInterval)
+            //        {
 
-                    Invoke("Shoot", 0.5f);
-                    anim.SetTrigger("shootwhiles");
-                    
-                    Invoke("stopshoot", 0.7f);
-                    timeSinceLastShot = 0f;
-                }
+            //            Invoke("Shoot", 0.5f);
+            //            anim.SetTrigger("shootwhiles");
+
+            //            Invoke("stopshoot", 0.7f);
+            //            timeSinceLastShot = 0f;
+            //        }
+            //    }
+            if (Input.GetKeyDown(ShootKey) && canShoot)
+            {
+                anim.SetTrigger("shootwhiles");
+                Invoke("Shoot", 0.7f); 
+
+                Invoke("stopshoot", 0.7f);
+                StartCoroutine(ResetShootingInterval());
             }
-      
-        anim.SetBool("rolling", rolling);
+            anim.SetBool("rolling", rolling);
 
         anim.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
         }
@@ -145,5 +155,15 @@ public class PlayerMovement : MonoBehaviour
     public void Shoot()
     {
         Instantiate(bullet, firepoint.position, firepoint.rotation);
+    }
+    public void Shootswitchside()
+    {
+        Instantiate(bulletsw, firepoint.position, firepoint.rotation);
+    }
+    IEnumerator ResetShootingInterval()
+    {
+        canShoot = false;
+        yield return new WaitForSeconds(shootingInterval);
+        canShoot = true;
     }
 }
