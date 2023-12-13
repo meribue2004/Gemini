@@ -19,11 +19,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource keyCollectEfx;
     public AudioSource healthkitEfx;
     public AudioSource timekitEfx;
-<<<<<<< Updated upstream
     //public AudioSource dieEfx;
-=======
-  
->>>>>>> Stashed changes
     public AudioSource ambient;
     public AudioSource dialoguemememew;
     public AudioSource dialogueSara;
