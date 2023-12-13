@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        FindObjectOfType<AudioManager>().Play("moog");
         isFacingRight = true;
         anim = GetComponent<Animator>();
         anim.SetBool("levelgun", lev4and5);

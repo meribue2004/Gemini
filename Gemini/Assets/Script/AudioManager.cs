@@ -27,7 +27,7 @@ public class AudioManager : MonoBehaviour
 
 
 
-    public static AudioManager instance = null; // allow other scripts to call functions from AudioManager
+    // public static AudioManager instance = null; // allow other scripts to call functions from AudioManager
 
     
 
@@ -42,19 +42,19 @@ public class AudioManager : MonoBehaviour
              s.source.loop=s.loop;
         }
         // Check if there is already an instance of AudioManager
-        if (instance == null)
-        {
-            // If not, set it to this
-            instance = this;
-        }
-        else if (instance != this)
-        {
-            // If another instance already exists, destroy this one
-            Destroy(gameObject);
-        }
+        // if (instance == null)
+        // {
+        //     // If not, set it to this
+        //     instance = this;
+        // }
+        // else if (instance != this)
+        // {
+        //     // If another instance already exists, destroy this one
+        //     Destroy(gameObject);
+        // }
 
-        // Make AudioManager persist across scenes
-        DontDestroyOnLoad(gameObject);
+        // // Make AudioManager persist across scenes
+        // DontDestroyOnLoad(gameObject);
     }
 
     // play sounds
