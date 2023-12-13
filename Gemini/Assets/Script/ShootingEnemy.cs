@@ -16,19 +16,22 @@ public class ShootingEnemy : EnemyController
         player = FindObjectOfType<PlayerMovement>();
     }
 
-    public bool returnside() { return onplayers; }
+    public bool returnside() 
+    { 
+        return onplayers; 
+    }
+
     public void setside(bool side) {
         onplayers = side;
         Debug.Log("Enemy got switched");
-
     }
-    public void setside1(ShootingEnemy side)
-    {
-        enemyController = side;
-        onplayers= side.returnside();
-        Debug.Log("Enemy got switched");
 
-    }
+    //public void setside1(ShootingEnemy side)
+    //{
+    //    enemyController = side;
+    //    onplayers= side.returnside();
+    //    Debug.Log("Enemy got switched");
+    //}
     public ShootingEnemy returnside1() { return enemyController; }
     private void Update()
     {

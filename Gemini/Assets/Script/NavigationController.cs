@@ -19,4 +19,12 @@ public class NavigationController : MonoBehaviour
      Time.timeScale = 1f; // Resume time
       Application.LoadLevel(0);
     }
+    public void GoToLvl1(){
+     
+      Application.LoadLevel(1);
+    }
+    public void QuitGame(){
+     Application.Quit();
+    }
 }
+

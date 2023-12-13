@@ -7,12 +7,13 @@ public class lever : MonoBehaviour
     public Transform laser;
     public Sprite leverpulled;
     private bool hasPlayed;
-    // Start is called before the first frame update
     public bool leverl3=true;
+    private LockedDoor Door;
+
     void Start()
     {
         hasPlayed = false;
-
+        Door = FindObjectOfType<LockedDoor>();
     }
 
     // Update is called once per frame
@@ -22,21 +23,25 @@ public class lever : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-       
-        if (collision.gameObject.tag == "Player" && !hasPlayed)
+       if (collision.gameObject.tag == "Player" && !hasPlayed)
         {
-           
-            laser.GetComponent<leverturned>().leverturnedd();
-                hasPlayed = true;
+            hasPlayed = true;
+            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteRenderer.sprite = leverpulled;
 
-            Transform objectTransform = transform;
-
-            if (leverl3)
-            {
+            if (leverl3) 
+            { 
+                laser.GetComponent<leverturned>().leverturnedd();
+                
+                Transform objectTransform = transform;
                 objectTransform.position = new Vector3(objectTransform.position.x, 7, objectTransform.position.z);
             }
-            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-                spriteRenderer.sprite = leverpulled;
+            else
+            {
+                Door.OpenDoor();
+            }
+
+            
             
         }
     }

@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class Bulletswitchsides : MonoBehaviour
 {
-  
-
-    // Update is called once per frame
- 
-
     public float speed;
     ShootingEnemy enemyController;
 

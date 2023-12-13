@@ -9,21 +9,23 @@ public class BulletController : MonoBehaviour
     private Animator anim;
     public int damage;
     private Transform player;
-    private bool GotHit = false;
-    public bool onplayerside=false;
+    private bool GotHit;
+    public bool onplayerside;
     ShootingEnemy enemyController;
     private ShootingEnemy shootingEnemy;
+
     private void Start()
     {
+        onplayerside = false;
+        GotHit = false;
         anim = GetComponent<Animator>();
         player = FindObjectOfType<PlayerMovement>().transform;
-     
         SetInitialDirection();
     }
 
     void Update()
     {
-      
+      //bullet did not collide with anything
         if (!GotHit)
         {
             onplayerside = shootingEnemy.returnside();
@@ -79,14 +81,18 @@ public class BulletController : MonoBehaviour
         isFacingRight = !isFacingRight;
         transform.localScale = new Vector3(-(transform.localScale.x), transform.localScale.y, transform.localScale.z);
     }
+
+    //sets the direction of the bullet based on the players direction
     private void SetInitialDirection()
     {
         if (player.position.x > transform.position.x)
         {
+            //player to the right, move in positive direction ->
             bulletSpeed = Mathf.Abs(bulletSpeed);
         }
         else
         {
+            //player to the left, move in negative direction <-
             bulletSpeed = -Mathf.Abs(bulletSpeed);
         }
 
