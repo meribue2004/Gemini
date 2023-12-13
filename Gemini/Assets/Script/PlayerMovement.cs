@@ -25,8 +25,11 @@ public class PlayerMovement : MonoBehaviour
     private Animator anim;
     public bool lev4and5;
     public float shootingInterval = 2f;
-    private float timeSinceLastShot = 2f;
+    //private float timeSinceLastShot = 2f;
+    public float shootingIntervalsw = 3f;
+    //private float timeSinceLastShotsw = 3f;
     bool canShoot=true;
+    bool canShootsw = true;
 
     void Start()
     {
@@ -64,8 +67,9 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-        timeSinceLastShot += Time.deltaTime;
-      
+        //timeSinceLastShot += Time.deltaTime;
+        //timeSinceLastShotsw += Time.deltaTime;
+
 
         if (!PauseMenu.isPaused){
             if (Input.GetKeyDown(Spacebar) && grounded)
@@ -122,18 +126,27 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyDown(ShootKey) && canShoot)
             {
                 anim.SetTrigger("shootwhiles");
-                Invoke("Shoot", 0.7f); 
+                Invoke("Shoot", 0.9f); 
 
-                Invoke("stopshoot", 0.7f);
+                Invoke("stopshoot", 0.9f);
                 StartCoroutine(ResetShootingInterval());
+            }
+            if (Input.GetKeyDown(Shottswitch) && canShootsw)
+            {
+                anim.SetTrigger("shootwhiles");
+               
+
+                Invoke("Shootswitchside", 0.9f);
+                Invoke("stopshoot", 0.9f);
+                StartCoroutine(ResetShootingIntervalsw());
             }
             anim.SetBool("rolling", rolling);
 
         anim.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
         }
     }
-   
-    void flip()
+
+void flip()
     {
         transform.localScale = new Vector3(-(transform.localScale.x), transform.localScale.y, transform.localScale.z);
     }
@@ -165,5 +178,11 @@ public class PlayerMovement : MonoBehaviour
         canShoot = false;
         yield return new WaitForSeconds(shootingInterval);
         canShoot = true;
+    }
+    IEnumerator ResetShootingIntervalsw()
+    {
+        canShootsw = false;
+        yield return new WaitForSeconds(shootingInterval);
+        canShootsw = true;
     }
 }

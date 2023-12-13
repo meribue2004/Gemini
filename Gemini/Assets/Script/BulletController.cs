@@ -10,18 +10,28 @@ public class BulletController : MonoBehaviour
     public int damage;
     private Transform player;
     private bool GotHit = false;
-    private bool onplayerside=false;
+    public bool onplayerside=false;
+   // ShootingEnemy enemyController;
     private void Start()
     {
         anim = GetComponent<Animator>();
         player = FindObjectOfType<PlayerMovement>().transform;
         SetInitialDirection();
     }
+    //public void seteem(ShootingEnemy nn)
+    //{
+    //    enemyController = nn;
+    //    onplayerside = enemyController.returnside();
+    //}
+    //public void sett(bool yy)
+    //{
+    //    onplayerside=yy;
+    //    Debug.Log("bullet got switched");
+    //}
 
     void Update()
     {
-       onplayerside= FindObjectOfType<EnemyController>().returnside();
-
+       onplayerside= FindObjectOfType<ShootingEnemy>().returnside();
         if (!GotHit)
         {
             GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed, GetComponent<Rigidbody2D>().velocity.y);
@@ -31,7 +41,7 @@ public class BulletController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (GotHit) return; // Ignore collisions if the bullet has already hit something
-
+        ShootingEnemy collidedScript = collision.GetComponent<ShootingEnemy>();
         if (collision.tag == "Player" && !(onplayerside))
         {
             StopBullet();
@@ -40,7 +50,7 @@ public class BulletController : MonoBehaviour
         else if (collision.tag == "Enemy" && onplayerside)
         {
             StopBullet();
-            FindObjectOfType<EnemyController>().TakeHit(damage);
+            collidedScript.TakeHit(damage);
         }
         else if (collision.tag == "Ground")
         {

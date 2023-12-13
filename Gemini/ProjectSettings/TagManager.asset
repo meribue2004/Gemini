@@ -66,3 +66,6 @@ TagManager:
   - name: wall
     uniqueID: 2244769707
     locked: 0
+  - name: shot
+    uniqueID: 2270009245
+    locked: 0

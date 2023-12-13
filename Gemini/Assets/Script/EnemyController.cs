@@ -15,6 +15,7 @@ public class EnemyController : MonoBehaviour
     private bool onplayersside=false;
 
 
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -29,17 +30,16 @@ public class EnemyController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider)
     {
         
-        if (collider.tag == "Player" && !(onplayersside))
+        if (collider.tag == "Player")
         {
             FindObjectOfType<Healthstates>().TakeDamage(damageToPlayer);
         }
-        if (collider.tag == "Enemy" && (onplayersside))
-        {
-            FindObjectOfType<EnemyController>().TakeHit(damageToPlayer);
-        }
+        //if (collider.tag == "Enemy" && (onplayersside))
+        //{
+        //    FindObjectOfType<EnemyController>().TakeHit(damageToPlayer);
+        //}
     }
-    public bool returnside() { return onplayersside; }
-    public void setside(bool side) {  onplayersside = side; }
+  
     public void TakeHit(float damageTaken)
     {
         HitPoints -= damageTaken;
