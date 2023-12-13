@@ -35,6 +35,11 @@ public class BulletController : MonoBehaviour
             StopBullet();
             FindObjectOfType<Healthstates>().TakeDamage(damage);
         }
+        else if (collision.tag == "Enemy")
+        {
+            StopBullet();
+            FindObjectOfType<EnemyController>().TakeHit(damage);
+        }
         else if (collision.tag == "Ground")
         {
             StopBullet();

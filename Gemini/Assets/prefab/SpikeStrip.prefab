@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2300698122946281508}
   - component: {fileID: 1570620095917440719}
+  - component: {fileID: 1375365196673622828}
   m_Layer: 0
   m_Name: SpikeStrip
   m_TagString: Untagged
@@ -84,3 +85,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1375365196673622828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8391926619653166500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 731955abb832d2e4f8cc5876dabc27d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1

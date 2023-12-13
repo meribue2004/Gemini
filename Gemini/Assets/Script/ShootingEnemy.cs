@@ -7,7 +7,7 @@ public class ShootingEnemy : EnemyController
     private PlayerMovement player;
     public float shootingInterval = 5f;
     private float timeSinceLastShot = 0f;
-
+    private bool onplayers;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -17,7 +17,7 @@ public class ShootingEnemy : EnemyController
     private void Update()
     {
         timeSinceLastShot += Time.deltaTime;
-
+        onplayers= FindObjectOfType<EnemyController>().returnside();
         if (timeSinceLastShot >= shootingInterval)
         {
             anim.SetBool("shooting", true);
@@ -29,10 +29,15 @@ public class ShootingEnemy : EnemyController
             timeSinceLastShot = 0f;
         }
 
-        if ((player.transform.position.x < transform.position.x && isFacingRight) ||
-         (player.transform.position.x > transform.position.x && !isFacingRight))
+        if ((player.transform.position.x < transform.position.x && isFacingRight &&!(onplayers)) ||
+         (player.transform.position.x > transform.position.x && !isFacingRight && !(onplayers)))
         {
             Flip();
+        }
+
+        if (onplayers)
+        {
+Invoke("Flip",2f);
         }
     }
 

@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject bullet;
     private Animator anim;
     public bool lev4and5;
+    public float shootingInterval = 2f;
+    private float timeSinceLastShot = 2f;
 
     void Start()
     {
@@ -52,9 +54,17 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     // Update is called once per frame
+    void stopshoot()
+    {
+        anim.SetTrigger("stopshoot");
+    }
     void Update()
     {
-        if(!PauseMenu.isPaused){
+
+        timeSinceLastShot += Time.deltaTime;
+      
+     
+        if (!PauseMenu.isPaused){
             if (Input.GetKeyDown(Spacebar) && grounded)
         {
             Jump();
@@ -96,8 +106,16 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(ShootKey))
         {
-            Shoot();
-        }
+                if (timeSinceLastShot >= shootingInterval)
+                {
+
+                    Invoke("Shoot", 0.5f);
+                    anim.SetTrigger("shootwhiles");
+                    
+                    Invoke("stopshoot", 0.7f);
+                    timeSinceLastShot = 0f;
+                }
+            }
       
         anim.SetBool("rolling", rolling);
 

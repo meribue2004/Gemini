@@ -12,6 +12,7 @@ public class EnemyController : MonoBehaviour
     public Animator anim;
     public GameObject bullet;
     public Transform shootingPoint;
+    private bool onplayersside=false;
 
 
     void Start()
@@ -27,12 +28,17 @@ public class EnemyController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.tag == "Player")
+        
+        if (collider.tag == "Player" && !(onplayersside))
         {
             FindObjectOfType<Healthstates>().TakeDamage(damageToPlayer);
         }
+        if (collider.tag == "Enemy" && (onplayersside))
+        {
+            FindObjectOfType<EnemyController>().TakeHit(damageToPlayer);
+        }
     }
-
+    public bool returnside() { return onplayersside; }
     public void TakeHit(float damageTaken)
     {
         HitPoints -= damageTaken;

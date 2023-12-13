@@ -8,7 +8,7 @@ public class lever : MonoBehaviour
     public Sprite leverpulled;
     private bool hasPlayed;
     // Start is called before the first frame update
-
+    public bool leverl3=true;
     void Start()
     {
         hasPlayed = false;
@@ -31,8 +31,10 @@ public class lever : MonoBehaviour
 
             Transform objectTransform = transform;
 
-         
-            objectTransform.position = new Vector3(objectTransform.position.x,7 , objectTransform.position.z);
+            if (leverl3)
+            {
+                objectTransform.position = new Vector3(objectTransform.position.x, 7, objectTransform.position.z);
+            }
             SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
                 spriteRenderer.sprite = leverpulled;
             
