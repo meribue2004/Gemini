@@ -22,6 +22,14 @@ public class ShootingEnemy : EnemyController
         Debug.Log("Enemy got switched");
 
     }
+    public void setside1(ShootingEnemy side)
+    {
+        enemyController = side;
+        onplayers= side.returnside();
+        Debug.Log("Enemy got switched");
+
+    }
+    public ShootingEnemy returnside1() { return enemyController; }
     private void Update()
     {
         
@@ -46,7 +54,7 @@ public class ShootingEnemy : EnemyController
 
 //        else if (onplayers)
 //        {
-//Invoke("Flip",10f);
+//Invoke("Flip",15f);
 //        }
     }
 
@@ -55,12 +63,22 @@ public class ShootingEnemy : EnemyController
         anim.SetBool("shooting", false);
     }
 
+    //public void Shootss()
+    //{
+       
+    //    GameObject bulletInstance=Instantiate(bulletss, shootingPoint.position, shootingPoint.rotation);
+    //    BulletController bulletScript = bulletInstance.GetComponent<BulletController>();
+  
+    //    bulletScript.onplayerside=onplayers;
+     
+    //}
     public void Shootss()
     {
-       
-        GameObject bulletInstance=Instantiate(bulletss, shootingPoint.position, shootingPoint.rotation);
+        GameObject bulletInstance = Instantiate(bulletss, shootingPoint.position, shootingPoint.rotation);
         BulletController bulletScript = bulletInstance.GetComponent<BulletController>();
-        bulletScript.onplayerside=onplayers;
+
+        // Pass a reference to the ShootingEnemy script
+        bulletScript.SetShootingEnemy(this);
     }
 }
 

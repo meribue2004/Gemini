@@ -11,29 +11,22 @@ public class BulletController : MonoBehaviour
     private Transform player;
     private bool GotHit = false;
     public bool onplayerside=false;
-   // ShootingEnemy enemyController;
+    ShootingEnemy enemyController;
+    private ShootingEnemy shootingEnemy;
     private void Start()
     {
         anim = GetComponent<Animator>();
         player = FindObjectOfType<PlayerMovement>().transform;
+     
         SetInitialDirection();
     }
-    //public void seteem(ShootingEnemy nn)
-    //{
-    //    enemyController = nn;
-    //    onplayerside = enemyController.returnside();
-    //}
-    //public void sett(bool yy)
-    //{
-    //    onplayerside=yy;
-    //    Debug.Log("bullet got switched");
-    //}
 
     void Update()
     {
-       onplayerside= FindObjectOfType<ShootingEnemy>().returnside();
+      
         if (!GotHit)
         {
+            onplayerside = shootingEnemy.returnside();
             GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed, GetComponent<Rigidbody2D>().velocity.y);
         }
     }
@@ -42,20 +35,27 @@ public class BulletController : MonoBehaviour
     {
         if (GotHit) return; // Ignore collisions if the bullet has already hit something
         ShootingEnemy collidedScript = collision.GetComponent<ShootingEnemy>();
-        if (collision.tag == "Player" && !(onplayerside))
-        {
-            StopBullet();
-            FindObjectOfType<Healthstates>().TakeDamage(damage);
-        }
-        else if (collision.tag == "Enemy" && onplayerside)
+        Healthstates collidedScript2 = collision.GetComponent<Healthstates>();
+      
+         if (collision.tag == "Enemy" && onplayerside)
         {
             StopBullet();
             collidedScript.TakeHit(damage);
+        }
+        if (collision.tag == "Player" && !(onplayerside))
+        {
+            StopBullet();
+            collidedScript2.TakeDamage(damage);
         }
         else if (collision.tag == "Ground")
         {
             StopBullet();
         }
+    }
+    public void SetShootingEnemy(ShootingEnemy enemy)
+    {
+        shootingEnemy = enemy;
+        onplayerside = shootingEnemy.returnside();
     }
 
     private void StopBullet()
