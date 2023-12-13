@@ -1,62 +1,70 @@
-using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.Audio;
 using UnityEngine;
-
+using System;
 public class AudioManager : MonoBehaviour
 {
-    public AudioSource pauseMenu;
-    public AudioSource mainMenu;
-    public AudioSource loseMenu;
-    public AudioSource winMenu;
-    public AudioSource intenseGameplayMusic;
-    public AudioSource normalGameplayMusic;
-    public AudioSource winEfx;
-    public AudioSource dieEfx;
-    public AudioSource footstepsEfx;
-    public AudioSource playerweapon1Efx;
-    public AudioSource playerweapon2Efx;
-    public AudioSource enemyweaponEfx;
-    public AudioSource keyCollectEfx;
-    public AudioSource healthkitEfx;
-    public AudioSource timekitEfx;
-    //public AudioSource dieEfx;
-    public AudioSource ambient;
-    public AudioSource dialoguemememew;
-    public AudioSource dialogueSara;
-    public AudioSource cutscene;
+    public Sound[] sounds; //list of sounds with certain properties
+    // public AudioSource pauseMenu;
+    // public AudioSource mainMenu;
+    // public AudioSource loseMenu;
+    // public AudioSource winMenu;
+    // public AudioSource intenseGameplayMusic;
+    // public AudioSource normalGameplayMusic;
+    // public AudioSource winEfx;
+    // public AudioSource dieEfx;
+    // public AudioSource footstepsEfx;
+    // public AudioSource playerweapon1Efx;
+    // public AudioSource playerweapon2Efx;
+    // public AudioSource enemyweaponEfx;
+    // public AudioSource keyCollectEfx;
+    // public AudioSource healthkitEfx;
+    // public AudioSource timekitEfx;
+    // //public AudioSource dieEfx;
+    // public AudioSource ambient;
+    // public AudioSource dialoguemememew;
+    // public AudioSource dialogueSara;
+    // public AudioSource cutscene;
 
     public static AudioManager instance = null; // allow other scripts to call functions from AudioManager
+
     
-    // Start is called before the first frame update
-    void Start()
+
+    void Awake()//loop through list and for each sound add an audio
+    {
+        foreach(Sound s in sounds){
+            s.source=gameObject.AddComponent<AudioSource>(); //set the current sound audiosoruce to the 
+             s.source.clip=s.clip;//assign thaudio clip
+             s.source.volume=s.volume;
+             s.sourve.pitch=s.pitch;
+        }
+        // // Check if there is already an instance of AudioManager
+        // if (instance == null)
+        // {
+        //     // If not, set it to this
+        //     instance = this;
+        // }
+        // else if (instance != this)
+        // {
+        //     // If another instance already exists, destroy this one
+        //     Destroy(gameObject);
+        // }
+
+        // // Make AudioManager persist across scenes
+        // DontDestroyOnLoad(gameObject);
+    }
+
+    // play sounds
+   void Start()
     {
         // Your Start logic goes here
     }
-
-    void Awake()
-    {
-        // Check if there is already an instance of AudioManager
-        if (instance == null)
-        {
-            // If not, set it to this
-            instance = this;
-        }
-        else if (instance != this)
-        {
-            // If another instance already exists, destroy this one
-            Destroy(gameObject);
-        }
-
-        // Make AudioManager persist across scenes
-        DontDestroyOnLoad(gameObject);
+    public void Play(string name){
+        //loop through all sounds and find the sound with the appropriate name
+        sounds s=Array.Find(sounds,sound=>sound.name=name);
+        s.source.Play();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        // Your Update logic goes here
-    }
-    public void PlaySingle(AudioClip clip){
-     
-    }
+    // public void PlaySingle(AudioClip clip){
+    //  efxSource.clip=clip;
+    //  efxSourse.Play();
+    // }
 }
