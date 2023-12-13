@@ -1,21 +1,27 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+
+
 public class PauseMenu : MonoBehaviour
 {
-    
-    public GameObject pauseMenu; // reference to the pause menu
+    [SerializeField] private GameObject pauseMenu; // reference to the pause menu
     public static bool isPaused;
-public Image pauseMenuImage;
+
     void Start()
     {
-        SetPanelAlpha(0f);
-        pauseMenu.SetActive(false);
-
-     
-
-       
+        // Check if pauseMenu is assigned before trying to access it
+        if (pauseMenu != null)
+        {
+            pauseMenu.SetActive(false);
+        }
+        else
+        {
+            Debug.LogError("PauseMenu: The 'pauseMenu' GameObject is not assigned in the Unity Editor.");
+        }
     }
+
+  
 
     void Update()
     {
@@ -35,7 +41,7 @@ public Image pauseMenuImage;
 
     public void PauseGame()
     {
-        SetPanelAlpha(0.69f);
+        //SetPanelAlpha(0.69f);
         pauseMenu.SetActive(true); // Activate the menu
         Time.timeScale = 0f; // Stop time
         isPaused = true;
@@ -43,17 +49,17 @@ public Image pauseMenuImage;
 
     public void ResumeGame()
     {
-        SetPanelAlpha(0f);
+        //SetPanelAlpha(0f);
         pauseMenu.SetActive(false); // Close the menu
         Time.timeScale = 1f; // Resume time
         isPaused = false;
     }
-    private void SetPanelAlpha(float alpha)
-    {
-        Color panelColor = pauseMenuImage.color;
-        panelColor.a = alpha;
-        pauseMenuImage.color = panelColor;
-    }
+   // private void SetPanelAlpha(float alpha)
+    // // {
+    // //     Color panelColor = pauseMenuImage.color;
+    // //     panelColor.a = alpha;
+    // //     pauseMenuImage.color = panelColor;
+    // // }
     public void GoToMainMenu(){
      Time.timeScale = 1f; // Resume time
      Application.LoadLevel(0);
