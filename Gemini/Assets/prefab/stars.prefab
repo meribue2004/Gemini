@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1042711588899077599}
   - component: {fileID: 4923845713512720636}
+  - component: {fileID: 1915968114387515691}
   m_Layer: 0
   m_Name: stars
   m_TagString: Untagged
@@ -111,3 +112,19 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &1915968114387515691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6299994896764060137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 958aa58910f4b1a4dac781d1f89e3bb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minIntensity: 0.6
+  maxIntensity: 1.74
+  minFlickerTime: 0.1
+  maxFlickerTime: 0.5

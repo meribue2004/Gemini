@@ -186,10 +186,10 @@ public class Healthsytemlevel3 : MonoBehaviour
         {
             ResetHealth();
             Debug.Log(heartscollected);
-            Color imageColor = heartImages[lives].color;
+            Color imageColor = heartImages[lives-1].color;
             Debug.Log(imageColor);
             imageColor.a = 1f; 
-            heartImages[lives].color = imageColor;
+            heartImages[lives-1].color = imageColor;
         }
     }
 }
