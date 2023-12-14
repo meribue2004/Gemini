@@ -160,3 +160,5 @@ MonoBehaviour:
   isFacingRight: 0
   bulletSpeed: 10
   damage: 1
+  onplayerside: 0
+  GoldenRobot: 1

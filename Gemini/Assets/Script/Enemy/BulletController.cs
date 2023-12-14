@@ -13,6 +13,7 @@ public class BulletController : MonoBehaviour
     public bool onplayerside;
     ShootingEnemy enemyController;
     private ShootingEnemy shootingEnemy;
+    public bool GoldenRobot;
 
     private void Start()
     {
@@ -28,7 +29,9 @@ public class BulletController : MonoBehaviour
       //bullet did not collide with anything
         if (!GotHit)
         {
-            onplayerside = shootingEnemy.returnside();
+            if(GoldenRobot)
+                onplayerside = shootingEnemy.returnside();
+
             GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed, GetComponent<Rigidbody2D>().velocity.y);
         }
     }
@@ -48,6 +51,10 @@ public class BulletController : MonoBehaviour
         {
             StopBullet();
             collidedScript2.TakeDamage(damage);
+        }
+        if (collision.tag == "shield")
+        {
+            StopBullet();
         }
         else if (collision.tag == "Ground")
         {

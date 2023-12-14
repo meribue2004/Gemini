@@ -33,4 +33,23 @@ public class LockedDoor : MonoBehaviour
         anim.SetBool("StayOpen", true);
 
     }
+
+    public void LockDoor()
+    {
+        StartCoroutine(Lock());
+    }
+
+    IEnumerator Lock()
+    {
+        anim.SetBool("StayOpen", false);
+        anim.SetBool("Open", false);
+        anim.SetBool("Close", true);
+
+        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
+
+        boxCollider.enabled = true;
+        anim.SetBool("StayClosed", true);
+
+
+    }
 }

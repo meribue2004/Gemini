@@ -12,6 +12,7 @@ public class PlayerBullet : MonoBehaviour
         PlayerMovement player;
         player = FindObjectOfType<PlayerMovement>();
 
+        //direction of the bullet
         if (player.transform.localScale.x < 0)
         {
             speed = -speed;
@@ -37,6 +38,10 @@ public class PlayerBullet : MonoBehaviour
                 enemyController.TakeHit(damage);
             }
 
+            Destroy(gameObject);
+        }
+        if (collision.tag == "Ground")
+        {
             Destroy(gameObject);
         }
     }

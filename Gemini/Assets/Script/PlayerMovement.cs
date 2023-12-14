@@ -30,10 +30,13 @@ public class PlayerMovement : MonoBehaviour
     //private float timeSinceLastShotsw = 3f;
     bool canShoot=true;
     bool canShootsw = true;
-
+    private bool shielded;
+    public GameObject shield;
+    private float shieldCooldown = 5f;
+    private float lastShieldActivationTime = 0f;
     void Start()
     {
-        FindObjectOfType<AudioManager>().Play("moog");
+        //FindObjectOfType<AudioManager>().Play("moog");
         isFacingRight = true;
         anim = GetComponent<Animator>();
         anim.SetBool("levelgun", lev4and5);
@@ -71,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
         //timeSinceLastShot += Time.deltaTime;
         //timeSinceLastShotsw += Time.deltaTime;
 
-
+        CheckShield();
         if (!PauseMenu.isPaused){
             if (Input.GetKeyDown(Spacebar) && grounded)
         {
@@ -147,7 +150,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-void flip()
+    void flip()
     {
         transform.localScale = new Vector3(-(transform.localScale.x), transform.localScale.y, transform.localScale.z);
     }
@@ -185,5 +188,30 @@ void flip()
         canShootsw = false;
         yield return new WaitForSeconds(shootingInterval);
         canShootsw = true;
+    }
+
+    void CheckShield()
+    {
+        if (Input.GetKey(KeyCode.S) && Time.time >= lastShieldActivationTime + 10f && !shielded)
+        {
+            StartCoroutine(ActivateShield());
+        }
+    }
+
+    IEnumerator ActivateShield()
+    {
+        // Activate shield
+        shield.SetActive(true);
+        shielded = true;
+
+        // Update the last shield activation time
+        lastShieldActivationTime = Time.time;
+
+        // Wait for the cooldown duration
+        yield return new WaitForSeconds(shieldCooldown);
+
+        // Deactivate shield after the cooldown
+        shield.SetActive(false);
+        shielded = false;
     }
 }

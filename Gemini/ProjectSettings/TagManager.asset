@@ -11,6 +11,7 @@ TagManager:
   - Score
   - Heart
   - Time
+  - shield
   layers:
   - Default
   - TransparentFX

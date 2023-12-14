@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Playershoots : MonoBehaviour
+public class OpenTheDoor : MonoBehaviour
 {
+    public LockedDoor door;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +15,12 @@ public class Playershoots : MonoBehaviour
     void Update()
     {
         
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            door.OpenDoor();
+        }
     }
 }
