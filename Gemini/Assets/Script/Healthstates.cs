@@ -109,7 +109,7 @@ public class Healthstates : MonoBehaviour
 
     public Image healthBar; 
     public Image[] heartImages;
-
+    bool canmove;
     public int coinsCollected = 0;
     public float timecollected = 0;
     public float heartscollected = 0;
@@ -131,7 +131,8 @@ public class Healthstates : MonoBehaviour
                 hurt = false;
                 died = false;
                 anim.SetBool("hurt", hurt);
-             
+                canmove = true;
+                FindObjectOfType<PlayerMovement>().setcanmove(canmove);
                 this.isImmune = false;
             }
         }
@@ -139,8 +140,11 @@ public class Healthstates : MonoBehaviour
    public void TakeDamage(int damage)
     {
         
+
         if (!this.isImmune)
         {
+            canmove = false;
+            FindObjectOfType<PlayerMovement>().setcanmove(canmove);
             hurt = true;
             anim.SetBool("hurt", hurt);
             this.health = this.health - damage;

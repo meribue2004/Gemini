@@ -15066,7 +15066,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 80449577623523940, guid: c43cb68fa9cb28f489f511bb8056e360, type: 3}
       propertyPath: health
-      value: 100
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 80449577623523940, guid: c43cb68fa9cb28f489f511bb8056e360, type: 3}
       propertyPath: healthBar
@@ -15100,6 +15100,10 @@ PrefabInstance:
       propertyPath: bulletsw
       value: 
       objectReference: {fileID: 5543788272567603745, guid: d26daf2ce0f735d459d37f174887fad0, type: 3}
+    - target: {fileID: 6427062821213163583, guid: c43cb68fa9cb28f489f511bb8056e360, type: 3}
+      propertyPath: arrowdown
+      value: 274
+      objectReference: {fileID: 0}
     - target: {fileID: 6427062821213163583, guid: c43cb68fa9cb28f489f511bb8056e360, type: 3}
       propertyPath: Shottswitch
       value: 100
@@ -84573,11 +84577,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8443084340200751779, guid: 82591accd061a2849b4e3cda0a17fc79, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40.33
+      value: -4.8
       objectReference: {fileID: 0}
     - target: {fileID: 8443084340200751779, guid: 82591accd061a2849b4e3cda0a17fc79, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 33.322285
+      value: 41.3
       objectReference: {fileID: 0}
     - target: {fileID: 8443084340200751779, guid: 82591accd061a2849b4e3cda0a17fc79, type: 3}
       propertyPath: m_LocalPosition.z

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
+    bool canmove=true;
     public float jumpHeight;
     public bool isFacingRight;
     public KeyCode Spacebar;
@@ -52,7 +53,11 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("sliding", playerTouchedObject);
         }
     }
+    public void setcanmove(bool I)
+    {
+        canmove = I;
 
+    }
     public void OnCollisionExit2D(Collision2D collision)
     {
         // Reset the boolean variable when the player leaves the object
@@ -68,52 +73,49 @@ public class PlayerMovement : MonoBehaviour
     {
         anim.SetTrigger("stopshoot");
     }
-    void Update()
+    void movmentcode()
     {
-
-        //timeSinceLastShot += Time.deltaTime;
-        //timeSinceLastShotsw += Time.deltaTime;
-
         CheckShield();
-        if (!PauseMenu.isPaused){
+        if (!PauseMenu.isPaused)
+        {
             if (Input.GetKeyDown(Spacebar) && grounded)
-        {
-            Jump();
-        }
-
-        anim.SetBool("grounded", grounded);
-
-        if (Input.GetKey(L))
-        {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
-            if (isFacingRight)
             {
-                flip();
-                isFacingRight = false;
+                Jump();
             }
-        }
 
-        if (Input.GetKey(R))
+            anim.SetBool("grounded", grounded);
 
-        {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
-
-            if (!isFacingRight)
+            if (Input.GetKey(L))
             {
-                flip();
-                isFacingRight = true;
+                GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+                if (isFacingRight)
+                {
+                    flip();
+                    isFacingRight = false;
+                }
             }
-        }
 
-        if (Input.GetKeyDown(arrowdown))
-        {
-            rolling= true;  
-        }
+            if (Input.GetKey(R))
 
-        if (Input.GetKeyUp(arrowdown))
-        {
-            rolling = false;
-        }
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2(moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
+
+                if (!isFacingRight)
+                {
+                    flip();
+                    isFacingRight = true;
+                }
+            }
+
+            if (Input.GetKeyDown(arrowdown))
+            {
+                rolling = true;
+            }
+
+            if (Input.GetKeyUp(arrowdown))
+            {
+                rolling = false;
+            }
 
             //if (Input.GetKeyDown(ShootKey))
             //{
@@ -130,7 +132,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyDown(ShootKey) && canShoot)
             {
                 anim.SetTrigger("shootwhiles");
-                Invoke("Shoot", 0.9f); 
+                Invoke("Shoot", 0.9f);
 
                 Invoke("stopshoot", 0.9f);
                 StartCoroutine(ResetShootingInterval());
@@ -138,7 +140,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKeyDown(Shottswitch) && canShootsw)
             {
                 anim.SetTrigger("shootwhiles");
-               
+
 
                 Invoke("Shootswitchside", 0.9f);
                 Invoke("stopshoot", 0.9f);
@@ -146,8 +148,19 @@ public class PlayerMovement : MonoBehaviour
             }
             anim.SetBool("rolling", rolling);
 
-        anim.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
+            anim.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
         }
+    }
+    void Update()
+    {
+        if (canmove)
+        {
+            movmentcode();
+        }
+        //timeSinceLastShot += Time.deltaTime;
+        //timeSinceLastShotsw += Time.deltaTime;
+
+      
     }
 
     void flip()
