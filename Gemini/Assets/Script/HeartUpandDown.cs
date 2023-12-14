@@ -28,7 +28,7 @@ public class HeartUpandDown : MonoBehaviour
     {
         if(other.tag=="Player")
         {
-            FindObjectOfType<Healthstates>().heartscollected += heart;
+            FindObjectOfType<Healthsytemlevel3>().heartscollected += heart;
         }
         Destroy(this.gameObject);
     }

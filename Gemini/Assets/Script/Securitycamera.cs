@@ -24,7 +24,7 @@ public class Securitycamera : MonoBehaviour
         // Check if the collider that touched the sprite is the player 
         if (other.CompareTag("Player"))
         {
-            player.GetComponent<Healthstates>().Decreaselives();
+            player.GetComponent<Healthstates>().TakeDamage(6);
             FindObjectOfType<LevelManager>().RespawnPlayer();
         }
     }

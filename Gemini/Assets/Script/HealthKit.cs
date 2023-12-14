@@ -21,7 +21,8 @@ public class HealthKit : MonoBehaviour
         if (other.tag == "Player")
         {
             FindObjectOfType<Healthstates>().heartscollected += heart;
+            Destroy(this.gameObject);
         }
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
     }
 }

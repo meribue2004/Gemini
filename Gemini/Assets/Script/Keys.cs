@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Keys : MonoBehaviour
 {
-    public int coin_value;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +18,12 @@ public class Keys : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.name == "Player")
-        {
-            FindObjectOfType<Healthstates>().coinsCollected += coin_value;
-        }
         Destroy(this.gameObject);
+        if (other.tag == "Player")
+        {
+           
+            FindObjectOfType<Healthstates>().CollectCoin();
+        }
+
     }
 }

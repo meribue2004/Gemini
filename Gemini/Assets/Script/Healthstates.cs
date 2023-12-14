@@ -249,19 +249,21 @@ heartImages[lives ].color = imageColor;
         yield return new WaitForSeconds(3f);
     }
 
-    public void CollectCoin(int coinValue)
+    public void CollectCoin()
     {
-        this.coinsCollected = this.coinsCollected + coinValue;
+        coinsCollected++;
+        Debug.Log(coinsCollected);
+        scoreText.text = coinsCollected.ToString();
     }
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Score")
-        {
-            coinsCollected++;
-            Debug.Log(coinsCollected);
+        //if (col.gameObject.tag == "Score")
+        //{
+        //    coinsCollected++;
+        //    Debug.Log(coinsCollected);
 
-            scoreText.text = coinsCollected.ToString();
-        }
+        //    scoreText.text = coinsCollected.ToString();
+        //}
         if (col.gameObject.tag == "Heart")
         {
             ResetHealth();
