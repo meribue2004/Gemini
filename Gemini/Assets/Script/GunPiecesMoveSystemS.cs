@@ -152,6 +152,7 @@ public class GunPiecesMoveSystemS : MonoBehaviour
         }
         if(isCorrectlyPlaced)
         {
+            GunCompletion.counter++;
             Debug.Log("Piece placed correctly");
             //puzzlemanager.CheckPuzzleCompletion();
         }
