@@ -1955,6 +1955,7 @@ MonoBehaviour:
   maxX: 90
   minY: 0
   maxY: 0
+  Yoffset: 0
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3493,6 +3494,37 @@ CompositeCollider2D:
     m_Paths: []
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!1 &897426078 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8831754013202794976, guid: f03e3928346a12843af5d472fddbe500, type: 3}
+  m_PrefabInstance: {fileID: 8831754011573272198}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &897426083
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897426078}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.37817326}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.12, y: 2.56}
+    newSize: {x: 5.12, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.12, y: 1.8036535}
+  m_EdgeRadius: 0
 --- !u!1 &967241829
 GameObject:
   m_ObjectHideFlags: 0
