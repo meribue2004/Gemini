@@ -12,30 +12,40 @@ public class HackedEva : EnemyController
     private float teleportTimer = 0f;
     public float teleportInterval = 10f;
     private bool dialogueTriggered = false;
+    private Vector2 playerPosition;
 
 
     void Start()
     {
-
+        playerPosition = player.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!DialogueManager.isDialogueActive && !ChoicesBtn.isChoosing)
+        if (!DialogueManager.isDialogueActive)
         { 
             DisplayDialog();
-
-            CheckTeleport();
-            timeSinceLastShot += Time.deltaTime;
-            if (timeSinceLastShot >= shootingInterval)
+            if (!ChoicesBtn.isChoosing)
             {
-                Invoke("Shoot", 0.5f);
-                timeSinceLastShot = 0f;
+                CheckTeleport();
+                timeSinceLastShot += Time.deltaTime;
+                if (timeSinceLastShot >= shootingInterval)
+                {
+                    Invoke("Shoot", 0.5f);
+                    timeSinceLastShot = 0f;
+                }
             }
 
            
         }
+    }
+    public override void TakeHit(float damageTaken)
+    {
+        CurrentHealth -= damageTaken;
+
+        //updating the enemy's health bar
+        healthBar.setHealth(CurrentHealth, MaxHealth);
     }
 
     void CheckTeleport()
@@ -75,6 +85,11 @@ public class HackedEva : EnemyController
                 rb.bodyType = RigidbodyType2D.Dynamic;
                 rb.transform.eulerAngles = new Vector3(0, 0, 60);
                 transform.position = points[0].transform.position;
+                player.transform.position = playerPosition;
+                if (!player.isFacingRight)
+                {
+                    player.flip();
+                }
 
                 dialogueTriggered = true;
                 string[] dialogue =

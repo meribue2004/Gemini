@@ -10,7 +10,7 @@ public class MovingPlatform : MonoBehaviour
     
     void Update()
     {
-        if (!DialogueManager.isDialogueActive)
+        if (!DialogueManager.isDialogueActive && !ChoicesBtn.isChoosing)
         {
             //used to check that the platform had reached the current point, by comparing the distance between the platform and the point
             if (Vector2.Distance(points[CurrentPoint].transform.position, transform.position) < 0.1f)

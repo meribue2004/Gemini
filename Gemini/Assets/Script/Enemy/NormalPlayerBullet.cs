@@ -23,6 +23,16 @@ public class NormalPlayerBullet : PlayerBulletController
             //destroy the bullet after it hits the enemy
             Destroy(gameObject);
         }
+        if(collision.tag=="Main Computer")
+        {
+            MainComputer mainComp = collision.GetComponent<MainComputer>();
+
+            if (mainComp != null)
+            {
+                mainComp.TakeHit(damage);
+            }
+            Destroy(gameObject);
+        }
         //destroy the bullet if it hits the ground as well
         if (collision.tag == "Ground")
         {

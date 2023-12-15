@@ -31,6 +31,7 @@ public class ChoicesBtn : MonoBehaviour
         SceneManager.LoadScene("ending2");
     }
 
+
     public void setChoices(bool c)
     {
         isChoosing = true;

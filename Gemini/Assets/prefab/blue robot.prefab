@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6169033769439036428}
   - component: {fileID: 6169033769439036424}
   m_Layer: 0
-  m_Name: Blue robot
+  m_Name: blue robot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6169033769439036429}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 11.66251, y: -4.9522667, z: 0.14045891}
-  m_LocalScale: {x: 0.8902, y: 0.8694, z: 1}
+  m_LocalScale: {x: 0.76245636, y: 0.724558, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -146,7 +146,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFacingRight: 1
-  damage: 1
+  damageToPlayer: 1
+  healthBar: {fileID: 0}
+  CurrentHealth: 3
+  MaxHealth: 3
+  bullet: {fileID: 0}
+  shootingPoint: {fileID: 0}
+  player: {fileID: 0}
+  shootingInterval: 5
   points:
   - {fileID: 0}
   - {fileID: 0}
