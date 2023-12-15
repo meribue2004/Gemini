@@ -28,7 +28,7 @@ public class gunpiecescollect : MonoBehaviour
         if (other.tag == "Player")
         {
             FindObjectOfType<jetpackmovment>().gunpiecescollcted();
+            Destroy(this.gameObject);
         }
-        Destroy(this.gameObject);
     }
 }
