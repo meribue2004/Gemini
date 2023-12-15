@@ -10,16 +10,19 @@ public class MovingPlatform : MonoBehaviour
     
     void Update()
     {
-        //used to check that the platform had reached the current point, by comparing the distance between the platform and the point
-        if (Vector2.Distance(points[CurrentPoint].transform.position, transform.position) < 0.1f) 
+        if (!DialogueManager.isDialogueActive)
         {
-            CurrentPoint++;//when it reaches we increment CurrentPoint to say at which point we are at
-            if (CurrentPoint >= points.Length)
+            //used to check that the platform had reached the current point, by comparing the distance between the platform and the point
+            if (Vector2.Distance(points[CurrentPoint].transform.position, transform.position) < 0.1f)
             {
-                CurrentPoint = 0;// when it reachs the last point aka "points.Lenght" it will start agian from point 0
+                CurrentPoint++;//when it reaches we increment CurrentPoint to say at which point we are at
+                if (CurrentPoint >= points.Length)
+                {
+                    CurrentPoint = 0;// when it reachs the last point aka "points.Lenght" it will start agian from point 0
+                }
             }
+            transform.position = Vector2.MoveTowards(transform.position, points[CurrentPoint].transform.position, Time.deltaTime * speed);
         }
-        transform.position = Vector2.MoveTowards(transform.position, points[CurrentPoint].transform.position, Time.deltaTime*speed);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {

@@ -221,13 +221,12 @@ MonoBehaviour:
   isFacingRight: 0
   damageToPlayer: 1
   healthBar: {fileID: 2012906066}
-  HitPoints: 3
-  MaxHitPoint: 3
-  anim: {fileID: 7245258429619929377}
+  CurrentHealth: 3
+  MaxHealth: 3
   bullet: {fileID: 6589944037769076729, guid: bcc5621b4a2f5b14ea1e14db9d329741, type: 3}
   shootingPoint: {fileID: 7245258429614101471}
+  player: {fileID: 0}
   shootingInterval: 5
-  bulletss: {fileID: 6589944037769076729, guid: bcc5621b4a2f5b14ea1e14db9d329741, type: 3}
 --- !u!50 &7245258431001152121
 Rigidbody2D:
   serializedVersion: 4

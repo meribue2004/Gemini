@@ -2,45 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bulletswitchsides : MonoBehaviour
+//switching side bullet called by key 'D'
+public class Bulletswitchsides : PlayerBulletController
 {
-    public float speed;
-    ShootingEnemy enemyController;
-
-    void Start()
-    {
-        PlayerMovement player;
-        player = FindObjectOfType<PlayerMovement>();
-
-        if (player.transform.localScale.x < 0)
-        {
-            speed = -speed;
-            transform.localScale = new Vector3(-(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        }
-    }
-
-    void Update()
-    {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(speed, GetComponent<Rigidbody2D>().velocity.y);
-    }
-    public ShootingEnemy returnswitchedenemy()
-    {
-        return enemyController;
-    }
+    ShootingEnemy Enemy;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Enemy")
         {
-            Debug.Log("Enemy got hit");
-             enemyController = collision.GetComponent<ShootingEnemy>();
-           // FindObjectOfType<BulletController>().seteem(enemyController);
+            Debug.Log("Enemy got Switched");
+            Enemy = collision.GetComponent<ShootingEnemy>();
 
-            if (enemyController != null)
+            if (Enemy != null)
             {
-                // Call the TakeHit function on the specific enemy
-                enemyController.setside(true);
+                Enemy.setside(true);
             }
 
+            Destroy(gameObject);
+        }
+        if (collision.tag == "Ground")
+        {
             Destroy(gameObject);
         }
     }

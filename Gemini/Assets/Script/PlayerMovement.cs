@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject shield;
     private float shieldCooldown = 5f;
     private float lastShieldActivationTime = 0f;
+    private 
     void Start()
     {
         //FindObjectOfType<AudioManager>().Play("moog");
@@ -75,9 +76,10 @@ public class PlayerMovement : MonoBehaviour
     }
     void movmentcode()
     {
-        CheckShield();
-        if (!PauseMenu.isPaused)
+        
+        if (!PauseMenu.isPaused && !DialogueManager.isDialogueActive)
         {
+            CheckShield();
             if (Input.GetKeyDown(Spacebar) && grounded)
             {
                 Jump();

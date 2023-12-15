@@ -2,23 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletController : MonoBehaviour
+public class EnemyBullet : MonoBehaviour
 {
     public bool isFacingRight = true;
     public float bulletSpeed;
     private Animator anim;
     public int damage;
     private Transform player;
-    private bool GotHit;
-    public bool onplayerside;
-    ShootingEnemy enemyController;
+    private bool onplayerside;
     private ShootingEnemy shootingEnemy;
     public bool GoldenRobot;
 
     private void Start()
     {
         onplayerside = false;
-        GotHit = false;
         anim = GetComponent<Animator>();
         player = FindObjectOfType<PlayerMovement>().transform;
         SetInitialDirection();
@@ -26,19 +23,19 @@ public class BulletController : MonoBehaviour
 
     void Update()
     {
-      //bullet did not collide with anything
-        if (!GotHit)
+        //only the golden robot can be switched shids
+        if (GoldenRobot)
         {
-            if(GoldenRobot)
-                onplayerside = shootingEnemy.returnside();
-
-            GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed, GetComponent<Rigidbody2D>().velocity.y);
+            //checking is the enemy is on the player's side, so that if they are the bullet wont hurt the player
+            onplayerside = shootingEnemy.returnside();
         }
+
+        //movement only x, y is constant
+        GetComponent<Rigidbody2D>().velocity = new Vector2(bulletSpeed, GetComponent<Rigidbody2D>().velocity.y);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (GotHit) return; // Ignore collisions if the bullet has already hit something
         ShootingEnemy collidedScript = collision.GetComponent<ShootingEnemy>();
         Healthstates collidedScript2 = collision.GetComponent<Healthstates>();
       
@@ -52,28 +49,20 @@ public class BulletController : MonoBehaviour
             StopBullet();
             collidedScript2.TakeDamage(damage);
         }
-        if (collision.tag == "shield")
+        else if (collision.tag == "shield" || collision.tag == "Ground")
         {
             StopBullet();
         }
-        else if (collision.tag == "Ground")
-        {
-            StopBullet();
-        }
-    }
-    public void SetShootingEnemy(ShootingEnemy enemy)
-    {
-        shootingEnemy = enemy;
-        onplayerside = shootingEnemy.returnside();
     }
 
+    //bullet stops moving and plays the Destroy animation
     private void StopBullet()
     {
-        GotHit = true;
-        GetComponent<Rigidbody2D>().velocity = Vector2.zero; // Stop the bullet
+        GetComponent<Rigidbody2D>().velocity = Vector2.zero; // Stop the bullet by setting verlocity to 0
         StartCoroutine(DestroyAfterAnimation());
     }
 
+    //bullet gets destroyed after the destroy animation
     IEnumerator DestroyAfterAnimation()
     {
         anim.SetBool("hit", true);
@@ -81,12 +70,6 @@ public class BulletController : MonoBehaviour
         yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(0).length);
 
         Destroy(gameObject);
-    }
-
-    public void Flip()
-    {
-        isFacingRight = !isFacingRight;
-        transform.localScale = new Vector3(-(transform.localScale.x), transform.localScale.y, transform.localScale.z);
     }
 
     //sets the direction of the bullet based on the players direction
@@ -108,5 +91,16 @@ public class BulletController : MonoBehaviour
         {
             Flip();
         }
+    }
+    public void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        transform.localScale = new Vector3(-(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+    }
+
+    public void SetShootingEnemy(ShootingEnemy enemy)
+    {
+        shootingEnemy = enemy;
+        onplayerside = shootingEnemy.returnside();
     }
 }

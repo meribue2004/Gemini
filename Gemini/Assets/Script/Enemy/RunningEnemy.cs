@@ -9,25 +9,24 @@ public class RunningEnemy : EnemyController
     private int CurrentPoint = 0;
     public float speed;
 
-
+    //variables for shooting
     public float stoppingDistance;
-    public GameObject player;
     private bool isShooting;
-    public float shootingInterval = 2f;
-    private float timeSinceLastShot = 0f;
 
     private void Start()
     {
         anim = GetComponent<Animator>();
         isShooting = false;
-        isFacingRight = false;
+        //isFacingRight = false;
     }
 
     void Update()
     {
+        //only move if the enemy is not shooting the player
         if (!isShooting)
             Move();
 
+        //Checking if player is close, if yes the enemy starts shooting, if no they continue moving
         PlayerClose();
     }
 
@@ -37,16 +36,21 @@ public class RunningEnemy : EnemyController
         anim.SetBool("wait", false);
         anim.SetBool("Shoot", false);
 
+        //check the distance between the enemy's location and the point he should go to,
+        //if this distance is small we assume he reached it so he starts moving to the next point and flips direction
         if (Vector2.Distance(points[CurrentPoint].transform.position, transform.position) < 0.1f)
         {
             Flip();
-            CurrentPoint++;
+            CurrentPoint++; //updating the point the enemy is at right now
+
+            //He has reached the last point, start going to the first point again
             if (CurrentPoint >= points.Length)
             {
                 CurrentPoint = 0;
             }
         }
 
+        //movemment from his current position to the point he needs to go to
         transform.position = Vector2.MoveTowards(transform.position, points[CurrentPoint].transform.position, Time.deltaTime * speed);
     }
 
@@ -55,12 +59,15 @@ public class RunningEnemy : EnemyController
         // Calculate the distance between the enemy and the player
         float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
 
+        //if this distance is close enough and the player is standing in front of the enemy
+        //the enemy will stop moving and start shooting
         if (checkIfFront() && distanceToPlayer <= stoppingDistance)
         {
             //Idel state
             anim.SetBool("wait", true);
-
             isShooting = true;
+
+            //shoot every 5 seconds
             timeSinceLastShot += Time.deltaTime;
             if (timeSinceLastShot >= shootingInterval)
             {

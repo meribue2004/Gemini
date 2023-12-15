@@ -38,6 +38,10 @@ public class DroneBullet : MonoBehaviour
             Destroy(gameObject);
 
         }
+        if (collider.tag == "shield")
+        {
+            Destroy(gameObject);
+        }
         else if (collider.CompareTag("Ground"))
         {
             Destroy(gameObject);
@@ -45,22 +49,4 @@ public class DroneBullet : MonoBehaviour
 
 
     }
-
-    //void OnTriggerEnter2D(Collider2D collider)
-    //{
-
-    //    if (collider.CompareTag("Player"))
-    //    {
-    //        Debug.Log("Player collision");
-    //        FindObjectOfType<PlayerStats>().TakeDamage(damage);
-    //        Destroy(gameObject);
-
-    //    }
-    //    else if (collider.CompareTag("ground"))
-    //    {
-    //        Debug.Log("Ground collision");
-    //        Destroy(gameObject);
-    //    }
-
-    //}
 }

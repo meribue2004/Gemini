@@ -6,15 +6,11 @@ public class PauseMenu : MonoBehaviour
     
     public GameObject pauseMenu; // reference to the pause menu
     public static bool isPaused;
-public Image pauseMenuImage;
+    public Image pauseMenuImage;
     void Start()
     {
         SetPanelAlpha(0f);
         pauseMenu.SetActive(false);
-
-     
-
-       
     }
 
     void Update()

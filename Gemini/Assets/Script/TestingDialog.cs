@@ -28,7 +28,7 @@ public class TestingDialog : MonoBehaviour
                 "Scared Eva: oh no really",
                 "Worried Eva: More blah blah blah",
                 "Eva: me memme meem mem",
-                "Adam: human noices",
+                "Lu: human noices",
                 "Evil Eva: robot noices"
             };
             dialogueManager.SetSentences(dialogue);

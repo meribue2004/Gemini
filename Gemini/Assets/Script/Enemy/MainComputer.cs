@@ -8,8 +8,7 @@ public class MainComputer : EnemyController
     public Sprite HalfHealth;
     public Sprite Death;
     private SpriteRenderer sr;
-    public float shootingInterval = 5f;
-    private float timeSinceLastShot = 0f;
+
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
@@ -30,14 +29,31 @@ public class MainComputer : EnemyController
 
     void Health()
     {
-        if ((MaxHitPoint / 2) == HitPoints)
+        //when reached half its health
+        if ((MaxHealth / 2) == CurrentHealth)
         {
             Debug.Log("half health");
             sr.sprite = HalfHealth;
         }
-        if (HitPoints == 0)
+        //when reached half its health
+        if (CurrentHealth == 0)
         {
             sr.sprite = Death;
+            Invoke("destory", 0.5f);
         }
+    }
+
+    //overriding the enemyController parent function since the logic is a bit different
+    public new void TakeHit(float damageTaken)
+    {
+        CurrentHealth -= damageTaken;
+
+        //updating the enemy's health bar
+        healthBar.setHealth(CurrentHealth, MaxHealth);
+    }
+
+    void destory()
+    {
+        Destroy(this.gameObject);
     }
 }

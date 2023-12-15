@@ -5,52 +5,48 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public bool isFacingRight = false;
-    public int damageToPlayer=1;
+    public int damageToPlayer = 1;
     public EnemyHealthBar healthBar;
-    public float HitPoints=3; // if hit 3 times they die
-    public float MaxHitPoint = 3; // if hit 3 times they die
-    public Animator anim;
+    public float CurrentHealth=3;
+    public float MaxHealth = 3; // if hit 3 times they die
+    protected Animator anim;
     public GameObject bullet;
     public Transform shootingPoint;
-    private bool onplayersside=false;
-
-
+    public GameObject player; //we find the player to know his position
+    public float shootingInterval = 5f; //shoots every seconds
+    protected float timeSinceLastShot = 0f; //counter for the shots
 
     void Start()
     {
         anim = GetComponent<Animator>();
     }
 
-    public void Flip()
-    {
-        isFacingRight = !isFacingRight;
-        transform.localScale = new Vector3(-(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-    }
-
+    //If the player touches the enemy they get hurt
     void OnTriggerEnter2D(Collider2D collider)
     {
-        
         if (collider.tag == "Player")
         {
+            //function TakeDamage in the player's Healthstates decreases his health by a certain amount
             FindObjectOfType<Healthstates>().TakeDamage(damageToPlayer);
         }
-        //if (collider.tag == "Enemy" && (onplayersside))
-        //{
-        //    FindObjectOfType<EnemyController>().TakeHit(damageToPlayer);
-        //}
     }
   
+    //if a Player's bullet hits the enemy he losses health  
     public void TakeHit(float damageTaken)
     {
-        HitPoints -= damageTaken;
-        healthBar.setHealth(HitPoints, MaxHitPoint);
+        CurrentHealth -= damageTaken;
 
-        if (HitPoints <= 0)
+        //updating the enemy's health bar
+        healthBar.setHealth(CurrentHealth, MaxHealth);
+
+        //when the enemy's life is 0 he dies
+        if (CurrentHealth <= 0)
         {
             StartCoroutine(DestroyAfterAnimation());
         }
     }
 
+    //Dying after the die animation plays
     IEnumerator DestroyAfterAnimation()
     {
         anim.SetTrigger("die");
@@ -62,9 +58,17 @@ public class EnemyController : MonoBehaviour
         Destroy(gameObject);
     }
 
+    //Creating an Enemy bullet instance
     public void Shoot()
     {
         Instantiate(bullet, shootingPoint.position, shootingPoint.rotation);
     }
+
+    public void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        transform.localScale = new Vector3(-(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+    }
+
 }
 
