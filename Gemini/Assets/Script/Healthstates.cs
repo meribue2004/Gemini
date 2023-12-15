@@ -143,12 +143,21 @@ public class Healthstates : MonoBehaviour
 
         if (!this.isImmune)
         {
+            if(damage==1){
+                healthBar.fillAmount -= 0.1285f;
+            }
+            if(damage==2){
+                healthBar.fillAmount -= 0.257f;
+            }
+            if(damage==3){
+                healthBar.fillAmount -= 0.3855f;
+            }
             canmove = false;
             FindObjectOfType<PlayerMovement>().setcanmove(canmove);
             hurt = true;
             anim.SetBool("hurt", hurt);
             this.health = this.health - damage;
-            healthBar.fillAmount -= 0.1285f;
+          
 
            
             if (this.health < 0)
