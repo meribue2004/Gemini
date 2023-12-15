@@ -3670,7 +3670,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 63f4a27187980bd4c9fc16117ec5f583, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -5071,6 +5071,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 513063566873763163, guid: 7cec2e3e16e0983479a739487ea119e6, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 63f4a27187980bd4c9fc16117ec5f583, type: 2}
     - target: {fileID: 513063566873763165, guid: 7cec2e3e16e0983479a739487ea119e6, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -6313,25 +6317,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4217191089911210951, guid: 237b9b3077c4e2941b34d801f5a9a236, type: 3}
-      propertyPath: m_SortingLayer
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4217191089911210951, guid: 237b9b3077c4e2941b34d801f5a9a236, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1145404385
-      objectReference: {fileID: 0}
-    - target: {fileID: 5417624914481953902, guid: 237b9b3077c4e2941b34d801f5a9a236, type: 3}
-      propertyPath: m_BodyType
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6180390482889040237, guid: 237b9b3077c4e2941b34d801f5a9a236, type: 3}
       propertyPath: m_Name
       value: T1 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6180390482889040237, guid: 237b9b3077c4e2941b34d801f5a9a236, type: 3}
-      propertyPath: m_Layer
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 237b9b3077c4e2941b34d801f5a9a236, type: 3}
