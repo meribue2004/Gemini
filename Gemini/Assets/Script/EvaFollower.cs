@@ -6,15 +6,19 @@ public class EvaFollower : MonoBehaviour
 {
     private PlayerMovement player;
     public float maxspeed = 3f;
-    // Start is called before the first frame update
+    public float behindDistance = 4f;
+
     void Start()
     {
         player = FindObjectOfType<PlayerMovement>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, maxspeed * Time.deltaTime);
+        // Calculate the target position to be 4 units behind the player
+        Vector3 targetPosition = player.transform.position - (player.transform.right * behindDistance);
+
+        // Move towards the target position
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, maxspeed * Time.deltaTime);
     }
 }
