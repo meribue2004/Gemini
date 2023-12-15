@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class Main : MonoBehaviour
 {
     static public Main Instance;
+    public GameObject puzzle;
+    public GameObject others;
 
     public int switchCount;
     public GameObject winText;
@@ -20,6 +22,8 @@ public class Main : MonoBehaviour
         if (onCount == switchCount)
         {
             winText.SetActive(true);
+            Invoke("disapear", 1f);
+            DialogueManager.isDialogueActive = false;
         }
     }
     private void Update()
@@ -28,4 +32,12 @@ public class Main : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
+
+    void disapear()
+    {
+        others.SetActive(true);
+        puzzle.SetActive(false);
+        Camera.main.orthographicSize = 7.6f;
+    }
+
 }

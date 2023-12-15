@@ -9,10 +9,19 @@ public class Wire : MonoBehaviour
     Vector3 startPoint;
     Vector3 startPosition;
     // Start is called before the first frame update
+
+
     void Start()
     {
         startPoint = transform.parent.position;
         startPosition = transform.position;
+
+
+        // Retrieve the starting position
+        string startPositionString = PlayerPrefs.GetString("StartPosition");
+        Vector3 start = Vector3.zero;
+
+
     }
 
     private void OnMouseDrag()
@@ -56,6 +65,7 @@ public class Wire : MonoBehaviour
 
         // destory the script
         Destroy(this);
+
     }
 
     private void OnMouseUp()
@@ -78,4 +88,5 @@ public class Wire : MonoBehaviour
         wireEnd.size = new Vector2(dist, wireEnd.size.y);
 
     }
- }
+
+}

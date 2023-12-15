@@ -37,7 +37,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 450, y: 190}
+  m_AnchoredPosition: {x: 450, y: 186.98328}
   m_SizeDelta: {x: 539.4259, y: 157.3468}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6359835691685087928
@@ -113,8 +113,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 473.15942, y: 190.73631}
-  m_SizeDelta: {x: 361.4101, y: 102.4365}
+  m_AnchoredPosition: {x: 489.18127, y: 186}
+  m_SizeDelta: {x: 329.3664, y: 105.8757}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6359835691834868598
 CanvasRenderer:
@@ -171,8 +171,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 17
+  m_fontSizeBase: 17
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -0.18774414, w: -1.8726807}
+  m_margin: {x: 1.0337219, y: 0, z: -0.18774414, w: 0.5519867}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -248,8 +248,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 277.71295, y: 78.6734}
-  m_SizeDelta: {x: 916, y: 380}
+  m_AnchoredPosition: {x: 277.71295, y: 85}
+  m_SizeDelta: {x: 916, y: 386.7757}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6359835692433854848
 CanvasRenderer:
@@ -325,7 +325,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 679, y: 190.74}
+  m_AnchoredPosition: {x: 679, y: 187.72327}
   m_SizeDelta: {x: 18.4255, y: 27.1909}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6359835692777835385
@@ -411,7 +411,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Dialogue, Assembly-CSharp
+        m_TargetAssemblyTypeName: DialogueManager, Assembly-CSharp
         m_MethodName: NextSentence
         m_Mode: 1
         m_Arguments:

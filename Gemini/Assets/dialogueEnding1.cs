@@ -5,12 +5,13 @@ using UnityEngine;
 public class dialogueEnding1 : MonoBehaviour
 {
     public DialogueManager dialogueManager;
+    private bool DialogueIsTriggered;
     // Start is called before the first frame update
     void Start()
     {
-        
+        DialogueIsTriggered = false;
     }
-IEnumerator MyCoroutine()
+    IEnumerator MyCoroutine()
     {
         Debug.Log("Coroutine started");
         
@@ -26,15 +27,14 @@ IEnumerator MyCoroutine()
     }
      private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && !DialogueIsTriggered)
         {
+            DialogueIsTriggered = true;
             StartCoroutine(MyCoroutine());
             string[] dialogue =
             {
                 "Adam: *sighs* ...let's do this. For Grandpa Lu and Eva!",
                 "Adam: blah blah blah"
-             
-                
             };
             dialogueManager.SetSentences(dialogue);
             dialogueManager.StartCoroutine(dialogueManager.TypeDialogue());
