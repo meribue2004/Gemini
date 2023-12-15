@@ -189,7 +189,7 @@ public class Healthstates : MonoBehaviour
     //koki reset health 
    void ResetHealth()
     {
-      
+        health = 6;
        healthBar.fillAmount = 0.771f ;
     }
     void PlayHitReaction()
@@ -239,7 +239,7 @@ heartImages[lives ].color = imageColor;
                  WaitAndContinue();
                 FindObjectOfType<LevelManager>().RespawnPlayer();
                 ResetHealth();
-                this.health = 6;
+              
              
                 
 
