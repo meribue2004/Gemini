@@ -25,7 +25,6 @@ public class lowOpacity : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             SetOpacity(0.5f);
-            FindObjectOfType<CameraController>().maxX=610;
         }
     }
 
