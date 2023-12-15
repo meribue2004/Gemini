@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class jetpackmovment : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class jetpackmovment : MonoBehaviour
     private int gunpieces;
     float zValue;
     bool canmove = true;
+
+    public TextMeshProUGUI gunpiecesText;
     void Start()
     {
         isFacingRight = true;
@@ -26,7 +29,7 @@ public class jetpackmovment : MonoBehaviour
     {
         gunpieces++;
         Debug.Log("gun peices" + gunpieces);
-
+        gunpiecesText.text = gunpieces.ToString();
     }
     private void Awake()
     {

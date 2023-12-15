@@ -28,7 +28,7 @@ public class Healthsytemlevel3 : MonoBehaviour
     public Image healthBar; 
     public Image[] heartImages;
     public float heartscollected = 0;
-   
+
     void Start()
     {
         //spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
@@ -94,6 +94,10 @@ public class Healthsytemlevel3 : MonoBehaviour
             }
             else if (this.health == 0 && this.lives == 1)
             {
+                this.lives--;
+                Color imageColor = heartImages[lives].color;
+                imageColor.a = 0f; // Set alpha to 0 (fully transparent)
+                heartImages[lives - 1].color = imageColor;
                 Debug.Log("Gameover");
                 Destroy(this.gameObject); // Destroy the object when no lives left and health is zero
             }
