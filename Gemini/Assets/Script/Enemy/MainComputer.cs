@@ -11,6 +11,7 @@ public class MainComputer : EnemyController
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
     }
 
@@ -44,7 +45,7 @@ public class MainComputer : EnemyController
     }
 
     //overriding the enemyController parent function since the logic is a bit different
-    public new void TakeHit(float damageTaken)
+    public override void TakeHit(float damageTaken)
     {
         CurrentHealth -= damageTaken;
 

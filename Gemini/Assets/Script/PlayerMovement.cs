@@ -77,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
     void movmentcode()
     {
         
-        if (!PauseMenu.isPaused && !DialogueManager.isDialogueActive)
+        if (!PauseMenu.isPaused && !DialogueManager.isDialogueActive && !ChoicesBtn.isChoosing)
         {
             CheckShield();
             if (Input.GetKeyDown(Spacebar) && grounded)
@@ -165,7 +165,7 @@ public class PlayerMovement : MonoBehaviour
       
     }
 
-    void flip()
+    public void flip()
     {
         transform.localScale = new Vector3(-(transform.localScale.x), transform.localScale.y, transform.localScale.z);
     }

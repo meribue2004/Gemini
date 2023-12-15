@@ -12,14 +12,15 @@ public class EnemyController : MonoBehaviour
     protected Animator anim;
     public GameObject bullet;
     public Transform shootingPoint;
-    public GameObject player; //we find the player to know his position
+    public PlayerMovement player; //we find the player to know his position
     public float shootingInterval = 5f; //shoots every seconds
     protected float timeSinceLastShot = 0f; //counter for the shots
 
     void Start()
     {
         anim = GetComponent<Animator>();
-    }
+        player = GetComponent<PlayerMovement>();
+}
 
     //If the player touches the enemy they get hurt
     void OnTriggerEnter2D(Collider2D collider)
@@ -32,7 +33,7 @@ public class EnemyController : MonoBehaviour
     }
   
     //if a Player's bullet hits the enemy he losses health  
-    public void TakeHit(float damageTaken)
+    public virtual void TakeHit(float damageTaken)
     {
         CurrentHealth -= damageTaken;
 

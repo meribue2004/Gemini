@@ -12,6 +12,7 @@ TagManager:
   - Heart
   - Time
   - shield
+  - Main Computer
   layers:
   - Default
   - TransparentFX
