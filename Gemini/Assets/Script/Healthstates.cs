@@ -177,6 +177,10 @@ public class Healthstates : MonoBehaviour
             }
             else if (this.health == 0 && this.lives == 1)
             {
+                this.lives--;
+                Color imageColor = heartImages[lives].color;
+                imageColor.a = 0f; // Set alpha to 0 (fully transparent)
+                heartImages[lives].color = imageColor;
                 Debug.Log("Gameover");
                 Destroy(this.gameObject); // Destroy the object when no lives left and health is zero
             }
