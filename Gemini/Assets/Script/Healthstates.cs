@@ -191,7 +191,7 @@ public class Healthstates : MonoBehaviour
         }
     }
     //koki reset health 
-   void ResetHealth()
+  public  void ResetHealth()
     {
         health = 6;
        healthBar.fillAmount = 0.771f ;
@@ -272,26 +272,26 @@ heartImages[lives ].color = imageColor;
         Debug.Log(coinsCollected);
         scoreText.text = coinsCollected.ToString();
     }
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        //if (col.gameObject.tag == "Score")
-        //{
-        //    coinsCollected++;
-        //    Debug.Log(coinsCollected);
+    //void OnTriggerEnter2D(Collider2D col)
+    //{
+    //    //if (col.gameObject.tag == "Score")
+    //    //{
+    //    //    coinsCollected++;
+    //    //    Debug.Log(coinsCollected);
 
-        //    scoreText.text = coinsCollected.ToString();
-        //}
-        if (col.gameObject.tag == "Heart")
-        {
-            ResetHealth();
-            Debug.Log(heartscollected);
-        }
-        if(col.gameObject.tag=="Time")
-        {
-           FindObjectOfType<Timer>().currentTime+=30;
-            Debug.Log(timecollected);
-        }
-    }
+    //    //    scoreText.text = coinsCollected.ToString();
+    //    //}
+    //    if (col.gameObject.tag == "Heart")
+    //    {
+    //        //ResetHealth();
+    //        Debug.Log(heartscollected);
+    //    }
+    //    if(col.gameObject.tag=="Time")
+    //    {
+    //       FindObjectOfType<Timer>().currentTime+=30;
+    //        Debug.Log(timecollected);
+    //    }
+    //}
     IEnumerator DieAndRespawn()
     {
         health = 6;

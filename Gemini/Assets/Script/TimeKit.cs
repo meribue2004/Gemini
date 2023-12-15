@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TimeKit : MonoBehaviour
 {
-    public float time;
+    public float time=30;
     //public float timetoadd = 10f;
     // Start is called before the first frame update
     void Start()
@@ -22,6 +22,7 @@ public class TimeKit : MonoBehaviour
         if (other.name == "Player")
         {
             FindObjectOfType<Healthstates>().timecollected += time;
+            FindObjectOfType<Timer>().currentTime += 30;
         }
         Destroy(this.gameObject);
     }
