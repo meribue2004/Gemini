@@ -18,10 +18,11 @@ public class Keys : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(this.gameObject);
+       
         if (other.tag == "Player")
         {
-           
+            Destroy(this.gameObject);
+
             FindObjectOfType<Healthstates>().CollectCoin();
         }
 
