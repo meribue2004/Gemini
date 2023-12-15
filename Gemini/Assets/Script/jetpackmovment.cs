@@ -15,13 +15,19 @@ public class jetpackmovment : MonoBehaviour
     public KeyCode moveLeft;
     public KeyCode moveRight;
     public float rotationSpeed = 90f;
+    private int gunpieces;
     float zValue;
     bool canmove = true;
     void Start()
     {
         isFacingRight = true;
     }
+   public void gunpiecescollcted()
+    {
+        gunpieces++;
+        Debug.Log("gun peices" + gunpieces);
 
+    }
     private void Awake()
     {
         rigdbody = GetComponent<Rigidbody2D>();
