@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class CutScene4 : MonoBehaviour
 {
-    public DialogueManager dialogueManager;
+    public DialogueManagerCutScene dialogueManager;
+    public bool isTriggered;
     // Start is called before the first frame update
     void Start()
     {
-        
+        isTriggered = false;
     }
 
     // Update is called once per frame
@@ -19,22 +20,21 @@ public class CutScene4 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+
+        if (collision.tag == "Player" && !isTriggered)
         {
+            isTriggered = true;
             string[] dialogue =
             {
-                "Eva: Good job Adam! we are so close-",
-                "*Eva Gliches*",
-                "scared Eva: OH No! what's happening! I- I- AD-A-m ",
-                " Worried Adam: Eva!! What's happening to you??",
-                "*More Gliches*",
+                "Scared Eva: OH No! what's happening! I- I- AD-A-m ",
+                "Adam: Eva!! What's happening to you??",
                 "Scared Eva: I-I- don't KNow- HEL-",
                 "Evil Eva: HOW DARE YOU DEFY US ADAM?",
-                "Worried Adam: EVA??",
+                "Adam: EVA??",
                 "Evil Eva: Eva is gone Adam! WE ARE GEMINI!",
                 "Evil Eva: AND WE ARE GOING TO DESTROY YOU!",
-                "Angry Adam: NO! You can't take away Eva from me!",
-                "Angry Adam: Hang On, Eva! I'm getting you back!",
+                "Adam: NO! You can't take away Eva from me!",
+                "Adam: Hang On, Eva! I'm getting you back!",
 
             };
             dialogueManager.SetSentences(dialogue);

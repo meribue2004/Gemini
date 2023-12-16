@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class CutScene5 : MonoBehaviour
 {
-    public DialogueManager dialogueManager;
+    public DialogueManagerCutScene dialogueManager;
+    public bool isTriggered;
     // Start is called before the first frame update
     void Start()
     {
-        
+        isTriggered = false;
     }
 
     // Update is called once per frame
@@ -19,8 +20,10 @@ public class CutScene5 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+
+        if (collision.tag == "Player" && !isTriggered)
         {
+            isTriggered = true;
             string[] dialogue =
             {
                 "Evil Eva:YOU MERE HUMAN! You have no idea what you are doing!! ",
