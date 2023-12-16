@@ -20,7 +20,7 @@ public class electricshock : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         collider2D = GetComponent<Collider2D>();
         startPosition = transform.position;
-       
+         FindObjectOfType<AudioManager>().Play("lvl3");
         StartCoroutine(FlickerSprite());
     }
     void Update()
@@ -33,6 +33,8 @@ public class electricshock : MonoBehaviour
     {
         while (true)
         {
+           
+
         
             spriteRenderer.enabled = !spriteRenderer.enabled;
 
@@ -47,6 +49,19 @@ public class electricshock : MonoBehaviour
             collider2D.enabled = true;
 
             yield return new WaitForSeconds(flickerDuration - flickerInterval);
+        }
+    }
+    public int damage = 1;
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+
+
+        if (collider.tag == "Player")
+        {
+             FindObjectOfType<AudioManager>().Play("electrify");
+            
+            FindObjectOfType<Healthsytemlevel3>().TakeDamage(damage);
+            //FindObjectOfType<LevelManager>().RespawnPlayer();
         }
     }
 }
