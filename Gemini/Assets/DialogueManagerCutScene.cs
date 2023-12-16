@@ -63,7 +63,7 @@ public class DialogueManagerCutScene : MonoBehaviour
 
             if (textDisplay.text == dialogueSentence[index])
             {
-                NextSentence();
+                Invoke("NextSentence", 0.5f);
             }
         }
     }
