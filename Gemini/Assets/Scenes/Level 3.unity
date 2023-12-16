@@ -14089,7 +14089,7 @@ MonoBehaviour:
   textDisplay: {fileID: 8652576243978609520}
   typingSpeed: 0.08
   continueButton: {fileID: 8652576245183196004}
-  dialogueBox: {fileID: 8652576243978609522}
+  dialogueBox: {fileID: 8652576245144580793}
   characterImage: {fileID: 8652576245409150961}
   player: {fileID: 1361091053}
   bg: {fileID: 8652576244453470594}
