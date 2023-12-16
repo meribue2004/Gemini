@@ -49,17 +49,10 @@ public class EnemyBullet : MonoBehaviour
             StopBullet();
             collidedScript2.TakeDamage(damage);
         }
-        if (collision.tag == "shield")
-        {
-            //StopBullet();
-            Destroy(this.gameObject);
-
-        }
-        else if (collision.tag == "Ground" )
+        else if (collision.tag == "shield" || collision.tag == "Ground")
         {
             StopBullet();
         }
-
     }
 
     //bullet stops moving and plays the Destroy animation

@@ -24,28 +24,25 @@ public class ShootingEnemy : EnemyController
 
     private void Update()
     {
-        if (!DialogueManager.isDialogueActive)
+        //shooting
+        timeSinceLastShot += Time.deltaTime;
+        if (timeSinceLastShot >= shootingInterval)
         {
-            //shooting
-            timeSinceLastShot += Time.deltaTime;
-            if (timeSinceLastShot >= shootingInterval)
-            {
+            FindObjectOfType<AudioManager>().Play("enemyweapon");
+            anim.SetBool("shooting", true);
 
-                anim.SetBool("shooting", true);
+            Invoke("Shoot", 0.5f);
 
-                Invoke("Shoot", 0.5f);
+            Invoke("StopShootingAnimation", 0.7f);
 
-                Invoke("StopShootingAnimation", 0.7f);
+            timeSinceLastShot = 0f;
+        }
 
-                timeSinceLastShot = 0f;
-            }
-
-            //Fliping the position of the enemy based on the position of the player
-            if ((player.transform.position.x < transform.position.x && isFacingRight) ||
-             (player.transform.position.x > transform.position.x && !isFacingRight))
-            {
-                Flip();
-            }
+        //Fliping the position of the enemy based on the position of the player
+        if ((player.transform.position.x < transform.position.x && isFacingRight ) ||
+         (player.transform.position.x > transform.position.x && !isFacingRight  ))
+        {
+            Flip();
         }
     }
 
@@ -61,7 +58,6 @@ public class ShootingEnemy : EnemyController
 
         // Pass a reference to the ShootingEnemy script
         bulletScript.SetShootingEnemy(this);
-        FindObjectOfType<AudioManager>().Play("enemyweapon");
     }
 }
 
