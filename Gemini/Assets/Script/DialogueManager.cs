@@ -43,6 +43,7 @@ public class DialogueManager : MonoBehaviour
 
     public IEnumerator TypeDialogue()
     {
+        //FindObjectOfType<AudioManager>().Play("meme");
         isDialogueActive = true;
 
         dialogueBox.SetActive(true);
