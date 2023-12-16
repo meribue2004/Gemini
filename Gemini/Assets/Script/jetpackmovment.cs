@@ -16,7 +16,7 @@ public class jetpackmovment : MonoBehaviour
     public KeyCode moveLeft;
     public KeyCode moveRight;
     public float rotationSpeed = 90f;
-    private int gunpieces;
+    public int gunpieces;
     float zValue;
     bool canmove = true;
 

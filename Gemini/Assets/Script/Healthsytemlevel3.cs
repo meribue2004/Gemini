@@ -98,7 +98,7 @@ public class Healthsytemlevel3 : MonoBehaviour
                 this.lives--;
                 Color imageColor = heartImages[lives].color;
                 imageColor.a = 0f; // Set alpha to 0 (fully transparent)
-                heartImages[lives - 1].color = imageColor;
+                heartImages[lives].color = imageColor;
                 Debug.Log("Gameover");
                 Destroy(this.gameObject); // Destroy the object when no lives left and health is zero
             }

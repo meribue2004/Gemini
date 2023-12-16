@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 5a0b04ac8b4f33d49aa84b1ba8c7d3ab
   - enabled: 1
+    path: Assets/Scenes/grandpalus.unity
+    guid: 71b5eed5f984ad6478dc255c9c08e9ea
+  - enabled: 1
     path: Assets/Scenes/Level 1.unity
     guid: 522760cbffbd40a4fbb7ffee81372ff1
   - enabled: 1
@@ -21,21 +24,33 @@ EditorBuildSettings:
     path: Assets/Scenes/ControlRoomSecene.unity
     guid: 743c45f8e48c77e48a277148a773b471
   - enabled: 1
+    path: Assets/Scenes/PuzzleWires.unity
+    guid: 36ac92a47d495e04a9ad074ead384a84
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: 9fa5332abcd8ccd4ca15228d43703e72
+  - enabled: 1
+    path: Assets/Scenes/ControlRoomSecene 1.unity
+    guid: 3bcd3f3ed26bb0c44871080a619d92fb
+  - enabled: 1
+    path: Assets/Scenes/Level 4.unity
+    guid: 3c7c3f0edfd914c45a66c08f946bf703
+  - enabled: 1
+    path: Assets/Scenes/glitchEva.unity
+    guid: 0475d1c97c1f0a14481010b1325b352a
+  - enabled: 1
     path: Assets/Scenes/Level 5.unity
     guid: ca0a316bad3fcfc4a80057469d78b5c6
   - enabled: 1
     path: Assets/Scenes/ending1.unity
     guid: c24e22bc335823d428d55aca4b780092
   - enabled: 1
+    path: Assets/Scenes/backtoearth.unity
+    guid: c256c1651d0fcd240975e26e47df829c
+  - enabled: 1
     path: Assets/Scenes/ending2.unity
     guid: d5adb8887e454854ca2017078d86aea3
   - enabled: 1
-    path: Assets/Scenes/PuzzleWires.unity
-    guid: 36ac92a47d495e04a9ad074ead384a84
-  - enabled: 1
-    path: Assets/Scenes/Level 4.unity
-    guid: 3c7c3f0edfd914c45a66c08f946bf703
-  - enabled: 1
-    path: Assets/Scenes/Level 3.unity
-    guid: 9fa5332abcd8ccd4ca15228d43703e72
+    path: Assets/Scenes/Credits.unity
+    guid: 1bb3a497e245c074d8c661b8eeaa9ed8
   m_configObjects: {}

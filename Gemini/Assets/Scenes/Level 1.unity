@@ -9258,7 +9258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 8905758813814934280}
-  typingSpeed: 0.02
+  typingSpeed: 0.07
   continueButton: {fileID: 8905758812607791900}
   dialogueBox: {fileID: 8905758813696082652}
   characterImage: {fileID: 8905758812417433481}

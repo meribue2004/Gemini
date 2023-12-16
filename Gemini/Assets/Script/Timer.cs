@@ -15,22 +15,25 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        // Update the current time
-        currentTime -= Time.deltaTime;
-
-        // Ensure the current time doesn't go below zero
-        currentTime = Mathf.Max(currentTime, 0f);
-
-        // Update the time bar UI
-        UpdateTimeBarUI();
-
-        // Check if time is up
-        if (currentTime <= 0f)
+        if (!DialogueManager.isDialogueActive)
         {
-             FindObjectOfType<Healthstates>().DecreaselivesTimer();
-             currentTime = totalTime;
-            // Handle time-up logic here
-            Debug.Log("Time's up!");
+            // Update the current time
+            currentTime -= Time.deltaTime;
+
+            // Ensure the current time doesn't go below zero
+            currentTime = Mathf.Max(currentTime, 0f);
+
+            // Update the time bar UI
+            UpdateTimeBarUI();
+
+            // Check if time is up
+            if (currentTime <= 0f)
+            {
+                FindObjectOfType<Healthstates>().DecreaselivesTimer();
+                currentTime = totalTime;
+                // Handle time-up logic here
+                Debug.Log("Time's up!");
+            }
         }
     }
 

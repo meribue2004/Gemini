@@ -633,7 +633,7 @@ MonoBehaviour:
   textDisplay: {fileID: 5025151139608615362}
   typingSpeed: 0.02
   continueButton: {fileID: 5025151138407764438}
-  dialogueBox: {fileID: 5025151139458568214}
+  dialogueBox: {fileID: 5025151138459158539}
   characterImage: {fileID: 5025151138732248387}
   player: {fileID: 2138400561}
   bg: {fileID: 5025151139154266928}
@@ -9558,6 +9558,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1887642483491029563, guid: c1696651f8c70524980c9113306229c4, type: 3}
   m_PrefabInstance: {fileID: 823448551}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &546132182 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4356124411340475096, guid: 266e4adfeb354bd4bb3d008c121f3bd7, type: 3}
+  m_PrefabInstance: {fileID: 623490367}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &546132187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546132182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdcc5ded650fcc94ab3938b26086be32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &546887743
 PrefabInstance:
   m_ObjectHideFlags: 0

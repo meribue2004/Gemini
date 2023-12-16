@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class DialogueManagerCutScene : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class DialogueManagerCutScene : MonoBehaviour
     public GameObject dialogueBox;
     public Image characterImage;
     public Rigidbody2D player;
+    public int cutScene;
+    public int currentSceneIndex;
+    public bool Ending1;
 
     public Sprite Adam;
     public Sprite Eva;
@@ -93,7 +97,16 @@ public class DialogueManagerCutScene : MonoBehaviour
             player.constraints = RigidbodyConstraints2D.None;
             player.constraints = RigidbodyConstraints2D.FreezeRotation;
             isDialogueActive = false;
+            if (!Ending1) {
+                Invoke("load", 0.3f); 
+            }
         }
+    }
+
+    private void load()
+    {
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
 }
