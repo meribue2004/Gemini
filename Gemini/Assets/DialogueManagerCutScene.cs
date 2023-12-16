@@ -39,7 +39,8 @@ public class DialogueManagerCutScene : MonoBehaviour
 
     public IEnumerator TypeDialogue()
     {
-        //FindObjectOfType<AudioManager>().Play("meme");
+         
+        FindObjectOfType<AudioManager>().Play("meme");
         isDialogueActive = true;
 
         dialogueBox.SetActive(true);
