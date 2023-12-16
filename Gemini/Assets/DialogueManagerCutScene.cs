@@ -85,6 +85,7 @@ public class DialogueManagerCutScene : MonoBehaviour
         }
         else
         {
+            FindObjectOfType<AudioManager>().Stop("meme");
             textDisplay.text = "";
             dialogueBox.SetActive(false);
             this.dialogueSentence = null;

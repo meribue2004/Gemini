@@ -23,21 +23,23 @@ public class CutScene1 : MonoBehaviour
     {
         if (collision.tag == "Player" && !isTriggered)
         {
+              
             isTriggered = true;
             string[] dialogue =
             {
+               
                 "Lu: As you already know Adam, Earth hasn't healed yet..but that is not the truth!!",
                 "Adam: Whoa, what do you mean?",
-                "Lu: 40 years ago,me and my scientist collegues have discovered the earth has finally healed and we can go back to planet Earth, ut Gemini wasn't too happy about it..",
+                "Lu: 40 years ago,me and my scientist collegues have discovered the earth has finally healed and we can go back to planet Earth, but Gemini wasn't too happy about it..",
                 "Lu: Gemini wanted to stay in control of the ship and humans, and so it decided to keep that information to itself by wiping away the memory of my collegues.",
                 "Lu: Luckily, I managed to evade it at the last minute.",
                 "Adam: We won't let that happen again, Grandpa. We will tell them the truth this time and send those people back to their homeland. ",
-                "Lu: But it won't be easy, Adam. You must disable Gemini's control of the ship by taking the control chip and turning it manually.",
+                "Lu: But it won't be easy, Adam. You must disable Gemini's control of the ship by taking the control chip and turning it manual.",
                 "Lu: but first, you need to deactivate your tracking bracelet.",
                 "Adam: How can I do it?",
                 "Eva: Don't worry Adam, I can handle it and i will help you through your mission.",
                 "Adam: Then let's get going, Eva.",
-
+                 
             };
             dialogueManager.SetSentences(dialogue);
             dialogueManager.StartCoroutine(dialogueManager.TypeDialogue());
