@@ -38,7 +38,7 @@ public class jetpackmovment : MonoBehaviour
 
     void Update()
     {
-        if (canmove)
+        if (canmove && !DialogueManager.isDialogueActive) 
         {
             movmentcode();
         }
