@@ -85653,7 +85653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2862fed70ac0a344b73f1fc1720e9e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 1298005232}
+  pauseMenu: {fileID: 2139438679}
   pauseMenuImage: {fileID: 1298005233}
 --- !u!4 &1893319515
 Transform:

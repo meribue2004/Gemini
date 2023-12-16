@@ -5306,7 +5306,7 @@ PrefabInstance:
     - target: {fileID: 6479654284229408865, guid: a582224c10838fb45b8b97f04e94805b, type: 3}
       propertyPath: pauseMenu
       value: 
-      objectReference: {fileID: 1168072776}
+      objectReference: {fileID: 1487091238}
     - target: {fileID: 6479654284229408865, guid: a582224c10838fb45b8b97f04e94805b, type: 3}
       propertyPath: pauseMenuImage
       value: 
