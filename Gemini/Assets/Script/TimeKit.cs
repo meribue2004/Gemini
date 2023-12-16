@@ -17,13 +17,14 @@ public class TimeKit : MonoBehaviour
     {
         //FindObjectOfType<Timer>().IncreaseTotalTime(timetoadd);
     }
+  
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.name == "Player")
+        if (other.tag == "Player")
         {
             FindObjectOfType<AudioManager>().Play("time");
-            FindObjectOfType<Healthstates>().timecollected += time;
-            FindObjectOfType<Timer>().currentTime += 30;
+      
+            FindObjectOfType<Healthstates>().inctime();
         }
         Destroy(this.gameObject);
     }

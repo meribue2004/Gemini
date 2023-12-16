@@ -273,6 +273,16 @@ heartImages[lives ].color = imageColor;
         Debug.Log(coinsCollected);
         scoreText.text = coinsCollected.ToString();
     }
+    public void inctime()
+    {
+        Debug.Log("hereee");
+
+        timecollected += 30;
+        Debug.Log(timecollected);
+        FindObjectOfType<Timer>().currentTime += 30f;
+
+
+    }
     //void OnTriggerEnter2D(Collider2D col)
     //{
     //    //if (col.gameObject.tag == "Score")
