@@ -51,7 +51,9 @@ public class EnemyBullet : MonoBehaviour
         }
         else if (collision.tag == "shield" || collision.tag == "Ground")
         {
-            StopBullet();
+
+            //StopBullet();
+            Destroy(this.gameObject);
         }
     }
 

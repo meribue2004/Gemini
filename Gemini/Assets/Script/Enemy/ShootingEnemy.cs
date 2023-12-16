@@ -24,25 +24,28 @@ public class ShootingEnemy : EnemyController
 
     private void Update()
     {
-        //shooting
-        timeSinceLastShot += Time.deltaTime;
-        if (timeSinceLastShot >= shootingInterval)
+        if (!DialogueManager.isDialogueActive)
         {
-            FindObjectOfType<AudioManager>().Play("enemyweapon");
-            anim.SetBool("shooting", true);
+            //shooting
+            timeSinceLastShot += Time.deltaTime;
+            if (timeSinceLastShot >= shootingInterval)
+            {
+                FindObjectOfType<AudioManager>().Play("enemyweapon");
+                anim.SetBool("shooting", true);
 
-            Invoke("Shoot", 0.5f);
+                Invoke("Shoot", 0.5f);
 
-            Invoke("StopShootingAnimation", 0.7f);
+                Invoke("StopShootingAnimation", 0.7f);
 
-            timeSinceLastShot = 0f;
-        }
+                timeSinceLastShot = 0f;
+            }
 
-        //Fliping the position of the enemy based on the position of the player
-        if ((player.transform.position.x < transform.position.x && isFacingRight ) ||
-         (player.transform.position.x > transform.position.x && !isFacingRight  ))
-        {
-            Flip();
+            //Fliping the position of the enemy based on the position of the player
+            if ((player.transform.position.x < transform.position.x && isFacingRight) ||
+             (player.transform.position.x > transform.position.x && !isFacingRight))
+            {
+                Flip();
+            }
         }
     }
 
