@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5476192182554404835}
   m_Layer: 0
   m_Name: 02
-  m_TagString: Untagged
+  m_TagString: Undefined
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,5 +154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1794122e4d218ac4fb5e557f233b2cea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shakeDuration: 0.5
-  shakeIntensity: 0.1
+  moveSpeed: 10
+  targetZ: -36
+  targetRotation: {x: 0, y: 0, z: -37}

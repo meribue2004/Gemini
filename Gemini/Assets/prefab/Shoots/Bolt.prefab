@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3340317700929826981}
   m_Layer: 0
   m_Name: Bolt
-  m_TagString: Untagged
+  m_TagString: Undefined
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,6 +139,7 @@ MonoBehaviour:
   isFacingRight: 0
   bulletSpeed: 10
   damage: 2
+  GoldenRobot: 0
 --- !u!50 &3340317700929826981
 Rigidbody2D:
   serializedVersion: 4

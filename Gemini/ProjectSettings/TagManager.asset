@@ -13,6 +13,8 @@ TagManager:
   - Time
   - shield
   - Main Computer
+  - Undefined
+  - Bullet
   layers:
   - Default
   - TransparentFX
