@@ -26,11 +26,11 @@ public class CutScene2 : MonoBehaviour
             isTriggered = true;
             string[] dialogue =
             {
-                "Eva: Phew! that was close! ",
-                "Adam: Now, where is the control room?",
-                "Eva: The control room should be at the end of this hall. Once we get there, I will connect the wires to deactivate your tracking bracelet. ",
+                
+                
                 "Worried Eva: Oh no! They spotted us! Quick we need to hurry!",
                 "Adam: Then what are we waiting for? let's go!",
+                "Eva: The control room should be at the end of this hall. Once we get there, I will connect the wires to deactivate your tracking bracelet. ",
                 
             };
             dialogueManager.SetSentences(dialogue);
