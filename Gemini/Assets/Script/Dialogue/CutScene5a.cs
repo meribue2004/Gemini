@@ -25,7 +25,7 @@ public class CutScene5a : MonoBehaviour
             isTriggered = true;
             string[] dialogue =
             {
-                "Adam: NO you are Lunatic! I will free those people from you and we will live in peace and harmony on planet Earth. ",
+                "Adam: NO you are a Lunatic! I will free those people from you and we will live in peace and harmony on planet Earth. ",
                 " Evil Eva: So you're killing the only one who helped you Adam? Huh, just what I expected.. ",
                 "Adam: I am so sorry Eva. I will find a way to rebuild you! I promise! But For now I have to do this to save the humanity.",
             };
