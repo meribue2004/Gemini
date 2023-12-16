@@ -139,6 +139,7 @@ public class Healthstates : MonoBehaviour
     }
    public void TakeDamage(int damage)
     {
+        FindObjectOfType<AudioManager>().Play("hurt");
         
 
         if (!this.isImmune)

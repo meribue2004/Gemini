@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
+
     public Transform target; // The target to follow (your player)
 
     public float CameraSpeed; // How quickly the camera follows the target
@@ -20,6 +21,8 @@ public class CameraController : MonoBehaviour
     {
         Yoffset = 0;
         mainCamera = Camera.main;
+        
+      
     }
 
     private void Update()

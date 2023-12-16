@@ -77,8 +77,17 @@ public class PlayerMovement : MonoBehaviour
     void movmentcode()
     {
         
+        
         if (!PauseMenu.isPaused && !DialogueManager.isDialogueActive && !ChoicesBtn.isChoosing)
         {
+            if (Input.GetKeyDown(L) || Input.GetKeyDown(R))
+    {
+        // Play footstep sound when moving left or right
+        if (grounded)
+        {
+          FindObjectOfType<AudioManager>().Play("footsteps");
+        }
+    }
             CheckShield();
             if (Input.GetKeyDown(Spacebar) && grounded)
             {
@@ -89,6 +98,7 @@ public class PlayerMovement : MonoBehaviour
 
             if (Input.GetKey(L))
             {
+                
                 GetComponent<Rigidbody2D>().velocity = new Vector2(-moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
                 if (isFacingRight)
                 {
@@ -100,6 +110,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKey(R))
 
             {
+               
                 GetComponent<Rigidbody2D>().velocity = new Vector2(moveSpeed, GetComponent<Rigidbody2D>().velocity.y);
 
                 if (!isFacingRight)
@@ -133,6 +144,7 @@ public class PlayerMovement : MonoBehaviour
             //    }
             if (Input.GetKeyDown(ShootKey) && canShoot)
             {
+                FindObjectOfType<AudioManager>().Play("playerweapon");
                 anim.SetTrigger("shootwhiles");
                 Invoke("Shoot", 0.9f);
 
@@ -141,6 +153,7 @@ public class PlayerMovement : MonoBehaviour
             }
             if (Input.GetKeyDown(Shottswitch) && canShootsw)
             {
+                FindObjectOfType<AudioManager>().Play("playerweapon");
                 anim.SetTrigger("shootwhiles");
 
 
@@ -158,6 +171,7 @@ public class PlayerMovement : MonoBehaviour
         if (canmove)
         {
             movmentcode();
+
         }
         //timeSinceLastShot += Time.deltaTime;
         //timeSinceLastShotsw += Time.deltaTime;
@@ -209,6 +223,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.S) && Time.time >= lastShieldActivationTime + 10f && !shielded)
         {
+            FindObjectOfType<AudioManager>().Play("shield");
+            
             StartCoroutine(ActivateShield());
         }
     }

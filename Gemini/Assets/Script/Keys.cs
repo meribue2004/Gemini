@@ -12,6 +12,7 @@ public class Keys : MonoBehaviour
             Destroy(this.gameObject);
 
             FindObjectOfType<Healthstates>().CollectCoin();
+            FindObjectOfType<AudioManager>().Play("keycollect");
         }
 
     }

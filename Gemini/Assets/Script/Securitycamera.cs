@@ -12,7 +12,10 @@ public class Securitycamera : MonoBehaviour
 
     public float rotationSpeed = 30f; // Adjust the rotation speed as needed
     public Transform rotationCenter; // The center point around which the camera rotates
-
+ private void Start()
+    {
+        FindObjectOfType<AudioManager>().Play("lvl1");
+    }
 
     // Update is called once per frame
     void Update()
@@ -21,9 +24,11 @@ public class Securitycamera : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
+
         // Check if the collider that touched the sprite is the player 
         if (other.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("surveillance");
             player.GetComponent<Healthstates>().TakeDamage(6);
             FindObjectOfType<LevelManager>().RespawnPlayer();
         }

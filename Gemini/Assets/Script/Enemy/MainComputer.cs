@@ -11,8 +11,10 @@ public class MainComputer : EnemyController
 
     void Start()
     {
+        
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+       
     }
 
     void Update()
@@ -21,6 +23,7 @@ public class MainComputer : EnemyController
 
         if (timeSinceLastShot >= shootingInterval)
         {
+            FindObjectOfType<AudioManager>().Play("aiheadshot");
             Shoot();
             timeSinceLastShot = 0f;
         }

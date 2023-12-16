@@ -5,11 +5,10 @@ using UnityEngine;
 public class GuideLevel1 : MonoBehaviour
 {
     public DialogueManager dialogueManager;
-    public bool isTriggered;
     // Start is called before the first frame update
     void Start()
     {
-        isTriggered = false;
+        
     }
 
     // Update is called once per frame
@@ -20,9 +19,8 @@ public class GuideLevel1 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player" && !isTriggered)
+        if (collision.tag == "Player")
         {
-            isTriggered = true;
             string[] dialogue =
             {
                 "Eva: Avoid camera survieliance by going in the opposite direction. this way Gemini won't catch you.",

@@ -4,6 +4,10 @@ public class Treadmill : MonoBehaviour
 {
     public float treadmillSpeed = 3f; // Adjust the treadmill speed as needed
 
+ private void Start()
+    {
+        FindObjectOfType<AudioManager>().Play("lvl2");
+    }
     void Update()
     {
         // Move the player to the left (treadmill direction) only if it's on the treadmill

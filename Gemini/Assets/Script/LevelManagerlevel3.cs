@@ -18,6 +18,7 @@ public class LevelManagerlevel3 : MonoBehaviour
     }
     public void RespawnPlayer()
     {
+        FindObjectOfType<AudioManager>().Play("revive");
         FindObjectOfType<jetpackmovment>().transform.position = CurrentCheckpoint.transform.position;
 
     }

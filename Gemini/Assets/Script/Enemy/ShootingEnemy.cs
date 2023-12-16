@@ -28,6 +28,7 @@ public class ShootingEnemy : EnemyController
         timeSinceLastShot += Time.deltaTime;
         if (timeSinceLastShot >= shootingInterval)
         {
+            FindObjectOfType<AudioManager>().Play("enemyweapon");
             anim.SetBool("shooting", true);
 
             Invoke("Shoot", 0.5f);

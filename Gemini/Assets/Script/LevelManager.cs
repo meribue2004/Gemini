@@ -8,6 +8,7 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
 
     }
 
@@ -18,6 +19,7 @@ public class LevelManager : MonoBehaviour
     }
     public void RespawnPlayer()
     {
+        FindObjectOfType<AudioManager>().Play("revive");
         FindObjectOfType<PlayerMovement>().transform.position = CurrentCheckpoint.transform.position;
 
     }

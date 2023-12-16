@@ -12,6 +12,8 @@ public class lever : MonoBehaviour
 
     void Start()
     {
+         FindObjectOfType<AudioManager>().Play("lvl4");
+         FindObjectOfType<AudioManager>().Play("sparks");
         hasPlayed = false;
         Door = FindObjectOfType<LockedDoor>();
     }
@@ -38,6 +40,7 @@ public class lever : MonoBehaviour
             }
             else
             {
+                FindObjectOfType<AudioManager>().Play("pressuredoor");
                 Door.OpenDoor();
             }
 

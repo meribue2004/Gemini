@@ -49,8 +49,12 @@ public class jetpackmovment : MonoBehaviour
     }
     void movmentcode()
     {
+        if (Input.GetKeyDown(arrowUp)){
+FindObjectOfType<AudioManager>().PlayRandom("jetpack","jetpack2");
+        }
         if (Input.GetKey(arrowUp))
         {
+            
             ApplyJetpackForce();
             zValue = 9 * Mathf.Sin(rotationSpeed * Time.time);
 

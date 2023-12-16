@@ -21,6 +21,7 @@ public class TimeKit : MonoBehaviour
     {
         if (other.name == "Player")
         {
+            FindObjectOfType<AudioManager>().Play("time");
             FindObjectOfType<Healthstates>().timecollected += time;
             FindObjectOfType<Timer>().currentTime += 30;
         }

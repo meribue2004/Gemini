@@ -71,6 +71,7 @@ public class trampoline : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("trampoline");
             StartCoroutine(JumpSequence(other.GetComponent<Rigidbody2D>()));
         }
     }

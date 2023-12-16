@@ -31,6 +31,7 @@ public class Drone : EnemyController
     void shoot()
     {
         Instantiate(bullet, shootingPoint.position, Quaternion.identity);
+        FindObjectOfType<AudioManager>().Play("droneshot");
     }
 
     public void move()

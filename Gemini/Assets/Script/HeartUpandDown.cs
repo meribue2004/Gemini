@@ -28,6 +28,7 @@ public class HeartUpandDown : MonoBehaviour
     {
         if(other.tag=="Player")
         {
+            FindObjectOfType<AudioManager>().Play("health");
             FindObjectOfType<Healthsytemlevel3>().heartscollected += heart;
         }
         Destroy(this.gameObject);

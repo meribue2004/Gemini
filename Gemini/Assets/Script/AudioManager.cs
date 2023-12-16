@@ -4,26 +4,8 @@ using System;
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds; //list of sounds with certain properties
-    // public AudioSource pauseMenu;
-    // public AudioSource mainMenu;
-    // public AudioSource loseMenu;
-    // public AudioSource winMenu;
-    // public AudioSource intenseGameplayMusic;
-    // public AudioSource normalGameplayMusic;
-    // public AudioSource winEfx;
-    // public AudioSource dieEfx;
-    // public AudioSource footstepsEfx;
-    // public AudioSource playerweapon1Efx;
-    // public AudioSource playerweapon2Efx;
-    // public AudioSource enemyweaponEfx;
-    // public AudioSource keyCollectEfx;
-    // public AudioSource healthkitEfx;
-    // public AudioSource timekitEfx;
-    // //public AudioSource dieEfx;
-    // public AudioSource ambient;
-    // public AudioSource dialoguemememew;
-    // public AudioSource dialogueSara;
-    // public AudioSource cutscene;
+    public Sound[] levelSoundtracks;
+    
 
 
 
@@ -73,6 +55,40 @@ public class AudioManager : MonoBehaviour
         
         s.source.Play();
     }
+     public void PlayRandom(string soundName1, string soundName2)
+    {
+        // Choose a random index (0 or 1) to determine which sound to play
+        int randomIndex = UnityEngine.Random.Range(0, 2);
+
+        // Get the corresponding sound clip based on the random index
+        string selectedSoundName = (randomIndex == 0) ? soundName1 : soundName2;
+
+        // Find the sound with the selected name
+        Sound s = Array.Find(sounds, sound => sound.name == selectedSoundName);
+
+        // If the sound is found, play it
+        if (s != null)
+        {
+            s.source.Play();
+        }
+        else
+        {
+            Debug.LogWarning("One or both sound names not found.");
+        }
+    }
+    // public void Stop(string name)
+    // {
+    //     Sound s = Array.Find(sounds, sound => sound.name == name);
+
+    //     if (s == null)
+    //     {
+    //         Debug.LogWarning("Sound with name " + name + " not found.");
+    //         return;
+    //     }
+
+    //     s.source.Stop();
+    // }
+    
     // public void PlaySingle(AudioClip clip){
     //  efxSource.clip=clip;
     //  efxSourse.Play();

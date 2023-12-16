@@ -24,6 +24,7 @@ public class lowOpacity : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+             FindObjectOfType<AudioManager>().Play("holo");
             SetOpacity(0.5f);
         }
     }

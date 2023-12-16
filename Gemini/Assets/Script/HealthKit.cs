@@ -20,9 +20,11 @@ public class HealthKit : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            
             FindObjectOfType<Healthstates>().heartscollected += heart;
             FindObjectOfType<Healthstates>().ResetHealth();
             Destroy(this.gameObject);
+             FindObjectOfType<AudioManager>().Play("health");
         }
         //Destroy(this.gameObject);
     }

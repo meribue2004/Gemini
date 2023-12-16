@@ -55,6 +55,7 @@ public class Healthsytemlevel3 : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
+        FindObjectOfType<AudioManager>().Play("hurt");
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         if (!this.isImmune)
         {

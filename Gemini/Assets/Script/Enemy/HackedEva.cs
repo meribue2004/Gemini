@@ -18,6 +18,9 @@ public class HackedEva : EnemyController
     void Start()
     {
         playerPosition = player.transform.position;
+          FindObjectOfType<AudioManager>().Play("lvl5");
+            FindObjectOfType<AudioManager>().Play("evaglitch");
+            FindObjectOfType<AudioManager>().Play("sparks");
     }
 
     // Update is called once per frame
@@ -32,6 +35,7 @@ public class HackedEva : EnemyController
                 timeSinceLastShot += Time.deltaTime;
                 if (timeSinceLastShot >= shootingInterval)
                 {
+                    FindObjectOfType<AudioManager>().Play("lazer");
                     Invoke("Shoot", 0.5f);
                     timeSinceLastShot = 0f;
                 }

@@ -22,6 +22,7 @@ public class traplevel3 : MonoBehaviour
 
         if (collider.tag == "Player")
         {
+            
             FindObjectOfType<Healthsytemlevel3>().TakeDamage(damage);
             //FindObjectOfType<LevelManager>().RespawnPlayer();
         }

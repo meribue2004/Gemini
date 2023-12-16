@@ -22,6 +22,7 @@ public class lasergun : MonoBehaviour
 
     void Shoot()
     {
+        FindObjectOfType<AudioManager>().Play("pew");
         // Instantiate bullet at the fire point position and rotation
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
 

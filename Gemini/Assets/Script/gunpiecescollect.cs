@@ -27,6 +27,7 @@ public class gunpiecescollect : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            FindObjectOfType<AudioManager>().Play("guncollect");
             FindObjectOfType<jetpackmovment>().gunpiecescollcted();
             Destroy(this.gameObject);
         }
