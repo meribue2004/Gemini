@@ -91,6 +91,8 @@ using UnityEngine;
 using UnityEngine.UI; //for health bar ui
 using TMPro;
 
+using UnityEngine.SceneManagement;
+
 public class Healthstates : MonoBehaviour
 {
     public int health = 6;
@@ -184,6 +186,7 @@ public class Healthstates : MonoBehaviour
                 heartImages[lives].color = imageColor;
                 Debug.Log("Gameover");
                 Destroy(this.gameObject); // Destroy the object when no lives left and health is zero
+                SceneManager.LoadScene("DieMenu");
             }
             Debug.Log("Player health:" + this.health.ToString());
             Debug.Log("Player Lives:" + this.lives.ToString());
