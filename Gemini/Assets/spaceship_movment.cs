@@ -129,6 +129,7 @@ public class spaceship_movment : MonoBehaviour
 
     void Start()
     {
+        FindObjectOfType<AudioManager>().Play("earthbg");
         rigdbody = GetComponent<Rigidbody2D>();
     }
 
