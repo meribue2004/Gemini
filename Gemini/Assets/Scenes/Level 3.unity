@@ -5580,7 +5580,7 @@ PrefabInstance:
     - target: {fileID: 6210867193100142766, guid: 76e8a59b46df7b3458f051e35c8f69aa, type: 3}
       propertyPath: sounds.Array.data[0].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 5a12530c659f07340b0223be62f94e07, type: 3}
+      objectReference: {fileID: 8300000, guid: 3bdbf9ca8a4a63b4296a3e16946f497d, type: 3}
     - target: {fileID: 6210867193100142766, guid: 76e8a59b46df7b3458f051e35c8f69aa, type: 3}
       propertyPath: sounds.Array.data[0].loop
       value: 1
@@ -14134,8 +14134,12 @@ PrefabInstance:
       value: -0.691
       objectReference: {fileID: 0}
     - target: {fileID: 5096898456731670563, guid: 67b02239e4a1b9d428752e83e0520791, type: 3}
+      propertyPath: moveSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5096898456731670563, guid: 67b02239e4a1b9d428752e83e0520791, type: 3}
       propertyPath: jetpackForce
-      value: 9
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 5096898456731670563, guid: 67b02239e4a1b9d428752e83e0520791, type: 3}
       propertyPath: gunpiecesText
@@ -14143,7 +14147,7 @@ PrefabInstance:
       objectReference: {fileID: 1264590304}
     - target: {fileID: 5096898456731670563, guid: 67b02239e4a1b9d428752e83e0520791, type: 3}
       propertyPath: stoppingForce
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 5096898456731670565, guid: 67b02239e4a1b9d428752e83e0520791, type: 3}
       propertyPath: healthBar
