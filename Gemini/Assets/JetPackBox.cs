@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JetPackBox : MonoBehaviour
+public class CollectBox : MonoBehaviour
 {
-    public GameObject winJetPack;
+    public GameObject winObject;
     public bool collided = false;
     // Start is called before the first frame update
     void Start()
     {
-        winJetPack.SetActive(false);
+        winObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -27,13 +27,13 @@ public class JetPackBox : MonoBehaviour
     public void open()
     {
         Destroy(this.gameObject);
-        winJetPack.SetActive(true);
+        winObject.SetActive(true);
         DialogueManager.isDialogueActive = true;
     }
     public void closee()
     {
         Debug.Log("Close");
-        winJetPack.SetActive(false);
+        winObject.SetActive(false);
         DialogueManager.isDialogueActive = false;
     }
 }

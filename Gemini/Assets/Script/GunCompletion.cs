@@ -19,7 +19,7 @@ public class GunCompletion : MonoBehaviour
         if(counter==5)
         {
             completeGun.SetActive(true);
-            SceneManager.LoadScene(currentSceneIndex + 1);
+            //SceneManager.LoadScene(currentSceneIndex + 1);
         }
     }
 }
