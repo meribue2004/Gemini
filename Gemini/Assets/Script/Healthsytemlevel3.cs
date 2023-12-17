@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; //for health bar ui
+using UnityEngine.SceneManagement;
 public class Healthsytemlevel3 : MonoBehaviour
 {
   
@@ -95,6 +96,7 @@ public class Healthsytemlevel3 : MonoBehaviour
             }
             else if (this.health == 0 && this.lives == 1)
             {
+                   SceneManager.LoadScene("DieMenu");
                 this.lives--;
                 Color imageColor = heartImages[lives].color;
                 imageColor.a = 0f; // Set alpha to 0 (fully transparent)

@@ -95,6 +95,7 @@ using UnityEngine.SceneManagement;
 
 public class Healthstates : MonoBehaviour
 {
+      public GameObject eva;
     public int health = 6;
 
     public int lives = 3;
@@ -180,13 +181,19 @@ public class Healthstates : MonoBehaviour
             }
             else if (this.health == 0 && this.lives == 1)
             {
+                
+
+  
+                SceneManager.LoadScene("DieMenu");
+                
                 this.lives--;
                 Color imageColor = heartImages[lives].color;
                 imageColor.a = 0f; // Set alpha to 0 (fully transparent)
                 heartImages[lives].color = imageColor;
                 Debug.Log("Gameover");
+                Destroy(eva);
                 Destroy(this.gameObject); // Destroy the object when no lives left and health is zero
-                SceneManager.LoadScene("DieMenu");
+                
             }
             Debug.Log("Player health:" + this.health.ToString());
             Debug.Log("Player Lives:" + this.lives.ToString());
