@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class NavigationController : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -15,12 +15,13 @@ public class NavigationController : MonoBehaviour
     {
         
     }
+
     public void GoToMainMenu(){
      Time.timeScale = 1f; // Resume time
       Application.LoadLevel(0);
     }
     public void GoTograndlus(){
-       Application.LoadLevel(1);
+        SceneManager.LoadScene("grandpalus");
        }
 
 

@@ -20,8 +20,8 @@ public class nextScene : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    { int i = FindObjectOfType<Healthstates>().coinsCollected;
-        if (collision.tag == "Player" &&(i==3))
+    {
+        if (collision.tag == "Player")
         {
             FindObjectOfType<AudioManager>().Play("portal");
             // Use SceneManager.LoadScene instead of Application.LoadLevel

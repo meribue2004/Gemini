@@ -5812,8 +5812,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1323367146}
   - component: {fileID: 1323367145}
-  - component: {fileID: 1323367147}
   - component: {fileID: 1323367148}
+  - component: {fileID: 1323367149}
   m_Layer: 0
   m_Name: EnergyCapsule
   m_TagString: Untagged
@@ -5888,18 +5888,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1323367147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1323367144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdcc5ded650fcc94ab3938b26086be32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1323367148
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5926,6 +5914,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 5.12}
   m_EdgeRadius: 0
+--- !u!114 &1323367149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323367144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e3489f3d63c96a4798d5992d0c375dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1359671519
 GameObject:
   m_ObjectHideFlags: 0
