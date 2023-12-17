@@ -14,7 +14,6 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialogueBox;
     public Image characterImage;
     public Rigidbody2D player;
-    public Image bg;
 
     public Sprite Adam;
     public Sprite Eva;
@@ -38,7 +37,6 @@ public class DialogueManager : MonoBehaviour
         characterImages.Add("Lu", Lu);
         dialogueBox.SetActive(false);
         continueButton.SetActive(false);
-        SetPanelAlpha(0f);
     }
 
     public IEnumerator TypeDialogue()
@@ -47,7 +45,6 @@ public class DialogueManager : MonoBehaviour
         isDialogueActive = true;
 
         dialogueBox.SetActive(true);
-        SetPanelAlpha(0.3f);
 
         //setting the char image according to the name
         string characterName = dialogueSentence[index].Split(':')[0].Trim();
@@ -99,13 +96,6 @@ public class DialogueManager : MonoBehaviour
             player.constraints = RigidbodyConstraints2D.FreezeRotation;
             isDialogueActive = false;
         }
-    }
-
-    private void SetPanelAlpha(float alpha)
-    {
-        Color panelColor = bg.color;
-        panelColor.a = alpha;
-        bg.color = panelColor;
     }
 
 }
