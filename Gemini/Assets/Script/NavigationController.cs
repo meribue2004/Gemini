@@ -27,7 +27,7 @@ public class NavigationController : MonoBehaviour
 
     public void GoToLvl1(){
      
-      Application.LoadLevel(2);
+      SceneManager.LoadScene("grandpalus");
     }
       public void GoToCaught(){
      
