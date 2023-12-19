@@ -13757,7 +13757,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFacingRight: 0
   damageToPlayer: 1
-  healthBar: {fileID: 644566159, guid: c1696651f8c70524980c9113306229c4, type: 3}
+  healthBar: {fileID: 7245258430139165942}
   CurrentHealth: 3
   MaxHealth: 3
   bullet: {fileID: 3642493652330258530, guid: 2e16bfff3096845438fb29958c74cb99, type: 3}
@@ -88088,7 +88088,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFacingRight: 0
   damageToPlayer: 1
-  healthBar: {fileID: 644566159, guid: c1696651f8c70524980c9113306229c4, type: 3}
+  healthBar: {fileID: 2723784797135410901}
   CurrentHealth: 3
   MaxHealth: 3
   bullet: {fileID: 3642493652330258530, guid: 2e16bfff3096845438fb29958c74cb99, type: 3}
