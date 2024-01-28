@@ -5030,7 +5030,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6838d9a3a72161f4d8d9c215ea3b7895, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -5089,9 +5089,9 @@ PolygonCollider2D:
       - {x: 0.76429653, y: -0.52629447}
       - {x: 0.5885153, y: -0.42082572}
       - {x: 0.43031216, y: -0.35051322}
-      - {x: 0.21663952, y: 0.02058196}
-      - {x: 0.47614574, y: 0.25365376}
-      - {x: 0.5991926, y: 0.54597116}
+      - {x: 0.56473666, y: -0.14043254}
+      - {x: 0.64103204, y: 0.038969908}
+      - {x: 0.63584167, y: 0.40284714}
       - {x: 0.6244583, y: 0.8369584}
       - {x: 0.5579176, y: 0.99115324}
       - {x: 0.47614574, y: 1.1493566}
@@ -5127,7 +5127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpHeight: 9
+  jumpHeight: 9.3
   isFacingRight: 1
   Spacebar: 32
   L: 276
@@ -5160,6 +5160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e6e7eae80e604c4aa2192ef261727bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eva: {fileID: 0}
   health: 6
   lives: 3
   isImmune: 0
