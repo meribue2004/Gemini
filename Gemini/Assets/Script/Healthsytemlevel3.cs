@@ -11,14 +11,14 @@ public class Healthsytemlevel3 : MonoBehaviour
     float zValue=15;
     private float startTime;
     private SpriteRenderer spriteRenderer;
-    public float shakeDuration = 1.5f;
-    public float shakeIntensity = 9.7f;
+    public float shakeDuration = 1.0f;
+    public float shakeIntensity = 4.7f;
 
     private Vector3 startPosition;
 
     public bool isImmune = false;
     private float immunityTime = 0f;
-    public float immunityDuration = 1.5f;
+    public float immunityDuration = 1.0f;
 
     private bool canMove = true;
     private Vector3 originalPosition;
@@ -49,6 +49,7 @@ public class Healthsytemlevel3 : MonoBehaviour
             {
                 canMove = true;
                 FindObjectOfType<jetpackmovment>().setcanmove(canMove);
+                transform.rotation = Quaternion.Euler(0f, 0f, -zValue);
 
                 this.isImmune = false;
             }
