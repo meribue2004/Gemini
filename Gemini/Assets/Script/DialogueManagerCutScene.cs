@@ -14,7 +14,7 @@ public class DialogueManagerCutScene : MonoBehaviour
     public GameObject dialogueBox;
     public Image characterImage;
     public Rigidbody2D player;
-    public int cutScene;
+    //public int cutScene;
     public int currentSceneIndex;
     public bool Ending1;
 
@@ -68,7 +68,7 @@ public class DialogueManagerCutScene : MonoBehaviour
 
             if (textDisplay.text == dialogueSentence[index])
             {
-                Invoke("NextSentence", 0.5f);
+                Invoke("NextSentence", 0.8f);
             }
         }
     }
@@ -103,7 +103,7 @@ public class DialogueManagerCutScene : MonoBehaviour
         }
     }
 
-    private void load()
+    public void load()
     {
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex + 1);
