@@ -10,6 +10,8 @@ public class CutScene1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FindObjectOfType<AudioManager>().Play("ambience");
+        FindObjectOfType<AudioManager>().Play("bg");
         isTriggered = false;
     }
 

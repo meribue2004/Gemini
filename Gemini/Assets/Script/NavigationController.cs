@@ -27,7 +27,7 @@ public class NavigationController : MonoBehaviour
 
     public void GoToLvl1(){
      
-      SceneManager.LoadScene("grandpalus");
+      SceneManager.LoadScene("level 1");
     }
       public void GoToCaught(){
      
@@ -35,7 +35,7 @@ public class NavigationController : MonoBehaviour
     }
       public void GoToLvl2(){
      
-      Application.LoadLevel(4);
+     SceneManager.LoadScene("level 2");
     }
       public void GoToPuzzleWires(){
      
@@ -47,7 +47,7 @@ public class NavigationController : MonoBehaviour
     }
       public void GoToLvl3(){
      
-      Application.LoadLevel(7);
+      SceneManager.LoadScene("level 3");
     }
       public void GoToGunPuzzle(){
      
@@ -55,15 +55,15 @@ public class NavigationController : MonoBehaviour
     }
       public void GoToLvl4(){
      
-      Application.LoadLevel(9);
+      SceneManager.LoadScene("level 4");
     }
       public void GoToLvl5(){
      
-      Application.LoadLevel(10);
+      SceneManager.LoadScene("level 5");
     }
-      public void GoToEnding1(){
+      public void GoToLvl6(){
      
-      Application.LoadLevel(11);
+      SceneManager.LoadScene("backtoearth");
     }
      public void GoToEarth(){
      
