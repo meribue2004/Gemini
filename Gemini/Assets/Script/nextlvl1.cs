@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 public class nextlvl1 : MonoBehaviour
 {
     private int currentSceneIndex;
+    public GameObject Reminder;
 
     // Start is called before the first frame update
     void Start()
     {
+        Reminder.SetActive(false);
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
@@ -21,11 +23,20 @@ public class nextlvl1 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     { int i = FindObjectOfType<Healthstates>().coinsCollected;
-        if (collision.tag == "Player" &&(i==3))
+        if (collision.tag == "Player" && (i==3))
         {
             FindObjectOfType<AudioManager>().Play("portal");
             // Use SceneManager.LoadScene instead of Application.LoadLevel
             SceneManager.LoadScene(currentSceneIndex + 1);
         }
+        else if (collision.tag == "Player" && (i < 3))
+        {
+            Reminder.SetActive(true);
+        }
+    }
+
+    public void ok()
+    {
+        Reminder.SetActive(false);
     }
 }
