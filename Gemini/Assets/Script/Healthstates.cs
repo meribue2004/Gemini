@@ -117,11 +117,20 @@ public class Healthstates : MonoBehaviour
     public float timecollected = 0;
     public float heartscollected = 0;
     public TextMeshProUGUI scoreText;
+    //key ui
+   public Image[] keyImages;  // Array to hold all key images
+    private int collectedKeys = 0;  // Counter for collected keys
     void Start()
     {
         //spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
          healthBar.fillAmount = 0.771f;
+          foreach (Image keyImage in keyImages)
+        {
+             Color imageColor = keyImage.color;
+            imageColor.a = 0f;  // Set alpha to 0 (fully transparent)
+            keyImage.color = imageColor;
+        }
     }
 
     void Update()
@@ -281,7 +290,21 @@ heartImages[lives ].color = imageColor;
     {
         coinsCollected++;
         Debug.Log(coinsCollected);
-        scoreText.text = coinsCollected.ToString();
+         if (collectedKeys < keyImages.Length)
+        {
+            // Make the next key image visible
+            Color imageColor = keyImages[collectedKeys].color;
+            imageColor.a = 1f;  // Set alpha to 1 (fully opaque)
+            keyImages[collectedKeys].color = imageColor;
+
+
+            // Increment the counter for collected keys
+            collectedKeys++;
+        }
+        else
+        {
+            Debug.LogWarning("All keys have already been collected.");
+        }
     }
     public void inctime()
     {

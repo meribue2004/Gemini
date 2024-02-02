@@ -545,6 +545,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6059504745229385770, guid: a0ac53d28dba1064093a3e2cb39dfebf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoTograndlus
+      objectReference: {fileID: 0}
     - target: {fileID: 6059504746410155352, guid: a0ac53d28dba1064093a3e2cb39dfebf, type: 3}
       propertyPath: m_Name
       value: Canvas
