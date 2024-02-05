@@ -32,11 +32,12 @@ public class DisintegratingPlatform : MonoBehaviour
     private float respawnDelay = 5f;
     private Vector2 respawnPosition; // Set this to the position where the platform should respawn
 
-    [SerializeField] private Rigidbody2D rb;
+    private Rigidbody2D rb;
     private Collider2D coll;
 
     private void Start()
     {
+        rb= this.GetComponent<Rigidbody2D>();
         coll = GetComponent<Collider2D>();
         respawnPosition = transform.position; // Store the initial position as the respawn position
     }
