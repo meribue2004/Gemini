@@ -108,12 +108,12 @@ TextureImporter:
       name: eva faces_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 107
-        width: 91
-        height: 80
+        x: 39
+        y: 187
+        width: 161
+        height: 141
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -129,12 +129,12 @@ TextureImporter:
       name: eva faces_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 102
-        width: 97
-        height: 82
+        x: 223
+        y: 179
+        width: 171
+        height: 144
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -150,12 +150,12 @@ TextureImporter:
       name: eva faces_2
       rect:
         serializedVersion: 2
-        x: 240
-        y: 101
-        width: 99
-        height: 77
+        x: 419
+        y: 178
+        width: 174
+        height: 135
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -171,19 +171,19 @@ TextureImporter:
       name: eva faces_3
       rect:
         serializedVersion: 2
-        x: 17
-        y: 9
-        width: 99
-        height: 77
+        x: 221
+        y: 14
+        width: 175
+        height: 137
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8ddef1abb2e88d42858bc9490d05c3d
-      internalID: -1572645055
+      spriteID: 7274e7d17e004484eab45d8a77386a50
+      internalID: 1990332973
       vertices: []
       indices: 
       edges: []
@@ -192,40 +192,19 @@ TextureImporter:
       name: eva faces_4
       rect:
         serializedVersion: 2
-        x: 127
-        y: 8
-        width: 99
-        height: 78
+        x: 419
+        y: 12
+        width: 174
+        height: 138
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5360fdf6a26b62c4fa4f87f943028096
-      internalID: -287677308
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: eva faces_5
-      rect:
-        serializedVersion: 2
-        x: 240
-        y: 7
-        width: 99
-        height: 78
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7274e7d17e004484eab45d8a77386a50
-      internalID: 1990332973
+      spriteID: e69d9613eee420c45b320ae5c220440f
+      internalID: 1032995429
       vertices: []
       indices: 
       edges: []
@@ -241,12 +220,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      eva faces_5: 1990332973
       eva faces_0: -1739627327
       eva faces_1: -1329631607
-      eva faces_3: -1572645055
+      eva faces_3: 1990332973
       eva faces_2: -1999947789
-      eva faces_4: -287677308
+      eva faces_4: 1032995429
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

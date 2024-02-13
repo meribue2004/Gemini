@@ -24,6 +24,7 @@ public class DialogueManager : MonoBehaviour
     public Dictionary<string, Sprite> characterImages;
 
     public static bool isDialogueActive;
+    private bool skip = false;
 
     void Start()
     {
@@ -41,8 +42,8 @@ public class DialogueManager : MonoBehaviour
 
     public IEnumerator TypeDialogue()
     {
-        //FindObjectOfType<AudioManager>().Play("meme");
-        isDialogueActive = true;
+        
+            isDialogueActive = true;
 
         dialogueBox.SetActive(true);
 
@@ -56,19 +57,26 @@ public class DialogueManager : MonoBehaviour
             // Adjust the size of the Image component based on the sprite size
             characterImage.rectTransform.sizeDelta = new Vector2(characterSprite.rect.width, characterSprite.rect.height);
         }
-       GetSoundForCharacter(characterName);
-        foreach (char letter in dialogueSentence[index].ToCharArray())
-        {
-            textDisplay.text += letter;
 
-            yield return new WaitForSeconds(typingSpeed);
+        GetSoundForCharacter(characterName);
 
-            if (textDisplay.text == dialogueSentence[index])
+        
+            foreach (char letter in dialogueSentence[index].ToCharArray())
             {
-                 Eskot();
-                continueButton.SetActive(true);
+                textDisplay.text += letter;
+                yield return new WaitForSeconds(typingSpeed);
+
+                if (!skip)
+                {
+                    if (textDisplay.text == dialogueSentence[index])
+                    {
+                        Eskot();
+                        continueButton.SetActive(true);
+                    }
+                }
             }
-        }
+        
+
     }
   private void Eskot(){
     FindObjectOfType<AudioManager>().Stop("dialogue");
@@ -129,6 +137,14 @@ private void GetSoundForCharacter(string characterName)
             player.constraints = RigidbodyConstraints2D.FreezeRotation;
             isDialogueActive = false;
         }
+    }
+
+    public void Skip()
+    {
+        skip = true;
+        Eskot();
+        index = dialogueSentence.Length - 1;
+        NextSentence();
     }
 
 }
