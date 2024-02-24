@@ -3087,10 +3087,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99a9b7949cbb9044cb65cdd5e687d480, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jetpackForce: 4
-  moveSpeed: 25
+  jetpackForce: 15
+  moveSpeed: 30
   stoppingForce: 1
-  smoothDamping: 0.4
+  smoothDamping: 0.8
   arrowUp: 273
   arrowDown: 274
   moveRight: 275

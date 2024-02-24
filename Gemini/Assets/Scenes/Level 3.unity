@@ -14078,7 +14078,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5096898456731670565, guid: 67b02239e4a1b9d428752e83e0520791, type: 3}
       propertyPath: shakeIntensity
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5096898456731670565, guid: 67b02239e4a1b9d428752e83e0520791, type: 3}
       propertyPath: immunityDuration
