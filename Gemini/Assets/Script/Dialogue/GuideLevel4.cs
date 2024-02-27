@@ -27,11 +27,11 @@ public class GuideLevel4 : MonoBehaviour
             {
                 "Worried Eva: Oh no! Gemini has sent a lot of robots after us!",
                 "Worried Eva: They are catching up so quickly!",
-                "Worried Eva: Now, you can use your shield to protect you from any bullets. it lasts only 5 seconds.",
-                "Worried Eva: You can only use it once every 10 seconds.",
+                "Worried Eva: Now, you can use your shield and the gun to protect. Press 's' to activate the shield and 'f' to fire your gun.",
+                "Worried Eva: But remember the shield lasts for 5 seconds and you can only use it once every 10 seconds.",
                 "Worried Eva: Fight the robots!",
                 "Worried Eva: Watch out from the blue robots, their shots are strong.",
-                "Eva: Good Luck!",
+                "Eva: Good Luck!"
             };
             dialogueManager.SetSentences(dialogue);
             dialogueManager.StartCoroutine(dialogueManager.TypeDialogue());
