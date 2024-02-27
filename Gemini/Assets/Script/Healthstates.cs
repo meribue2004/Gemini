@@ -289,6 +289,7 @@ heartImages[lives ].color = imageColor;
     public void CollectCoin()
     {
         coinsCollected++;
+        scoreText.text = coinsCollected.ToString();
         Debug.Log(coinsCollected);
          if (collectedKeys < keyImages.Length)
         {
