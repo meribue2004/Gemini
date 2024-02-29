@@ -25,15 +25,15 @@ public class PlayerMovement : MonoBehaviour
     public GameObject bulletsw;
     private Animator anim;
     public bool lev4and5;
-    public float shootingInterval = 2f;
+    public float shootingInterval = 1f;
     //private float timeSinceLastShot = 2f;
-    public float shootingIntervalsw = 3f;
+    public float shootingIntervalsw = 2f;
     //private float timeSinceLastShotsw = 3f;
     bool canShoot=true;
     bool canShootsw = true;
     private bool shielded;
     public GameObject shield;
-    private float shieldCooldown = 5f;
+    private float shieldCooldown = 2.5f;
     private float lastShieldActivationTime = 0f;
     private 
     void Start()
