@@ -16431,8 +16431,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6427062821213163583, guid: c43cb68fa9cb28f489f511bb8056e360, type: 3}
+      propertyPath: moveSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6427062821213163583, guid: c43cb68fa9cb28f489f511bb8056e360, type: 3}
       propertyPath: jumpHeight
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 6427062821213163583, guid: c43cb68fa9cb28f489f511bb8056e360, type: 3}
       propertyPath: Shottswitch
@@ -16472,15 +16476,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8004875742021666680, guid: c43cb68fa9cb28f489f511bb8056e360, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32.69
+      value: 62.6
       objectReference: {fileID: 0}
     - target: {fileID: 8004875742021666680, guid: c43cb68fa9cb28f489f511bb8056e360, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 55.36
+      value: 21.5
       objectReference: {fileID: 0}
     - target: {fileID: 8004875742021666680, guid: c43cb68fa9cb28f489f511bb8056e360, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.32
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 8004875742021666680, guid: c43cb68fa9cb28f489f511bb8056e360, type: 3}
       propertyPath: m_LocalRotation.w
@@ -16519,8 +16523,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 8004875742021666686, guid: c43cb68fa9cb28f489f511bb8056e360, type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8004875742021666686, guid: c43cb68fa9cb28f489f511bb8056e360, type: 3}
       propertyPath: m_GravityScale
-      value: 0.8
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c43cb68fa9cb28f489f511bb8056e360, type: 3}
@@ -88581,7 +88589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e743f2b3c51fe4ea7f50b8957ab240, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 10
+  jumpForce: 26
 --- !u!95 &4732281091515744061
 Animator:
   serializedVersion: 4

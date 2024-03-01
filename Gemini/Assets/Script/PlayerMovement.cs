@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject shield;
     private float shieldCooldown = 2.5f;
     private float lastShieldActivationTime = 0f;
+    private float DesiredGravityScale = 24;
     private 
     void Start()
     {
@@ -95,6 +96,10 @@ public class PlayerMovement : MonoBehaviour
             }
 
             anim.SetBool("grounded", grounded);
+            if (!Input.GetKey(L) && !Input.GetKey(R))
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2(0f, GetComponent<Rigidbody2D>().velocity.y);
+            }
 
             if (Input.GetKey(L))
             {
@@ -173,10 +178,13 @@ public class PlayerMovement : MonoBehaviour
             movmentcode();
 
         }
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.gravityScale = 1;
+
         //timeSinceLastShot += Time.deltaTime;
         //timeSinceLastShotsw += Time.deltaTime;
 
-      
+
     }
 
     public void flip()
@@ -184,14 +192,41 @@ public class PlayerMovement : MonoBehaviour
         transform.localScale = new Vector3(-(transform.localScale.x), transform.localScale.y, transform.localScale.z);
     }
 
+    //void Jump()
+    //{
+    //    GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpHeight);
+
+
+    //}
+
+
+    //void Jump()
+    //{
+    //    Rigidbody2D rb = GetComponent<Rigidbody2D>();
+
+    //    rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
+
+
+    //}
+
     void Jump()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, jumpHeight);
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
+ 
+       
     }
+
 
     void FixedUpdate()
     {
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
+        if (!grounded)
+        {
+            falldown();
+            Rigidbody2D rb = GetComponent<Rigidbody2D>();
+            rb.gravityScale = 3;
+        }
     }
 
     public bool getgrounded()
@@ -244,5 +279,9 @@ public class PlayerMovement : MonoBehaviour
         // Deactivate shield after the cooldown
         shield.SetActive(false);
         shielded = false;
+    }
+    IEnumerator falldown()
+    {
+        yield return new WaitForSeconds(2.0f);
     }
 }
