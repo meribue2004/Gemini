@@ -154,6 +154,7 @@ public class PlayerMovement : MonoBehaviour
                 Invoke("Shoot", 0.9f);
 
                 Invoke("stopshoot", 0.9f);
+
                 StartCoroutine(ResetShootingInterval());
             }
             if (Input.GetKeyDown(Shottswitch) && canShootsw)
@@ -164,6 +165,7 @@ public class PlayerMovement : MonoBehaviour
 
                 Invoke("Shootswitchside", 0.9f);
                 Invoke("stopshoot", 0.9f);
+
                 StartCoroutine(ResetShootingIntervalsw());
             }
             anim.SetBool("rolling", rolling);
@@ -244,6 +246,7 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator ResetShootingInterval()
     {
         canShoot = false;
+        FindObjectOfType<playerCooldown>().cooldown(shootingInterval);
         yield return new WaitForSeconds(shootingInterval);
         canShoot = true;
     }
