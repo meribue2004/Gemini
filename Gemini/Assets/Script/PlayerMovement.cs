@@ -246,7 +246,7 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator ResetShootingInterval()
     {
         canShoot = false;
-        FindObjectOfType<playerCooldown>().cooldown(shootingInterval);
+        
         yield return new WaitForSeconds(shootingInterval);
         canShoot = true;
     }
