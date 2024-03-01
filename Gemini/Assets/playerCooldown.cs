@@ -23,7 +23,7 @@ public class playerCooldown : MonoBehaviour
          bar.transform.position = Camera.main.WorldToScreenPoint(transform.parent.position + offset);
     }
 
-    public IEnumerator cooldown(float shootingInterval)
+    public void cooldown(float shootingInterval)
     {
          bar.SetActive(true);
             float currentTime = 0f;
@@ -32,10 +32,11 @@ public class playerCooldown : MonoBehaviour
         {
             currentTime += Time.deltaTime;
             coolBar.fillAmount = 1 - (currentTime / shootingInterval);
-            yield return null;
+           
         }
 
         bar.SetActive(false); // Hide the cooldown UI
+        coolBar.fillAmount = 1;
         
     }
 }

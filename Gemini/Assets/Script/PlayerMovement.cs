@@ -25,9 +25,9 @@ public class PlayerMovement : MonoBehaviour
     public GameObject bulletsw;
     private Animator anim;
     public bool lev4and5;
-    public float shootingInterval = 1f;
+    public float shootingInterval = 2f;
     //private float timeSinceLastShot = 2f;
-    public float shootingIntervalsw = 2f;
+    public float shootingIntervalsw = 3f;
     //private float timeSinceLastShotsw = 3f;
     bool canShoot=true;
     bool canShootsw = true;
