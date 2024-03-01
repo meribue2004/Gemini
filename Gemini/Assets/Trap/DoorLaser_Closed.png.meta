@@ -109,11 +109,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 9
-        y: 1
+        y: 16
         width: 50
-        height: 461
+        height: 409
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -130,11 +130,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 114
-        y: 1
-        width: 50
-        height: 461
+        y: 16
+        width: 51
+        height: 406
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -151,11 +151,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 218
-        y: 1
-        width: 49
-        height: 461
+        y: 15
+        width: 46
+        height: 409
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -172,11 +172,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 310
-        y: 1
-        width: 50
-        height: 461
+        y: 15
+        width: 46
+        height: 408
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -184,6 +184,48 @@ TextureImporter:
       bones: []
       spriteID: a70eaa4b774f2b14586a8c36ac1f0825
       internalID: -1329132674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorLaser_Closed_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 428
+        width: 50
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 460a270114318f54baf0216f3540f426
+      internalID: -647432863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DoorLaser_Closed_5
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 3
+        width: 48
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ddb4296eff930041aa880f32bd5c717
+      internalID: 1248357381
       vertices: []
       indices: 
       edges: []
@@ -201,6 +243,8 @@ TextureImporter:
     nameFileIdTable:
       DoorLaser_Closed_3: -1329132674
       DoorLaser_Closed_1: 1452063347
+      DoorLaser_Closed_4: -647432863
+      DoorLaser_Closed_5: 1248357381
       DoorLaser_Closed_0: 1985493056
       DoorLaser_Closed_2: 1686554807
   spritePackingTag: 
