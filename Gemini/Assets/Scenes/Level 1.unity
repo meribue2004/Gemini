@@ -6755,6 +6755,10 @@ PrefabInstance:
       propertyPath: moveSpeed
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 3546671699361827354, guid: 7cec2e3e16e0983479a739487ea119e6, type: 3}
+      propertyPath: jumpHeight
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7571708746745235521, guid: 7cec2e3e16e0983479a739487ea119e6, type: 3}
       propertyPath: eva
       value: 
